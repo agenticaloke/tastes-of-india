@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: tastes-of-india
+    env: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt &&
+      flask --app run.py init-db &&
+      flask --app run.py seed-recipes
+    startCommand: gunicorn run:app --bind 0.0.0.0:$PORT --workers 2 --timeout 60
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: FLASK_DEBUG
+        value: "0"

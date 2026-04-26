@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% block title %}Menu Builder — Tastes of India{% endblock %}
+
+{% block content %}
+<div class="mb-6">
+  <h1 class="text-3xl font-semibold text-rose-500 mb-2">Menu Builder</h1>
+  <p class="text-stone-500">Mix and match vegetarian dishes from any city to create the perfect Lunch or Dinner menu for your event.</p>
+</div>
+
+<div class="lg:grid lg:grid-cols-5 lg:gap-8">
+
+  <!-- Left: recipe picker -->
+  <div class="lg:col-span-3 mb-8 lg:mb-0">
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-100 p-5">
+      <h2 class="font-semibold text-stone-700 mb-4">Browse &amp; Add Dishes</h2>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap gap-3 mb-4">
+        <select id="city-filter" class="border border-stone-200 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200">
+          <option value="">All Cities</option>
+          {% for city in cities %}
+          <option value="{{ city['slug'] }}">{{ city['name'] }}</option>
+          {% endfor %}
+        </select>
+        <select id="cat-filter" class="border border-stone-200 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200">
+          <option value="">All Categories</option>
+          {% for cat in category_order %}
+          <option value="{{ cat }}">{{ category_labels[cat] }}</option>
+          {% endfor %}
+        </select>
+        <input id="recipe-search" type="text" placeholder="Filter by name…"
+               class="flex-1 min-w-0 border border-stone-200 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200" />
+      </div>
+
+      <!-- Recipe list -->
+      <div id="recipe-list" class="space-y-2 max-h-[520px] overflow-y-auto pr-1">
+        {% for cat in category_order %}
+        {% for recipe in recipes_by_category[cat] %}
+        <div class="recipe-row flex items-center justify-between gap-3 p-3 rounded-xl border border-stone-100 hover:border-rose-200 hover:bg-rose-50 transition"
+             data-id="{{ recipe.id }}"
+             data-name="{{ recipe.name }}"
+             data-city="{{ recipe.city_slug }}"
+             data-cat="{{ recipe.category }}"
+             data-city-name="{{ recipe.city_name }}"
+             data-cat-label="{{ category_labels[recipe.category] }}">
+          <div class="flex-1 min-w-0">
+            <p class="font-medium text-stone-800 text-sm truncate">{{ recipe.name }}</p>
+            <p class="text-xs text-stone-400">{{ recipe.city_name }} · {{ category_labels[recipe.category] }}</p>
+          </div>
+          <div class="flex gap-2 flex-shrink-0">
+            <button onclick="addToMenu('lunch', this)"
+                    class="add-btn text-xs bg-amber-50 text-amber-700 hover:bg-amber-100 px-3 py-1.5 rounded-lg font-medium transition">
+              + Lunch
+            </button>
+            <button onclick="addToMenu('dinner', this)"
+                    class="add-btn text-xs bg-sky-50 text-sky-600 hover:bg-sky-100 px-3 py-1.5 rounded-lg font-medium transition">
+              + Dinner
+            </button>
+          </div>
+        </div>
+        {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: menu panels -->
+  <div class="lg:col-span-2 space-y-5">
+
+    <!-- Save form -->
+    <div class="bg-white rounded-2xl shadow-sm border border-stone-100 p-5">
+      <h2 class="font-semibold text-stone-700 mb-3">Save Your Menu</h2>
+      <input id="menu-title" type="text" placeholder="Menu title (e.g. Diwali Dinner)"
+             class="w-full border border-stone-200 rounded-lg px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-rose-200" />
+      <textarea id="menu-notes" placeholder="Notes or event details…" rows="2"
+                class="w-full border border-stone-200 rounded-lg px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-rose-200"></textarea>
+      <div class="flex gap-2">
+        <button onclick="saveMenu()"
+                class="flex-1 bg-rose-300 text-white py-2 rounded-lg text-sm font-medium hover:bg-rose-400 transition">
+          Save Menu
+        </button>
+        <button onclick="clearMenu()"
+                class="border border-stone-200 text-stone-500 px-4 py-2 rounded-lg text-sm hover:bg-stone-50 transition">
+          Clear
+        </button>
+      </div>
+      <div id="save-msg" class="mt-3 text-sm text-emerald-600 hidden"></div>
+    </div>
+
+    <!-- Lunch panel -->
+    <div class="bg-amber-50 border border-amber-100 rounded-2xl p-5">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="font-semibold text-amber-700">🌞 Lunch</h3>
+        <span id="lunch-count" class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">0 dishes</span>
+      </div>
+      <div id="lunch-items" class="space-y-2 min-h-[60px]">
+        <p class="text-amber-400 text-sm italic" id="lunch-empty">Add dishes using the + Lunch buttons.</p>
+      </div>
+    </div>
+
+    <!-- Dinner panel -->
+    <div class="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="font-semibold text-sky-600">🌙 Dinner</h3>
+        <span id="dinner-count" class="text-xs bg-sky-100 text-sky-600 px-2 py-0.5 rounded-full">0 dishes</span>
+      </div>
+      <div id="dinner-items" class="space-y-2 min-h-[60px]">
+        <p class="text-sky-400 text-sm italic" id="dinner-empty">Add dishes using the + Dinner buttons.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const menuState = { lunch: [], dinner: [] };
+
+function addToMenu(meal, btn) {
+  const row = btn.closest('.recipe-row');
+  const item = {
+    id: parseInt(row.dataset.id),
+    name: row.dataset.name,
+    city: row.dataset.cityName,
+    cat: row.dataset.catLabel,
+  };
+  if (menuState[meal].find(r => r.id === item.id)) return;
+  menuState[meal].push(item);
+  renderPanel(meal);
+}
+
+function removeFromMenu(meal, id) {
+  menuState[meal] = menuState[meal].filter(r => r.id !== id);
+  renderPanel(meal);
+}
+
+function renderPanel(meal) {
+  const container = document.getElementById(meal + '-items');
+  const emptyEl = document.getElementById(meal + '-empty');
+  const countEl = document.getElementById(meal + '-count');
+  const items = menuState[meal];
+  countEl.textContent = items.length + ' dish' + (items.length !== 1 ? 'es' : '');
+  if (items.length === 0) {
+    container.innerHTML = '';
+    container.appendChild(emptyEl);
+    return;
+  }
+  if (emptyEl.parentNode) emptyEl.parentNode.removeChild(emptyEl);
+  container.innerHTML = items.map(r => `
+    <div class="flex items-center justify-between gap-2 bg-white rounded-lg px-3 py-2 text-sm shadow-sm border border-stone-100">
+      <div>
+        <p class="font-medium text-stone-700">${r.name}</p>
+        <p class="text-xs text-stone-400">${r.city} · ${r.cat}</p>
+      </div>
+      <button onclick="removeFromMenu('${meal}', ${r.id})" class="text-stone-300 hover:text-rose-400 transition text-lg leading-none">&times;</button>
+    </div>
+  `).join('');
+}
+
+async function saveMenu() {
+  const title = document.getElementById('menu-title').value.trim();
+  const notes = document.getElementById('menu-notes').value.trim();
+  if (!title) { alert('Please enter a menu title.'); return; }
+  if (!menuState.lunch.length && !menuState.dinner.length) {
+    alert('Please add at least one dish to Lunch or Dinner.'); return;
+  }
+  const payload = {
+    title,
+    meal_type: 'both',
+    lunch_ids: menuState.lunch.map(r => r.id),
+    dinner_ids: menuState.dinner.map(r => r.id),
+    notes,
+  };
+  try {
+    const res = await fetch('/api/menu', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    const msg = document.getElementById('save-msg');
+    msg.innerHTML = `Menu saved! <a href="/menu/${data.id}" class="underline font-medium">View</a> · <a href="/menu/${data.id}/print" target="_blank" class="underline font-medium">Print</a>`;
+    msg.classList.remove('hidden');
+  } catch (e) {
+    alert('Error saving menu. Please try again.');
+  }
+}
+
+function clearMenu() {
+  menuState.lunch = [];
+  menuState.dinner = [];
+  renderPanel('lunch');
+  renderPanel('dinner');
+  document.getElementById('menu-title').value = '';
+  document.getElementById('menu-notes').value = '';
+  document.getElementById('save-msg').classList.add('hidden');
+}
+
+function applyFilters() {
+  const city = document.getElementById('city-filter').value;
+  const cat = document.getElementById('cat-filter').value;
+  const q = document.getElementById('recipe-search').value.toLowerCase();
+  document.querySelectorAll('.recipe-row').forEach(row => {
+    const matchCity = !city || row.dataset.city === city;
+    const matchCat = !cat || row.dataset.cat === cat;
+    const matchQ = !q || row.dataset.name.toLowerCase().includes(q);
+    row.style.display = matchCity && matchCat && matchQ ? '' : 'none';
+  });
+}
+
+document.getElementById('city-filter').addEventListener('change', applyFilters);
+document.getElementById('cat-filter').addEventListener('change', applyFilters);
+document.getElementById('recipe-search').addEventListener('input', applyFilters);
+</script>
+{% endblock %}

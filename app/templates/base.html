@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Tastes of India{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Georgia', 'serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-stone-50 min-h-screen flex flex-col text-stone-700">
+
+  <!-- NAV -->
+  <header class="bg-rose-100 text-stone-700 shadow-sm border-b border-rose-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <a href="{{ url_for('web.index') }}" class="text-2xl font-semibold tracking-wide text-rose-600 hover:text-rose-500 transition">
+        Tastes of India
+      </a>
+
+      <!-- Search bar -->
+      <form action="{{ url_for('web.search') }}" method="get" class="flex w-full sm:w-auto" id="nav-search-form">
+        <input
+          id="nav-search-input"
+          type="text"
+          name="q"
+          value="{{ request.args.get('q', '') }}"
+          placeholder="Search recipes, cities, dishes…"
+          class="flex-1 sm:w-72 px-4 py-2 rounded-l-lg bg-white text-stone-700 text-sm border border-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-200"
+          autocomplete="off"
+        />
+        <button type="submit" class="bg-rose-300 hover:bg-rose-400 text-white px-4 py-2 rounded-r-lg text-sm font-medium transition">
+          Search
+        </button>
+      </form>
+
+      <!-- Nav links -->
+      <nav class="flex items-center gap-4 text-sm font-medium">
+        <a href="{{ url_for('web.search') }}" class="text-stone-600 hover:text-rose-500 transition">Browse</a>
+        <a href="{{ url_for('web.menu_builder') }}" class="bg-white text-rose-500 hover:bg-rose-50 border border-rose-200 px-3 py-1.5 rounded-lg transition">
+          Menu Builder
+        </a>
+      </nav>
+    </div>
+
+    <!-- City quick-links -->
+    <div class="bg-rose-50 border-t border-rose-100">
+      <div class="max-w-6xl mx-auto px-4 py-2 flex flex-wrap gap-3 text-sm">
+        {% for city_slug, city_name in [('delhi','Delhi'),('hyderabad','Hyderabad'),('indore','Indore'),('jaipur','Jaipur'),('kolkata','Kolkata')] %}
+        <a href="{{ url_for('web.city', slug=city_slug) }}"
+           class="transition {% if request.endpoint == 'web.city' and request.view_args.get('slug') == city_slug %}text-rose-600 font-semibold underline{% else %}text-stone-500 hover:text-rose-500{% endif %}">
+          {{ city_name }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-100 text-stone-500 text-sm text-center py-6 mt-8 border-t border-stone-200">
+    <p class="mb-1">
+      <strong class="text-stone-700">Tastes of India</strong> — Celebrating the culinary heritage of Jaipur, Kolkata, Hyderabad, Indore &amp; Delhi.
+    </p>
+    <p>All recipes are vegetarian. Sourced with attribution; credits belong to original authors.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

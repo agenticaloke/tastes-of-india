@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block title %}Search Recipes — Tastes of India{% endblock %}
+
+{% block content %}
+<h1 class="text-3xl font-semibold text-rose-500 mb-6">Search Recipes</h1>
+
+<!-- Filter form -->
+<form action="{{ url_for('web.search') }}" method="get" class="bg-white rounded-2xl shadow-sm border border-stone-100 p-6 mb-8">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div>
+      <label class="block text-sm font-medium text-stone-600 mb-1">Dish name or keyword</label>
+      <input type="text" name="q" value="{{ q }}"
+             class="w-full border border-stone-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200"
+             placeholder="e.g. biryani, paneer, chai…" />
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-stone-600 mb-1">City</label>
+      <select name="city" class="w-full border border-stone-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200">
+        <option value="">All Cities</option>
+        {% for city in cities %}
+        <option value="{{ city['slug'] }}" {% if city['slug'] == city_filter %}selected{% endif %}>
+          {{ city['name'] }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-stone-600 mb-1">Category</label>
+      <select name="category" class="w-full border border-stone-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-rose-200">
+        <option value="">All Categories</option>
+        {% for cat in categories %}
+        <option value="{{ cat }}" {% if cat == cat_filter %}selected{% endif %}>
+          {{ category_labels[cat] }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="mt-4 flex gap-3">
+    <button type="submit" class="bg-rose-300 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-rose-400 transition">
+      Search
+    </button>
+    <a href="{{ url_for('web.search') }}" class="border border-stone-200 text-stone-500 px-6 py-2 rounded-lg text-sm hover:bg-stone-50 transition">
+      Clear
+    </a>
+  </div>
+</form>
+
+<!-- Results -->
+{% if q or city_filter or cat_filter %}
+  <p class="text-stone-500 text-sm mb-4">
+    {{ results|length }} result{% if results|length != 1 %}s{% endif %}
+    {% if q %} for "<strong class="text-stone-700">{{ q }}</strong>"{% endif %}
+    {% if city_filter %} in <strong class="text-stone-700">{{ city_filter|capitalize }}</strong>{% endif %}
+    {% if cat_filter %} · <strong class="text-stone-700">{{ category_labels[cat_filter] }}</strong>{% endif %}
+  </p>
+
+  {% if results %}
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    {% for recipe in results %}
+    <a href="{{ url_for('web.recipe', slug=recipe.slug) }}"
+       class="group bg-white rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow p-5 flex flex-col">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <h3 class="font-semibold text-stone-800 group-hover:text-rose-500 transition leading-snug">{{ recipe.name }}</h3>
+        <span class="text-xs px-2 py-0.5 rounded-full flex-shrink-0
+          {% if recipe.category == 'appetizer' %}bg-emerald-50 text-emerald-600
+          {% elif recipe.category == 'entree' %}bg-amber-50 text-amber-700
+          {% elif recipe.category == 'dessert' %}bg-pink-50 text-pink-600
+          {% else %}bg-sky-50 text-sky-600{% endif %}">
+          {{ category_labels[recipe.category] }}
+        </span>
+      </div>
+      <p class="text-stone-500 text-sm flex-1 line-clamp-3 leading-relaxed">{{ recipe.description }}</p>
+      <div class="mt-3 flex items-center justify-between text-xs text-stone-400">
+        <span class="text-rose-500 font-medium">{{ recipe.city_name }}</span>
+        <span class="group-hover:text-rose-500">View →</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="text-center py-16 text-stone-400">
+    <div class="text-5xl mb-4">🔍</div>
+    <p class="text-lg font-medium text-stone-500">No recipes found</p>
+    <p class="text-sm mt-2">Try a different keyword or remove filters.</p>
+  </div>
+  {% endif %}
+
+{% else %}
+  <!-- Browse all by city -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    {% for city in cities %}
+    <a href="{{ url_for('web.city', slug=city['slug']) }}"
+       class="group bg-white rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition p-5">
+      <h3 class="font-semibold text-stone-800 group-hover:text-rose-500 text-lg mb-1">{{ city['name'] }}</h3>
+      <p class="text-rose-500 text-sm">Browse recipes →</p>
+    </a>
+    {% endfor %}
+  </div>
+{% endif %}
+{% endblock %}

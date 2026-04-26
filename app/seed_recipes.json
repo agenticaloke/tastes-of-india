@@ -1,0 +1,1577 @@
+{
+  "cities": [
+    {
+      "slug": "jaipur",
+      "name": "Jaipur",
+      "description": "The Pink City of Rajasthan, where royal kitchens gave birth to bold spices, rich ghee-laden breads, and legendary sweets that have endured for centuries.",
+      "image_file": "jaipur.jpg",
+      "recipes": [
+        {
+          "name": "Pyaaz Kachori",
+          "slug": "pyaaz-kachori",
+          "category": "appetizer",
+          "description": "A flaky, deep-fried pastry stuffed with a spicy onion mixture flavored with fennel and coriander. This iconic snack originated from the famous Rawat Mishthan Bhandar in Jaipur and remains a beloved street food served piping hot with tamarind chutney.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "refined flour (maida)"},
+            {"qty": "3 tbsp", "item": "oil or ghee (for dough)"},
+            {"qty": "1/2 tsp", "item": "carom seeds (ajwain)"},
+            {"qty": "1/2 tsp", "item": "salt"},
+            {"qty": "3 large", "item": "onions, finely chopped"},
+            {"qty": "1 tsp", "item": "fennel seeds (saunf)"},
+            {"qty": "1 tsp", "item": "coriander powder"},
+            {"qty": "1/2 tsp", "item": "red chili powder"},
+            {"qty": "1/4 tsp", "item": "turmeric"},
+            {"qty": "2 tbsp", "item": "dry mango powder (amchur)"},
+            {"qty": "as needed", "item": "oil for deep frying"}
+          ],
+          "instructions": [
+            "Mix flour, oil, carom seeds and salt; add water gradually to make a firm dough. Rest for 20 minutes.",
+            "Heat 2 tbsp oil in a pan; saute onions until golden. Add all spices and amchur, cook 3 minutes. Cool completely.",
+            "Divide dough into 10 balls. Flatten each, place a spoon of filling in centre, seal edges tightly and roll gently.",
+            "Deep fry on medium heat until golden and crisp, about 8-10 minutes. Drain on paper.",
+            "Serve hot with green chutney and tamarind chutney."
+          ],
+          "prep_time_mins": 30,
+          "cook_time_mins": 25,
+          "servings": 10,
+          "source_url": "https://www.themaharajaexpress.org/blog/top-10-traditional-dishes-of-rajasthan",
+          "author_credit": "The Maharaja Express"
+        },
+        {
+          "name": "Mirchi Bada",
+          "slug": "mirchi-bada",
+          "category": "appetizer",
+          "description": "Large green chilis stuffed with a spiced potato mixture, coated in gram flour batter and deep-fried until golden. A signature Rajasthani street snack with a delightful contrast of fire and earthiness, best enjoyed on a rainy evening.",
+          "ingredients": [
+            {"qty": "6 large", "item": "green chilis (long, mild variety)"},
+            {"qty": "3 medium", "item": "potatoes, boiled and mashed"},
+            {"qty": "1 tsp", "item": "ginger, grated"},
+            {"qty": "1/2 tsp", "item": "cumin seeds"},
+            {"qty": "1 tsp", "item": "dry mango powder (amchur)"},
+            {"qty": "1/2 tsp", "item": "garam masala"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "1.5 cups", "item": "gram flour (besan)"},
+            {"qty": "1/4 tsp", "item": "baking soda"},
+            {"qty": "as needed", "item": "oil for deep frying"}
+          ],
+          "instructions": [
+            "Slit chilis lengthwise without breaking them. Remove seeds if you prefer less heat.",
+            "Mix mashed potato with ginger, cumin, amchur, garam masala and salt.",
+            "Fill each chili generously with the potato mixture. Press to seal.",
+            "Make a smooth batter with besan, baking soda, salt and water (consistency of pancake batter).",
+            "Dip stuffed chilis in batter and deep fry on medium heat until golden, about 5-6 minutes.",
+            "Serve immediately with tamarind chutney."
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 20,
+          "servings": 6,
+          "source_url": "https://rajasthantourexpert.com/famous-foods-in-jaipur/",
+          "author_credit": "Rajasthan Tour Expert"
+        },
+        {
+          "name": "Aloo Tikki",
+          "slug": "aloo-tikki-jaipur",
+          "category": "appetizer",
+          "description": "Crisp golden potato patties seasoned with cumin, coriander, and green chili, served with layers of yogurt, tangy tamarind chutney, and fresh coriander. A beloved North Indian street food that Jaipur takes great pride in perfecting.",
+          "ingredients": [
+            {"qty": "4 large", "item": "potatoes, boiled and mashed"},
+            {"qty": "2 tbsp", "item": "gram flour (besan)"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "2", "item": "green chilis, finely chopped"},
+            {"qty": "1 tsp", "item": "ginger, grated"},
+            {"qty": "2 tbsp", "item": "fresh coriander, chopped"},
+            {"qty": "1 tsp", "item": "chaat masala"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "as needed", "item": "oil for shallow frying"},
+            {"qty": "to serve", "item": "yogurt, tamarind chutney, green chutney"}
+          ],
+          "instructions": [
+            "Combine mashed potato, besan, cumin, chilis, ginger, coriander, chaat masala and salt.",
+            "Divide into 8-10 equal portions and shape into flat round patties.",
+            "Heat a flat pan or tawa with a thin film of oil on medium heat.",
+            "Cook tikkis for 3-4 minutes per side until deeply golden and crisp.",
+            "Serve topped with yogurt, tamarind chutney and a dusting of chaat masala."
+          ],
+          "prep_time_mins": 15,
+          "cook_time_mins": 20,
+          "servings": 4,
+          "source_url": "https://rajasthantourexpert.com/famous-foods-in-jaipur/",
+          "author_credit": "Rajasthan Tour Expert"
+        },
+        {
+          "name": "Gatte Ki Sabzi",
+          "slug": "gatte-ki-sabzi",
+          "category": "entree",
+          "description": "Gram flour dumplings (gattes) boiled until firm, then simmered in a tangy yogurt-based curry spiced with mustard seeds, cumin and dried red chilis. A quintessential Rajasthani dish that transforms pantry staples into something deeply satisfying.",
+          "ingredients": [
+            {"qty": "1.5 cups", "item": "gram flour (besan)"},
+            {"qty": "1/2 tsp", "item": "carom seeds (ajwain)"},
+            {"qty": "1/2 tsp", "item": "red chili powder"},
+            {"qty": "1/4 tsp", "item": "turmeric"},
+            {"qty": "2 tbsp", "item": "oil"},
+            {"qty": "1.5 cups", "item": "yogurt, whisked"},
+            {"qty": "1 tsp", "item": "mustard seeds"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "2", "item": "dried red chilis"},
+            {"qty": "1 pinch", "item": "asafoetida (hing)"},
+            {"qty": "salt", "item": "to taste"}
+          ],
+          "instructions": [
+            "Mix besan with ajwain, chili, turmeric, oil and salt; add water to make stiff dough. Roll into finger-thick logs.",
+            "Boil logs in salted water for 12 minutes. Remove, cool slightly, slice into 1-inch pieces. Reserve boiling water.",
+            "Whisk yogurt with turmeric, chili powder and reserved water to make smooth curry base.",
+            "Heat oil; splutter mustard, cumin, hing and dried chilis. Pour in yogurt mixture, stir constantly on low heat.",
+            "Add gatte pieces, simmer 8 minutes. Garnish with coriander and serve with roti."
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 30,
+          "servings": 4,
+          "source_url": "https://www.themaharajaexpress.org/blog/top-10-traditional-dishes-of-rajasthan",
+          "author_credit": "The Maharaja Express"
+        },
+        {
+          "name": "Dal Baati Churma",
+          "slug": "dal-baati-churma",
+          "category": "entree",
+          "description": "The soul of Rajasthani cuisine: hard wheat rolls (baati) baked until golden and drenched in ghee, served alongside a fiery five-lentil dal and sweet churma made from crushed baati with jaggery and dry fruits. A complete meal that embodies the spirit of Rajputana.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "whole wheat flour"},
+            {"qty": "1/4 cup", "item": "semolina (sooji)"},
+            {"qty": "4 tbsp", "item": "ghee (for dough)"},
+            {"qty": "1 cup", "item": "mixed lentils (dal makhani mix)"},
+            {"qty": "2", "item": "tomatoes, chopped"},
+            {"qty": "1 tsp", "item": "ginger-garlic paste"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "2 tbsp", "item": "jaggery (for churma)"},
+            {"qty": "2 tbsp", "item": "almonds and raisins"},
+            {"qty": "generous", "item": "ghee for serving"}
+          ],
+          "instructions": [
+            "Mix flour, semolina, ghee, salt; add water gradually to make firm dough. Divide into 12 balls.",
+            "Bake baati in a preheated oven at 180C for 30 minutes, turning once, until golden and hollow-sounding when tapped.",
+            "Cook lentils with tomatoes, ginger-garlic, spices and water in a pressure cooker for 15 minutes.",
+            "For churma: coarsely grind 3 baati, mix with melted ghee, jaggery, cardamom, almonds and raisins.",
+            "Crack open hot baati, dunk generously in ghee. Serve alongside dal and churma on the side."
+          ],
+          "prep_time_mins": 30,
+          "cook_time_mins": 60,
+          "servings": 6,
+          "source_url": "https://www.themaharajaexpress.org/blog/top-10-traditional-dishes-of-rajasthan",
+          "author_credit": "The Maharaja Express"
+        },
+        {
+          "name": "Panchmel Dal",
+          "slug": "panchmel-dal",
+          "category": "entree",
+          "description": "Rajasthan's traditional five-lentil dal — a hearty blend of chana, moong, toor, urad and masoor dal tempered with whole spices, ghee, and a hint of asafoetida. Protein-rich, deeply flavoured and a festive Marwari staple, it pairs beautifully with baati or steamed rice.",
+          "ingredients": [
+            {"qty": "1/4 cup each", "item": "chana dal, moong dal, toor dal, urad dal, masoor dal"},
+            {"qty": "3 tbsp", "item": "ghee"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "1/2 tsp", "item": "mustard seeds"},
+            {"qty": "1 pinch", "item": "asafoetida (hing)"},
+            {"qty": "2", "item": "dried red chilis"},
+            {"qty": "1 tsp", "item": "ginger, grated"},
+            {"qty": "2", "item": "tomatoes, finely chopped"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "1 tsp", "item": "coriander powder"},
+            {"qty": "1 tsp", "item": "garam masala"},
+            {"qty": "1 tbsp", "item": "lemon juice"}
+          ],
+          "instructions": [
+            "Rinse and soak all five dals together for 30 minutes. Drain.",
+            "Pressure cook dals with 4 cups water, turmeric and salt for 4 whistles until soft but distinct.",
+            "Heat ghee in a pan; splutter cumin, mustard, red chilis and hing.",
+            "Add ginger and tomatoes; cook until tomatoes break down.",
+            "Stir in chili powder, coriander and garam masala; cook 1 minute.",
+            "Pour tempering over cooked dal, stir and simmer 5 minutes. Finish with lemon juice and coriander."
+          ],
+          "prep_time_mins": 40,
+          "cook_time_mins": 30,
+          "servings": 5,
+          "source_url": "https://www.themaharajaexpress.org/blog/top-10-traditional-dishes-of-rajasthan",
+          "author_credit": "The Maharaja Express"
+        },
+        {
+          "name": "Ker Sangri",
+          "slug": "ker-sangri",
+          "category": "entree",
+          "description": "A uniquely Rajasthani dry curry combining ker (desert caper berries) and sangri (desert beans from the Khejari tree). Sun-dried and then rehydrated, these indigenous ingredients are cooked with red chilis and spices for an earthy, tangy, and intensely flavored dish.",
+          "ingredients": [
+            {"qty": "1/2 cup", "item": "ker (dried desert capers), soaked overnight"},
+            {"qty": "1 cup", "item": "sangri (dried desert beans), soaked overnight"},
+            {"qty": "3 tbsp", "item": "oil or ghee"},
+            {"qty": "1 tsp", "item": "carom seeds (ajwain)"},
+            {"qty": "2 tsp", "item": "red chili powder"},
+            {"qty": "1 tsp", "item": "coriander powder"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "1 tsp", "item": "dry mango powder (amchur)"},
+            {"qty": "1 tsp", "item": "dried fenugreek leaves (kasuri methi)"},
+            {"qty": "salt", "item": "to taste"}
+          ],
+          "instructions": [
+            "Drain soaked ker and sangri. Boil separately for 10 minutes each; drain.",
+            "Heat ghee in a wide pan; add ajwain and let it splutter.",
+            "Add ker and sangri to the pan; saute on medium heat for 5 minutes.",
+            "Add all spice powders, amchur, kasuri methi and salt; mix well.",
+            "Cook on low heat for 15 minutes, stirring occasionally, until ingredients are well coated and dry.",
+            "Serve as a side dish with dal baati or rotis."
+          ],
+          "prep_time_mins": 10,
+          "cook_time_mins": 30,
+          "servings": 4,
+          "source_url": "https://www.themaharajaexpress.org/blog/top-10-traditional-dishes-of-rajasthan",
+          "author_credit": "The Maharaja Express"
+        },
+        {
+          "name": "Ghevar",
+          "slug": "ghevar",
+          "category": "dessert",
+          "description": "A disc-shaped Rajasthani sweet with a honeycomb-like texture, made by pouring flour batter into a cylinder of hot ghee to create its signature lacy structure. Soaked in sugar syrup and lavishly decorated with silver leaf, saffron cream, and pistachios — it is Jaipur's festive dessert par excellence.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "refined flour (maida)"},
+            {"qty": "1/2 cup", "item": "ghee (cold, for batter)"},
+            {"qty": "2 cups", "item": "ice-cold water"},
+            {"qty": "1.5 cups", "item": "sugar"},
+            {"qty": "1 cup", "item": "water (for syrup)"},
+            {"qty": "pinch", "item": "saffron"},
+            {"qty": "1 cup", "item": "heavy cream"},
+            {"qty": "2 tbsp", "item": "sugar (for cream)"},
+            {"qty": "2 tbsp", "item": "pistachios, sliced"},
+            {"qty": "as needed", "item": "ghee for deep frying"}
+          ],
+          "instructions": [
+            "Whisk cold ghee vigorously with 2 tbsp flour until fluffy. Gradually add ice water and remaining flour to make thin, smooth batter.",
+            "Heat ghee in a deep straight-sided vessel. Pour batter in a thin stream into centre, let it bubble and collect — scrape back edges. Repeat layers until disc forms.",
+            "Carefully remove ghevar; drain on a rack.",
+            "Make one-string sugar syrup; soak ghevar for 2 minutes, remove.",
+            "Whip cream with sugar and saffron; spread on top. Decorate with pistachios and silver leaf."
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 40,
+          "servings": 8,
+          "source_url": "https://www.themaharajaexpress.org/blog/top-10-traditional-dishes-of-rajasthan",
+          "author_credit": "The Maharaja Express"
+        },
+        {
+          "name": "Mawa Kachori",
+          "slug": "mawa-kachori",
+          "category": "dessert",
+          "description": "A royal Jaipur dessert — flaky deep-fried pastry filled with khoya (reduced milk solids) and fragrant dry fruits, then dipped in sugar syrup. This indulgent sweet bridges the line between savoury snack and dessert and is a signature of the city's famous sweet shops.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "refined flour (maida)"},
+            {"qty": "4 tbsp", "item": "ghee (for dough)"},
+            {"qty": "200g", "item": "khoya (mawa)"},
+            {"qty": "3 tbsp", "item": "powdered sugar"},
+            {"qty": "1/4 cup", "item": "mixed dry fruits (almonds, cashews, raisins)"},
+            {"qty": "1/2 tsp", "item": "cardamom powder"},
+            {"qty": "1.5 cups", "item": "sugar (for syrup)"},
+            {"qty": "1 cup", "item": "water"},
+            {"qty": "as needed", "item": "ghee for deep frying"}
+          ],
+          "instructions": [
+            "Rub ghee into flour until breadcrumb texture; add water gradually to make firm dough. Rest 20 minutes.",
+            "Crumble and lightly roast khoya until soft. Off heat, mix in powdered sugar, dry fruits and cardamom. Cool.",
+            "Divide dough into 12 balls. Roll each into a small circle, fill with khoya mixture, seal tightly.",
+            "Deep fry on low-medium heat until golden, about 10 minutes. Do not rush — they must cook through.",
+            "Make sugar syrup; dip warm kachoris for 1 minute. Remove and cool slightly before serving."
+          ],
+          "prep_time_mins": 30,
+          "cook_time_mins": 30,
+          "servings": 12,
+          "source_url": "https://www.themaharajaexpress.org/blog/top-10-traditional-dishes-of-rajasthan",
+          "author_credit": "The Maharaja Express"
+        },
+        {
+          "name": "Masala Chai",
+          "slug": "masala-chai-jaipur",
+          "category": "drink",
+          "description": "Rajasthan's beloved spiced tea, brewed strong with cardamom, ginger, cinnamon and cloves — warming enough for cool desert nights, aromatic enough for a royal welcome. Poured from height to create a frothy top, and served sweet in small clay cups.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "water"},
+            {"qty": "1 cup", "item": "full-fat milk"},
+            {"qty": "2 tsp", "item": "loose black tea (CTC or Assam)"},
+            {"qty": "4", "item": "green cardamom pods, lightly crushed"},
+            {"qty": "1/2 inch", "item": "fresh ginger, sliced"},
+            {"qty": "1 small stick", "item": "cinnamon"},
+            {"qty": "2", "item": "cloves"},
+            {"qty": "2 tsp", "item": "sugar (or to taste)"}
+          ],
+          "instructions": [
+            "Bring water to a boil in a saucepan with cardamom, ginger, cinnamon and cloves.",
+            "Add tea leaves; boil for 2 minutes until deeply coloured.",
+            "Add milk and sugar; bring back to a rolling boil.",
+            "Reduce heat and simmer 2 minutes. Strain into cups.",
+            "Pour from a height to froth. Serve immediately."
+          ],
+          "prep_time_mins": 2,
+          "cook_time_mins": 8,
+          "servings": 2,
+          "source_url": "https://rajasthantourexpert.com/famous-foods-in-jaipur/",
+          "author_credit": "Rajasthan Tour Expert"
+        }
+      ]
+    },
+    {
+      "slug": "kolkata",
+      "name": "Kolkata",
+      "description": "The City of Joy serves food that reflects its soul — from mustard-sharp vegetable curries and spongy rasgullas to street-side phuchka that defines the Bengali palate.",
+      "image_file": "kolkata.jpg",
+      "recipes": [
+        {
+          "name": "Phuchka",
+          "slug": "phuchka",
+          "category": "appetizer",
+          "description": "Kolkata's version of pani puri — crispy hollow semolina shells filled with spiced boiled potato and chickpeas, then dunked in intensely tangy tamarind water spiked with black salt and roasted cumin. Lighter and crisper than its counterparts, phuchka is a Kolkata institution.",
+          "ingredients": [
+            {"qty": "20", "item": "phuchka shells (semolina puris)"},
+            {"qty": "3 medium", "item": "potatoes, boiled and mashed"},
+            {"qty": "1/2 cup", "item": "boiled chickpeas (kabuli chana)"},
+            {"qty": "2 tsp", "item": "tamarind paste"},
+            {"qty": "2 cups", "item": "cold water"},
+            {"qty": "1 tsp", "item": "roasted cumin powder"},
+            {"qty": "1 tsp", "item": "black salt (kala namak)"},
+            {"qty": "1 tsp", "item": "chaat masala"},
+            {"qty": "2", "item": "green chilis, finely chopped"},
+            {"qty": "2 tbsp", "item": "fresh coriander, chopped"}
+          ],
+          "instructions": [
+            "Mix tamarind paste with cold water, cumin powder, black salt and chaat masala. Taste and adjust — should be very tangy.",
+            "Combine mashed potato, chickpeas, green chili, coriander and a pinch of black salt for the filling.",
+            "Just before serving, poke a hole in each phuchka shell with your thumb.",
+            "Fill with a small spoon of potato mixture.",
+            "Dunk immediately in tamarind water and eat in one bite."
+          ],
+          "prep_time_mins": 15,
+          "cook_time_mins": 0,
+          "servings": 4,
+          "source_url": "https://traveltriangle.com/blog/kolkata-cuisine/",
+          "author_credit": "Travel Triangle"
+        },
+        {
+          "name": "Posto Bora",
+          "slug": "posto-bora",
+          "category": "appetizer",
+          "description": "Crispy fritters made with white poppy seed (posto) paste mixed with onion, green chili and spices, then fried until golden. Posto is central to Bengali cooking, and these light, nutty fritters are a beloved snack eaten with plain rice or served as a side.",
+          "ingredients": [
+            {"qty": "4 tbsp", "item": "white poppy seeds (posto), soaked 30 min"},
+            {"qty": "1 medium", "item": "onion, finely chopped"},
+            {"qty": "2", "item": "green chilis, finely chopped"},
+            {"qty": "2 tbsp", "item": "rice flour (as binder)"},
+            {"qty": "1/4 tsp", "item": "turmeric"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "as needed", "item": "mustard oil for frying"}
+          ],
+          "instructions": [
+            "Drain soaked poppy seeds and grind to a coarse paste (do not over-process).",
+            "Mix paste with onion, chili, rice flour, turmeric and salt until combined.",
+            "Heat mustard oil in a pan on medium heat.",
+            "Drop tablespoon-sized portions into oil; flatten slightly. Fry 3-4 minutes per side until golden.",
+            "Drain and serve hot with steamed rice and mustard chutney."
+          ],
+          "prep_time_mins": 35,
+          "cook_time_mins": 15,
+          "servings": 4,
+          "source_url": "https://www.orangewayfarer.com/most-popular-bengali-dishes-kolkata/",
+          "author_credit": "Orange Wayfarer"
+        },
+        {
+          "name": "Beguni",
+          "slug": "beguni",
+          "category": "appetizer",
+          "description": "Thin slices of eggplant (begun) dipped in a spiced gram flour batter and deep-fried until deeply crisp. Sold at every Kolkata street corner during monsoon evenings, beguni is traditionally paired with muri (puffed rice) and a cup of adrak chai.",
+          "ingredients": [
+            {"qty": "1 large", "item": "eggplant, sliced 1/2 cm thick"},
+            {"qty": "1 cup", "item": "gram flour (besan)"},
+            {"qty": "2 tbsp", "item": "rice flour"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "1/2 tsp", "item": "red chili powder"},
+            {"qty": "1/4 tsp", "item": "nigella seeds (kalonji)"},
+            {"qty": "1 pinch", "item": "baking soda"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "as needed", "item": "mustard oil for deep frying"}
+          ],
+          "instructions": [
+            "Rub eggplant slices lightly with salt and turmeric; set aside 10 minutes.",
+            "Whisk besan, rice flour, chili powder, nigella seeds, baking soda and salt with water to a smooth pancake-consistency batter.",
+            "Pat eggplant slices dry. Heat mustard oil until smoking, reduce to medium.",
+            "Dip each slice in batter and lower gently into hot oil.",
+            "Fry 3-4 minutes per side until golden and crispy. Drain.",
+            "Serve hot with muri and kasundi (Bengali mustard sauce)."
+          ],
+          "prep_time_mins": 15,
+          "cook_time_mins": 20,
+          "servings": 4,
+          "source_url": "https://www.orangewayfarer.com/most-popular-bengali-dishes-kolkata/",
+          "author_credit": "Orange Wayfarer"
+        },
+        {
+          "name": "Aloo Posto",
+          "slug": "aloo-posto",
+          "category": "entree",
+          "description": "Potatoes simmered in a rich, creamy paste of ground poppy seeds (posto) with nigella and green chili — one of the most iconic and comforting dishes of Bengali home cooking. Served with warm rice and a drizzle of mustard oil, it is minimalism at its most satisfying.",
+          "ingredients": [
+            {"qty": "4 medium", "item": "potatoes, peeled and cubed"},
+            {"qty": "4 tbsp", "item": "white poppy seeds (posto), soaked 30 min"},
+            {"qty": "3", "item": "green chilis"},
+            {"qty": "3 tbsp", "item": "mustard oil"},
+            {"qty": "1/2 tsp", "item": "nigella seeds (kalonji)"},
+            {"qty": "1/4 tsp", "item": "turmeric"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "2 tbsp", "item": "fresh coriander, chopped"}
+          ],
+          "instructions": [
+            "Drain soaked poppy seeds and grind with 2 green chilis and a splash of water into a smooth paste.",
+            "Heat mustard oil until smoking; reduce to medium, add nigella seeds and slit remaining chili.",
+            "Add potato cubes; saute 5 minutes until lightly browned. Add turmeric and salt.",
+            "Add 1/2 cup water, cover and cook 10 minutes until potatoes are tender.",
+            "Stir in poppy seed paste; cook uncovered 5 minutes until sauce clings to potatoes.",
+            "Garnish with coriander. Serve with steamed white rice."
+          ],
+          "prep_time_mins": 35,
+          "cook_time_mins": 20,
+          "servings": 4,
+          "source_url": "https://www.orangewayfarer.com/most-popular-bengali-dishes-kolkata/",
+          "author_credit": "Orange Wayfarer"
+        },
+        {
+          "name": "Shukto",
+          "slug": "shukto",
+          "category": "entree",
+          "description": "A subtly bitter-sweet Bengali medley of mixed vegetables — including bitter gourd, drumstick, potato and raw banana — cooked in a delicate milk-and-poppy-seed gravy tempered with panch phoron. Traditionally served as the first course of a Bengali meal to open the appetite.",
+          "ingredients": [
+            {"qty": "1 small", "item": "bitter gourd, sliced"},
+            {"qty": "1", "item": "drumstick, cut in 2-inch pieces"},
+            {"qty": "1 medium", "item": "potato, cubed"},
+            {"qty": "1 small", "item": "raw banana, cubed"},
+            {"qty": "1 small", "item": "eggplant, cubed"},
+            {"qty": "1 tsp", "item": "panch phoron (five-spice blend)"},
+            {"qty": "2 tbsp", "item": "poppy seeds, ground to paste"},
+            {"qty": "1 tbsp", "item": "mustard paste"},
+            {"qty": "1 tsp", "item": "ginger paste"},
+            {"qty": "1 cup", "item": "milk"},
+            {"qty": "2 tbsp", "item": "ghee"},
+            {"qty": "salt and sugar", "item": "to taste"}
+          ],
+          "instructions": [
+            "Rub bitter gourd with salt; set aside 10 minutes to reduce bitterness. Rinse.",
+            "Heat ghee in a wide pan; fry each vegetable separately until lightly golden. Set aside.",
+            "In same pan add panch phoron and bay leaf; let it splutter. Add ginger, poppy and mustard pastes; cook 2 minutes.",
+            "Add all vegetables and 1/2 cup water; simmer 10 minutes.",
+            "Pour in milk, salt and a pinch of sugar. Simmer 5 minutes until gravy thickens slightly.",
+            "Serve as first course with steamed rice."
+          ],
+          "prep_time_mins": 25,
+          "cook_time_mins": 30,
+          "servings": 5,
+          "source_url": "https://traveltriangle.com/blog/kolkata-cuisine/",
+          "author_credit": "Travel Triangle"
+        },
+        {
+          "name": "Dhokar Dalna",
+          "slug": "dhokar-dalna",
+          "category": "entree",
+          "description": "Savoury spiced lentil cakes (dhoka), deep-fried to a crisp crust and then simmered in a ginger-tomato gravy with warming whole spices. A celebrated no-onion, no-garlic Bengali dish that proves vegetarian cooking can be as rich and ceremonial as any meat curry.",
+          "ingredients": [
+            {"qty": "1 cup", "item": "chana dal, soaked 4 hours"},
+            {"qty": "1 tsp", "item": "ginger, grated"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "1/2 tsp", "item": "asafoetida (hing)"},
+            {"qty": "3 medium", "item": "potatoes, cubed"},
+            {"qty": "2", "item": "tomatoes, pureed"},
+            {"qty": "2", "item": "bay leaves"},
+            {"qty": "4", "item": "cloves"},
+            {"qty": "1 stick", "item": "cinnamon"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1 tsp", "item": "garam masala"},
+            {"qty": "3 tbsp", "item": "mustard oil"},
+            {"qty": "2 tbsp", "item": "ghee"}
+          ],
+          "instructions": [
+            "Drain chana dal, grind to coarse paste. Mix with ginger, cumin, turmeric, hing and salt.",
+            "Heat 1 tbsp oil; cook dal mixture 5 minutes stirring until it comes together. Spread in a greased tray, cool and cut into diamonds.",
+            "Deep fry diamonds until golden and crisp. Set aside.",
+            "In same oil, saute potato cubes until golden. Remove.",
+            "Add whole spices and bay leaves; add tomato puree, chili, and salt. Cook until oil separates.",
+            "Add potatoes and 1.5 cups water; simmer 10 minutes until potatoes are tender.",
+            "Gently add fried dhokas; simmer 5 minutes. Finish with ghee and garam masala. Serve with luchi or rice."
+          ],
+          "prep_time_mins": 240,
+          "cook_time_mins": 45,
+          "servings": 5,
+          "source_url": "https://traveltriangle.com/blog/kolkata-cuisine/",
+          "author_credit": "Travel Triangle"
+        },
+        {
+          "name": "Chhanar Dalna",
+          "slug": "chhanar-dalna",
+          "category": "entree",
+          "description": "Freshly made chhana (paneer) shaped into balls or cubes, lightly fried and then simmered in a gently-spiced tomato and ginger gravy with a Bengali touch of sugar and ghee. Delicate, deeply satisfying, and a centrepiece at Bengali vegetarian feasts.",
+          "ingredients": [
+            {"qty": "1 litre", "item": "full-fat milk (to make chhana)"},
+            {"qty": "3 tbsp", "item": "lemon juice"},
+            {"qty": "2 tbsp", "item": "flour (for binding)"},
+            {"qty": "2 medium", "item": "tomatoes, pureed"},
+            {"qty": "1 tsp", "item": "ginger, grated"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "2", "item": "bay leaves"},
+            {"qty": "4", "item": "green cardamom pods"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "1 tsp", "item": "sugar"},
+            {"qty": "3 tbsp", "item": "mustard oil"},
+            {"qty": "1 tbsp", "item": "ghee"}
+          ],
+          "instructions": [
+            "Boil milk; add lemon juice to curdle. Strain through muslin; rinse chhana under cold water and press out liquid.",
+            "Knead chhana with flour until smooth; shape into 10 balls.",
+            "Shallow fry balls in mustard oil until golden on all sides. Remove carefully.",
+            "In same oil, splutter cumin, bay leaves and cardamom.",
+            "Add ginger and tomato puree with chili, turmeric, sugar and salt. Cook 8 minutes until oil separates.",
+            "Add 2 cups water; bring to boil. Add chhana balls; simmer 8 minutes.",
+            "Finish with ghee. Serve with luchi or steamed rice."
+          ],
+          "prep_time_mins": 30,
+          "cook_time_mins": 40,
+          "servings": 4,
+          "source_url": "https://www.orangewayfarer.com/most-popular-bengali-dishes-kolkata/",
+          "author_credit": "Orange Wayfarer"
+        },
+        {
+          "name": "Mishti Doi",
+          "slug": "mishti-doi",
+          "category": "dessert",
+          "description": "Bengal's iconic sweet curd — whole milk reduced, sweetened with jaggery for a caramel undertone, then set overnight in terracotta pots that absorb excess moisture and impart an earthy note. The result is thick, creamy and subtly complex in a way no plain yogurt can match.",
+          "ingredients": [
+            {"qty": "1 litre", "item": "full-fat milk"},
+            {"qty": "4 tbsp", "item": "jaggery (nolen gur preferred) or brown sugar"},
+            {"qty": "2 tbsp", "item": "condensed milk"},
+            {"qty": "2 tbsp", "item": "existing yogurt (as starter)"}
+          ],
+          "instructions": [
+            "Simmer milk on medium heat, stirring, until reduced by one-third — about 30 minutes.",
+            "Add jaggery and condensed milk; stir until dissolved. Cool to 40C (lukewarm — comfortable to hold).",
+            "Whisk in yogurt starter gently until just combined.",
+            "Pour into terracotta cups or a deep earthenware bowl.",
+            "Cover loosely; keep in a warm spot for 8-10 hours until set. Refrigerate before serving."
+          ],
+          "prep_time_mins": 10,
+          "cook_time_mins": 30,
+          "servings": 6,
+          "source_url": "https://traveltriangle.com/blog/kolkata-cuisine/",
+          "author_credit": "Travel Triangle"
+        },
+        {
+          "name": "Rosogolla",
+          "slug": "rosogolla",
+          "category": "dessert",
+          "description": "Kolkata's most beloved sweet — pillowy soft sponge balls made from freshly curdled chena (cottage cheese) cooked in thin sugar syrup until they double in size. Light, juicy and not overly sweet, rosogolla is the sweet that gave Kolkata its GI tag and its heart.",
+          "ingredients": [
+            {"qty": "1 litre", "item": "full-fat milk"},
+            {"qty": "3 tbsp", "item": "lemon juice or white vinegar"},
+            {"qty": "1 tsp", "item": "semolina (maida can substitute)"},
+            {"qty": "2 cups", "item": "sugar"},
+            {"qty": "5 cups", "item": "water"},
+            {"qty": "2", "item": "green cardamom pods"},
+            {"qty": "1 tsp", "item": "rose water (optional)"}
+          ],
+          "instructions": [
+            "Boil milk; add lemon juice off heat. Once curdled, strain through muslin cloth. Rinse chena with cold water to remove acidity.",
+            "Hang muslin for 30 minutes to drain. Chena must be moist but not wet.",
+            "Knead chena with semolina for 10 minutes until smooth and no longer sticky. Roll into smooth balls.",
+            "Boil sugar and water with cardamom in a wide pressure cooker. Add chena balls.",
+            "Pressure cook for 10 minutes. Allow to cool before opening. Balls should have doubled in size.",
+            "Chill in syrup for at least 1 hour before serving."
+          ],
+          "prep_time_mins": 45,
+          "cook_time_mins": 20,
+          "servings": 12,
+          "source_url": "https://www.orangewayfarer.com/most-popular-bengali-dishes-kolkata/",
+          "author_credit": "Orange Wayfarer"
+        },
+        {
+          "name": "Adrak Chai",
+          "slug": "adrak-chai-kolkata",
+          "category": "drink",
+          "description": "Kolkata's favourite cup — strong black tea simmered with a generous knob of fresh ginger, served sweet and milky in small glasses at every street corner. The cha-stalls of College Street and Park Street are legendary for this warming brew.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "water"},
+            {"qty": "1 cup", "item": "full-fat milk"},
+            {"qty": "2 tsp", "item": "Darjeeling or Assam CTC tea"},
+            {"qty": "1 inch", "item": "fresh ginger, roughly pounded"},
+            {"qty": "2 tsp", "item": "sugar (or to taste)"}
+          ],
+          "instructions": [
+            "Bring water to a rolling boil with the pounded ginger.",
+            "Add tea leaves; boil for 3 minutes.",
+            "Add milk; bring back to boil, then simmer 1 minute.",
+            "Add sugar and stir.",
+            "Strain into glasses and serve immediately."
+          ],
+          "prep_time_mins": 2,
+          "cook_time_mins": 8,
+          "servings": 2,
+          "source_url": "https://traveltriangle.com/blog/kolkata-cuisine/",
+          "author_credit": "Travel Triangle"
+        }
+      ]
+    },
+    {
+      "slug": "hyderabad",
+      "name": "Hyderabad",
+      "description": "The City of Pearls and Nizams, where royal kitchens perfected the dum pukht technique and gifted the world a legacy of aromatic rice, nuanced curries and the unforgettable Qubani ka Meetha.",
+      "image_file": "hyderabad.jpg",
+      "recipes": [
+        {
+          "name": "Sakinalu",
+          "slug": "sakinalu",
+          "category": "appetizer",
+          "description": "A traditional Telangana crispy snack made from rice flour and sesame seeds, intricately shaped into rings by hand. Sakinalu are prepared especially during the harvest festival of Sankranti — crunchy, lightly salted and utterly addictive as a tea-time snack.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "rice flour"},
+            {"qty": "3 tbsp", "item": "white sesame seeds"},
+            {"qty": "1 tsp", "item": "carom seeds (ajwain)"},
+            {"qty": "1/2 tsp", "item": "salt"},
+            {"qty": "1 tbsp", "item": "oil (for dough)"},
+            {"qty": "as needed", "item": "warm water"},
+            {"qty": "as needed", "item": "oil for deep frying"}
+          ],
+          "instructions": [
+            "Mix rice flour, sesame seeds, ajwain, salt and oil. Add warm water gradually to make a soft, pliable dough.",
+            "Take a small portion and roll between palms into a thin rope about 8 inches long.",
+            "Shape into a circle, joining the ends. Or use a murukku press for a uniform result.",
+            "Deep fry in medium-hot oil until light golden and completely crispy — about 5 minutes.",
+            "Drain and cool completely before storing. Keeps well for 2 weeks in an airtight jar."
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 30,
+          "servings": 6,
+          "source_url": "https://www.holidify.com/pages/food-of-telangana-1654.html",
+          "author_credit": "Holidify — Food of Telangana"
+        },
+        {
+          "name": "Baghare Baingan",
+          "slug": "baghare-baingan",
+          "category": "appetizer",
+          "description": "Small baby eggplants slit and stuffed with a roasted peanut, sesame and coconut masala, then braised in a tangy tamarind-enriched gravy. Described as the jewel of Hyderabadi vegetarian food, this dish is an essential partner to biryani.",
+          "ingredients": [
+            {"qty": "12", "item": "small baby eggplants (brinjal)"},
+            {"qty": "3 tbsp", "item": "roasted peanuts"},
+            {"qty": "2 tbsp", "item": "roasted sesame seeds"},
+            {"qty": "2 tbsp", "item": "desiccated coconut"},
+            {"qty": "2 tbsp", "item": "tamarind pulp"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "1 tsp", "item": "coriander seeds"},
+            {"qty": "1/2 tsp", "item": "red chili powder"},
+            {"qty": "1/4 tsp", "item": "turmeric"},
+            {"qty": "1 tsp", "item": "mustard seeds"},
+            {"qty": "10", "item": "curry leaves"},
+            {"qty": "2 tbsp", "item": "oil"}
+          ],
+          "instructions": [
+            "Dry roast peanuts, sesame, coconut, cumin and coriander until fragrant. Cool and grind to coarse powder.",
+            "Mix ground masala with tamarind, chili, turmeric and salt. Stuff generously into slit eggplants.",
+            "Heat oil; splutter mustard and curry leaves. Add stuffed eggplants carefully.",
+            "Cover and cook on low heat for 15 minutes, turning gently, until eggplants are tender.",
+            "Add any remaining masala and 1/4 cup water; simmer 5 minutes. Serve with biryani or roti."
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 30,
+          "servings": 4,
+          "source_url": "https://www.indianhealthyrecipes.com/bagara-baingan-recipe/",
+          "author_credit": "Swasthi Shreekanth — Indian Healthy Recipes"
+        },
+        {
+          "name": "Sarva Pindi",
+          "slug": "sarva-pindi",
+          "category": "appetizer",
+          "description": "A traditional Telangana savoury pancake made from rice flour and chana dal, spiced with chili and cumin and crisped on a tawa with sesame oil. Nutritious, quick and hearty, this breakfast staple has been eaten in the region for generations.",
+          "ingredients": [
+            {"qty": "1.5 cups", "item": "rice flour"},
+            {"qty": "1/4 cup", "item": "chana dal, soaked 1 hour"},
+            {"qty": "2", "item": "green chilis, finely chopped"},
+            {"qty": "1/2 tsp", "item": "cumin seeds"},
+            {"qty": "1/4 tsp", "item": "turmeric"},
+            {"qty": "2 tbsp", "item": "fresh coriander, chopped"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "2 tbsp", "item": "sesame oil"},
+            {"qty": "as needed", "item": "water"}
+          ],
+          "instructions": [
+            "Mix rice flour, drained chana dal, chilis, cumin, turmeric, coriander and salt.",
+            "Add water gradually to make a thick batter (slightly thicker than pancake batter).",
+            "Heat a tawa; grease with sesame oil. Pour a ladleful of batter; spread into a thick circle.",
+            "Make small holes on surface; drizzle oil into them and around edges.",
+            "Cook on medium heat until bottom is crispy (about 4 minutes); flip and cook 3 minutes more.",
+            "Serve hot with peanut chutney or coconut chutney."
+          ],
+          "prep_time_mins": 70,
+          "cook_time_mins": 20,
+          "servings": 4,
+          "source_url": "https://www.indianeagle.com/traveldiary/famous-food-of-telangana/",
+          "author_credit": "Indian Eagle"
+        },
+        {
+          "name": "Hyderabadi Vegetable Biryani",
+          "slug": "hyderabadi-vegetable-biryani",
+          "category": "entree",
+          "description": "A vegetarian homage to Hyderabad's most iconic dish — partially-cooked basmati rice layered over marinated mixed vegetables and paneer, then slow-cooked using the royal dum pukht technique. Fragrant with saffron, rose water and kewra, every grain carries Nizami royalty.",
+          "ingredients": [
+            {"qty": "500g", "item": "basmati rice, soaked 30 min"},
+            {"qty": "3 cups", "item": "mixed vegetables (carrot, beans, peas, cauliflower, potato)"},
+            {"qty": "200g", "item": "paneer, cubed"},
+            {"qty": "1 cup", "item": "yogurt"},
+            {"qty": "3 large", "item": "onions, sliced and fried golden (birista)"},
+            {"qty": "4 tbsp", "item": "ghee"},
+            {"qty": "1 pinch", "item": "saffron soaked in 4 tbsp warm milk"},
+            {"qty": "2 tbsp", "item": "rose water"},
+            {"qty": "1 tbsp", "item": "kewra water"},
+            {"qty": "2 tbsp", "item": "ginger-garlic paste"},
+            {"qty": "whole spices", "item": "bay leaves, cardamom, cinnamon, cloves, star anise"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1/2 cup", "item": "mint and coriander leaves"},
+            {"qty": "salt", "item": "to taste"}
+          ],
+          "instructions": [
+            "Marinate vegetables and paneer with yogurt, ginger-garlic, chili, salt, half the fried onions and herbs for 1 hour.",
+            "Par-boil rice in salted water with whole spices until 70% cooked. Drain.",
+            "In a heavy pot, layer: marinated vegetables at base, then rice, then remaining fried onions, herbs, ghee, saffron milk, rose water and kewra.",
+            "Seal pot tightly with aluminium foil and a tight lid. Place on a heavy tawa over lowest heat.",
+            "Cook on dum for 30 minutes. Rest 10 minutes before opening.",
+            "Gently fold from sides, not centre. Serve with raita and Mirchi ka Salan."
+          ],
+          "prep_time_mins": 90,
+          "cook_time_mins": 60,
+          "servings": 6,
+          "source_url": "https://www.vahrehvah.com/indianfood/popular-telangana-hyderabadi-recipes",
+          "author_credit": "Vahrehvah — Sanjay Thumma"
+        },
+        {
+          "name": "Khatti Dal",
+          "slug": "khatti-dal",
+          "category": "entree",
+          "description": "Hyderabad's beloved tangy yellow lentil dal, brightened with tamarind pulp and tempered with mustard seeds, curry leaves and dried red chilis. Everyday Hyderabadi home food that pairs perfectly with steamed rice, biryani or khichdi.",
+          "ingredients": [
+            {"qty": "1 cup", "item": "toor dal (split pigeon peas)"},
+            {"qty": "3 tbsp", "item": "tamarind pulp"},
+            {"qty": "2", "item": "tomatoes, chopped"},
+            {"qty": "1 tsp", "item": "turmeric"},
+            {"qty": "2", "item": "green chilis, slit"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "3 tbsp", "item": "oil or ghee"},
+            {"qty": "1 tsp", "item": "mustard seeds"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "3", "item": "dried red chilis"},
+            {"qty": "10", "item": "curry leaves"},
+            {"qty": "4", "item": "garlic cloves, crushed"},
+            {"qty": "salt", "item": "to taste"}
+          ],
+          "instructions": [
+            "Pressure cook dal with turmeric, tomatoes, green chilis and 3 cups water for 4 whistles until mushy.",
+            "Mash dal lightly with a whisk. Add tamarind pulp, chili powder and salt; simmer 5 minutes.",
+            "Heat oil in a small pan; splutter mustard and cumin seeds. Add garlic, dried chilis and curry leaves.",
+            "Pour tempering over the dal. Cover and leave for 5 minutes to absorb flavours.",
+            "Serve hot with steamed rice or chapati."
+          ],
+          "prep_time_mins": 10,
+          "cook_time_mins": 30,
+          "servings": 5,
+          "source_url": "https://www.indianhealthyrecipes.com/bagara-baingan-recipe/",
+          "author_credit": "Swasthi Shreekanth — Indian Healthy Recipes"
+        },
+        {
+          "name": "Tamatar Ka Kut",
+          "slug": "tamatar-ka-kut",
+          "category": "entree",
+          "description": "An exquisite Hyderabadi tomato stew enriched with roasted peanut and coconut paste, tempered with mustard seeds and curry leaves. Traditionally eaten with rice and boiled eggs (omitted here for a purely vegetarian version), this dish showcases the subtle, slow-built flavours that define Nizami cooking.",
+          "ingredients": [
+            {"qty": "6 large", "item": "ripe tomatoes, roughly chopped"},
+            {"qty": "3 tbsp", "item": "roasted peanuts"},
+            {"qty": "2 tbsp", "item": "roasted sesame seeds"},
+            {"qty": "2 tbsp", "item": "desiccated coconut"},
+            {"qty": "1 tbsp", "item": "tamarind pulp"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "1 tsp", "item": "mustard seeds"},
+            {"qty": "10", "item": "curry leaves"},
+            {"qty": "3", "item": "dried red chilis"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "3 tbsp", "item": "oil"},
+            {"qty": "salt", "item": "to taste"}
+          ],
+          "instructions": [
+            "Grind peanuts, sesame and coconut to a coarse powder.",
+            "Blend tomatoes to a puree; simmer in a pot with turmeric, salt and 1 cup water for 15 minutes.",
+            "Stir in ground paste and tamarind; simmer 10 minutes until thick and glossy.",
+            "Heat oil in a small pan; splutter mustard, cumin, dried chilis and curry leaves.",
+            "Pour tempering over the kut. Adjust salt.",
+            "Serve hot with steamed rice."
+          ],
+          "prep_time_mins": 15,
+          "cook_time_mins": 30,
+          "servings": 5,
+          "source_url": "https://www.vahrehvah.com/indianfood/popular-telangana-hyderabadi-recipes",
+          "author_credit": "Vahrehvah — Sanjay Thumma"
+        },
+        {
+          "name": "Mirchi ka Salan",
+          "slug": "mirchi-ka-salan",
+          "category": "entree",
+          "description": "Long mild green chilis braised in a luscious sauce of roasted peanuts, sesame, coconut and tamarind — the traditional accompaniment to Hyderabadi biryani. The interplay of nutty, tangy and gently fiery flavours makes this curry irresistible on its own.",
+          "ingredients": [
+            {"qty": "8", "item": "long mild green chilis (Bhavnagri)"},
+            {"qty": "3 tbsp", "item": "roasted peanuts"},
+            {"qty": "2 tbsp", "item": "roasted sesame seeds"},
+            {"qty": "2 tbsp", "item": "desiccated coconut"},
+            {"qty": "2 tbsp", "item": "tamarind pulp"},
+            {"qty": "2 medium", "item": "onions, sliced and roasted"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "1 tsp", "item": "mustard seeds"},
+            {"qty": "10", "item": "curry leaves"},
+            {"qty": "1/2 tsp", "item": "red chili powder"},
+            {"qty": "1/4 tsp", "item": "turmeric"},
+            {"qty": "2 tbsp", "item": "oil"},
+            {"qty": "salt", "item": "to taste"}
+          ],
+          "instructions": [
+            "Roast peanuts, sesame, coconut and roasted onions together; blend with tamarind and a little water to smooth paste.",
+            "Fry whole chilis in oil until blistered. Remove and set aside.",
+            "In same oil, splutter mustard, cumin and curry leaves. Add chili and turmeric powder.",
+            "Add the peanut-sesame paste; cook 10 minutes on medium heat until oil separates.",
+            "Add 1 cup water and salt; bring to boil. Add fried chilis; simmer 10 minutes.",
+            "Serve warm alongside biryani or with naan."
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 30,
+          "servings": 4,
+          "source_url": "https://www.whiskaffair.com/hyderabadi-mirchi-ka-salan/",
+          "author_credit": "Whiskaffair — Manali Luther"
+        },
+        {
+          "name": "Qubani ka Meetha",
+          "slug": "qubani-ka-meetha",
+          "category": "dessert",
+          "description": "Dried apricots slow-cooked until they melt into a glossy, amber compote, enriched with ghee and saffron, topped with fresh cream and slivered almonds. A signature dessert at Hyderabadi weddings, this dish epitomises the refined elegance of Nizami cuisine.",
+          "ingredients": [
+            {"qty": "250g", "item": "dried apricots (qubani), soaked overnight"},
+            {"qty": "1/4 cup", "item": "sugar (adjust to taste)"},
+            {"qty": "1 tbsp", "item": "ghee"},
+            {"qty": "1 pinch", "item": "saffron"},
+            {"qty": "2 tbsp", "item": "blanched almonds, slivered"},
+            {"qty": "1/2 cup", "item": "fresh cream or whipped cream (to serve)"}
+          ],
+          "instructions": [
+            "Drain soaked apricots; reserve the soaking water. Remove and crack the stones to extract the kernels.",
+            "Simmer apricots in 1 cup soaking water until very soft, about 20 minutes.",
+            "Add sugar, ghee and saffron; cook on medium heat, mashing gently, until compote thickens — about 15 minutes.",
+            "Stir in apricot kernels and half the almonds.",
+            "Cool to room temperature or chill. Serve topped with cream and remaining slivered almonds."
+          ],
+          "prep_time_mins": 480,
+          "cook_time_mins": 35,
+          "servings": 6,
+          "source_url": "https://www.vahrehvah.com/indianfood/popular-telangana-hyderabadi-recipes",
+          "author_credit": "Vahrehvah — Sanjay Thumma"
+        },
+        {
+          "name": "Hyderabadi Sweet Lassi",
+          "slug": "hyderabadi-sweet-lassi",
+          "category": "drink",
+          "description": "Hyderabad's beloved street version of lassi, blended with Roohafza — a concentrated rose-flavoured syrup — for a vivid pink, cool and refreshing drink. Sold in tall glasses at Old City food stalls, especially popular during Ramzan and the sweltering summer months.",
+          "ingredients": [
+            {"qty": "1 cup", "item": "thick yogurt"},
+            {"qty": "1/2 cup", "item": "cold milk"},
+            {"qty": "3 tbsp", "item": "Roohafza rose syrup"},
+            {"qty": "2 tsp", "item": "sugar (optional, to taste)"},
+            {"qty": "1/2 cup", "item": "crushed ice"}
+          ],
+          "instructions": [
+            "Combine yogurt, milk, Roohafza and sugar in a blender.",
+            "Blend for 1 minute until frothy.",
+            "Add crushed ice and blend briefly.",
+            "Pour into tall glasses. Serve immediately."
+          ],
+          "prep_time_mins": 5,
+          "cook_time_mins": 0,
+          "servings": 2,
+          "source_url": "https://www.siasat.com/8-lesser-known-indian-beverages-hyderabadis-have-you-tried-them-3261024/",
+          "author_credit": "Siasat Daily"
+        },
+        {
+          "name": "Badam ka Sherbet",
+          "slug": "badam-ka-sherbet",
+          "category": "drink",
+          "description": "A nourishing almond-based chilled drink made from soaked and ground almonds blended with saffron, rose water and cold milk. This Nizami sherbet is rich, cooling and aromatic — an elegant Hyderabadi summer refreshment with centuries of royal heritage.",
+          "ingredients": [
+            {"qty": "1/4 cup", "item": "raw almonds, soaked overnight and peeled"},
+            {"qty": "2 cups", "item": "cold milk"},
+            {"qty": "2 tbsp", "item": "sugar"},
+            {"qty": "1 pinch", "item": "saffron, dissolved in 1 tbsp warm milk"},
+            {"qty": "1 tsp", "item": "rose water"},
+            {"qty": "1/4 tsp", "item": "cardamom powder"},
+            {"qty": "ice cubes", "item": "to serve"}
+          ],
+          "instructions": [
+            "Blend soaked, peeled almonds with a splash of milk until completely smooth.",
+            "Add remaining milk, sugar, saffron milk, rose water and cardamom.",
+            "Blend until frothy and well combined.",
+            "Strain through a fine sieve for a silky texture.",
+            "Pour over ice and serve chilled, garnished with saffron strands."
+          ],
+          "prep_time_mins": 480,
+          "cook_time_mins": 0,
+          "servings": 2,
+          "source_url": "https://www.siasat.com/8-lesser-known-indian-beverages-hyderabadis-have-you-tried-them-3261024/",
+          "author_credit": "Siasat Daily"
+        }
+      ]
+    },
+    {
+      "slug": "indore",
+      "name": "Indore",
+      "description": "India's street food capital and the cleanest city, where the legendary Sarafa Bazaar and Chappan Dukan come alive at night with a staggering variety of chaat, fried snacks, milk sweets and sizzling stalls.",
+      "image_file": "indore.jpg",
+      "recipes": [
+        {
+          "name": "Khatta Samosa",
+          "slug": "khatta-samosa",
+          "category": "appetizer",
+          "description": "Indore's unique take on the samosa — a crispy triangular pastry filled with a spiced potato mixture given a bright tang from pomegranate seeds (anardana). Served with tamarind chutney and green chutney, these are crisper and more sour than the Punjabi original.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "refined flour (maida)"},
+            {"qty": "4 tbsp", "item": "oil (for dough)"},
+            {"qty": "1/2 tsp", "item": "carom seeds"},
+            {"qty": "4 medium", "item": "potatoes, boiled and mashed"},
+            {"qty": "2 tbsp", "item": "pomegranate seeds (anardana), roughly crushed"},
+            {"qty": "1/2 tsp", "item": "garam masala"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1 tsp", "item": "cumin powder"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "as needed", "item": "oil for deep frying"}
+          ],
+          "instructions": [
+            "Rub oil into flour with ajwain and salt until crumbly; add water to make stiff dough. Rest 20 minutes.",
+            "Mix mashed potato with pomegranate seeds, garam masala, chili, cumin and salt.",
+            "Divide dough into balls; roll each into an oval, cut in half. Shape each half into a cone; fill and seal firmly.",
+            "Deep fry on medium heat for 10-12 minutes until deeply golden and very crispy.",
+            "Serve with tangy tamarind chutney and fresh green chutney."
+          ],
+          "prep_time_mins": 30,
+          "cook_time_mins": 30,
+          "servings": 12,
+          "source_url": "https://www.veenaworld.com/blog/indore-street-food",
+          "author_credit": "Veena World"
+        },
+        {
+          "name": "Garadu",
+          "slug": "garadu",
+          "category": "appetizer",
+          "description": "Indore's beloved winter street food — cubes of yam (kand) deep-fried until light golden and crispy, then tossed with lemon juice, chaat masala, cumin and pomegranate seeds. Available only in winter months, garadu is the dish that makes Indoris nostalgic when they leave the city.",
+          "ingredients": [
+            {"qty": "500g", "item": "yam (kand/purple yam), peeled and cubed"},
+            {"qty": "1 tsp", "item": "chaat masala"},
+            {"qty": "1 tsp", "item": "cumin powder"},
+            {"qty": "1/2 tsp", "item": "red chili powder"},
+            {"qty": "1", "item": "lemon, juiced"},
+            {"qty": "2 tbsp", "item": "pomegranate seeds"},
+            {"qty": "2 tbsp", "item": "fresh coriander, chopped"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "as needed", "item": "oil for deep frying"}
+          ],
+          "instructions": [
+            "Peel and cut yam into 2cm cubes. Pat completely dry with a cloth.",
+            "Deep fry in medium-hot oil until light golden and cooked through, about 8 minutes.",
+            "Remove and drain. Immediately toss with chaat masala, cumin, chili, salt and lemon juice.",
+            "Top with pomegranate seeds and fresh coriander.",
+            "Serve hot from a paper cone as street food."
+          ],
+          "prep_time_mins": 10,
+          "cook_time_mins": 15,
+          "servings": 4,
+          "source_url": "https://www.holidify.com/pages/indore-famous-food-1500.html",
+          "author_credit": "Holidify"
+        },
+        {
+          "name": "Moong Bhajiya",
+          "slug": "moong-bhajiya",
+          "category": "appetizer",
+          "description": "Light and crispy fritters made from a coarsely ground moong dal batter mixed with green chilis, onion and coriander. A staple snack at Indore's Chappan Dukan, these bhajiya are served with a vivid green coriander dip and a salad of raw onion and radish.",
+          "ingredients": [
+            {"qty": "1 cup", "item": "split moong dal (with skin), soaked 4 hours"},
+            {"qty": "2", "item": "green chilis, finely chopped"},
+            {"qty": "1 medium", "item": "onion, finely chopped"},
+            {"qty": "2 tbsp", "item": "fresh coriander, chopped"},
+            {"qty": "1/2 tsp", "item": "cumin seeds"},
+            {"qty": "1/4 tsp", "item": "turmeric"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "as needed", "item": "oil for deep frying"},
+            {"qty": "to serve", "item": "green coriander chutney, sliced onion and radish"}
+          ],
+          "instructions": [
+            "Drain soaked moong dal; grind to a coarse paste (do not make it smooth — texture is key).",
+            "Mix paste with green chilis, onion, coriander, cumin, turmeric and salt.",
+            "Drop spoonfuls into hot oil; fry on medium heat until golden and crispy, about 4 minutes.",
+            "Drain on paper.",
+            "Serve immediately with green chutney, sliced raw onion and radish."
+          ],
+          "prep_time_mins": 250,
+          "cook_time_mins": 20,
+          "servings": 4,
+          "source_url": "https://www.veenaworld.com/blog/indore-street-food",
+          "author_credit": "Veena World"
+        },
+        {
+          "name": "Khopra Patties",
+          "slug": "khopra-patties",
+          "category": "appetizer",
+          "description": "Crispy potato patties with a heart of sweet and savoury desiccated coconut (khopra) filling laced with ginger, fresh coriander and dry fruits. An Indori original sold at iconic stalls like Vijay Chaat House — the surprise coconut filling makes every bite an event.",
+          "ingredients": [
+            {"qty": "4 large", "item": "potatoes, boiled and mashed"},
+            {"qty": "2 tbsp", "item": "corn flour (for binding)"},
+            {"qty": "1/2 cup", "item": "desiccated coconut (khopra)"},
+            {"qty": "1 tsp", "item": "ginger, grated"},
+            {"qty": "2 tbsp", "item": "fresh coriander, chopped"},
+            {"qty": "1", "item": "green chili, finely chopped"},
+            {"qty": "1 tsp", "item": "dry mango powder (amchur)"},
+            {"qty": "2 tbsp", "item": "raisins and cashews, chopped"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "as needed", "item": "oil for shallow frying"}
+          ],
+          "instructions": [
+            "Mix coconut, ginger, coriander, chili, amchur, raisins, cashews and salt for the filling.",
+            "Mix mashed potato with corn flour and salt; divide into 12 portions.",
+            "Flatten each potato portion; place a spoon of coconut filling in centre. Seal and shape into a round patty.",
+            "Shallow fry in oil on medium heat, 4 minutes per side, until deeply golden and crispy all over.",
+            "Drain and serve with tamarind and green chutneys."
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 25,
+          "servings": 4,
+          "source_url": "https://myspicetrunk.com/2020/12/07/khopra-patties/",
+          "author_credit": "My Spice Trunk"
+        },
+        {
+          "name": "Poha Jalebi",
+          "slug": "poha-jalebi",
+          "category": "entree",
+          "description": "Indore's breakfast institution — a plate of gently spiced flat rice (poha) topped with crunchy sev, chopped onion, fresh coriander and lime, served alongside crispy hot jalebis soaked in sugar syrup. The combination of savoury and sweet is startling and then irresistible.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "thick poha (flattened rice)"},
+            {"qty": "1 tsp", "item": "mustard seeds"},
+            {"qty": "10", "item": "curry leaves"},
+            {"qty": "1 medium", "item": "onion, finely chopped"},
+            {"qty": "2", "item": "green chilis, slit"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "1 tsp", "item": "jeeravan masala (or chaat masala)"},
+            {"qty": "1", "item": "lemon, juiced"},
+            {"qty": "2 tbsp", "item": "oil"},
+            {"qty": "to top", "item": "fine sev, chopped coriander"},
+            {"qty": "4", "item": "fresh hot jalebis (store-bought or homemade)"}
+          ],
+          "instructions": [
+            "Rinse poha in cold water, drain and let sit 5 minutes to soften.",
+            "Heat oil; splutter mustard seeds and curry leaves. Add onion and green chilis; saute 3 minutes.",
+            "Add turmeric; add poha and mix gently. Cook 3 minutes on low heat.",
+            "Add jeeravan masala, salt and lemon juice. Mix and switch off heat.",
+            "Plate poha and top generously with sev and coriander.",
+            "Serve alongside hot jalebis for dipping or eating on the side."
+          ],
+          "prep_time_mins": 10,
+          "cook_time_mins": 15,
+          "servings": 4,
+          "source_url": "https://www.incredibleindia.gov.in/en/madhya-pradesh/indore/must-try-street-food-in-indore-by",
+          "author_credit": "Incredible India"
+        },
+        {
+          "name": "Bhutte ka Kees",
+          "slug": "bhutte-ka-kees",
+          "category": "entree",
+          "description": "Fresh corn grated from the cob and cooked with milk, green chilis and spices until it forms a creamy, warmly spiced porridge. Uniquely Indori and typically unavailable outside the city, bhutte ka kees is comfort food at its most elemental.",
+          "ingredients": [
+            {"qty": "4 ears", "item": "fresh corn, kernels grated off"},
+            {"qty": "1 cup", "item": "full-fat milk"},
+            {"qty": "2 tbsp", "item": "ghee"},
+            {"qty": "1 tsp", "item": "mustard seeds"},
+            {"qty": "1/2 tsp", "item": "cumin seeds"},
+            {"qty": "1 pinch", "item": "asafoetida (hing)"},
+            {"qty": "2", "item": "green chilis, finely chopped"},
+            {"qty": "1 tsp", "item": "ginger, grated"},
+            {"qty": "1/4 tsp", "item": "turmeric"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "to garnish", "item": "fresh coconut, coriander, fine sev, lemon"}
+          ],
+          "instructions": [
+            "Heat ghee; splutter mustard, cumin and hing.",
+            "Add ginger, green chili and turmeric; cook 1 minute.",
+            "Add grated corn; stir well and cook on medium heat for 5 minutes.",
+            "Add milk gradually, stirring constantly to prevent lumps.",
+            "Cook until mixture thickens to porridge consistency, about 10 minutes. Season with salt.",
+            "Serve hot, garnished with fresh coconut, coriander, sev and a squeeze of lemon."
+          ],
+          "prep_time_mins": 15,
+          "cook_time_mins": 20,
+          "servings": 4,
+          "source_url": "https://www.veenaworld.com/blog/indore-street-food",
+          "author_credit": "Veena World"
+        },
+        {
+          "name": "Dal Bafla",
+          "slug": "dal-bafla",
+          "category": "entree",
+          "description": "Madhya Pradesh's answer to Dal Baati — wheat and curd balls boiled first then baked or roasted until crispy outside and fluffy within, served with a thin, rustic dal and dipped liberally in ghee. A hearty, slow-food tradition from the heart of India.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "whole wheat flour"},
+            {"qty": "1/4 cup", "item": "curd (yogurt)"},
+            {"qty": "1 tsp", "item": "carom seeds (ajwain)"},
+            {"qty": "4 tbsp", "item": "ghee (for dough and serving)"},
+            {"qty": "1 cup", "item": "yellow moong dal or toor dal"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "2", "item": "tomatoes, chopped"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1 pinch", "item": "asafoetida"},
+            {"qty": "salt", "item": "to taste"}
+          ],
+          "instructions": [
+            "Mix flour, curd, ghee, ajwain and salt; add water to make a stiff dough. Shape into golf-ball-sized balls.",
+            "Boil baflas in water for 20 minutes until cooked through. Remove and dry.",
+            "Bake at 180C for 25 minutes or roast over open flame until golden and crispy.",
+            "Cook dal with tomatoes, cumin, turmeric, chili and salt in a pressure cooker; season well.",
+            "Crack each bafla, pour ghee generously inside. Serve with dal for dipping."
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 60,
+          "servings": 5,
+          "source_url": "https://www.holidify.com/pages/indore-famous-food-1500.html",
+          "author_credit": "Holidify"
+        },
+        {
+          "name": "Mawa Baati",
+          "slug": "mawa-baati",
+          "category": "dessert",
+          "description": "Rich, crumbly sweet balls made from khoya (mawa), milk powder and flour, stuffed with chopped dry fruits, deep-fried golden and often served with thick rabri. A special occasion dessert from Indore's famous sweet shops, intensely rich and celebratory.",
+          "ingredients": [
+            {"qty": "200g", "item": "khoya (mawa), grated"},
+            {"qty": "4 tbsp", "item": "milk powder"},
+            {"qty": "4 tbsp", "item": "refined flour (maida)"},
+            {"qty": "2 tbsp", "item": "ghee"},
+            {"qty": "1/4 cup", "item": "mixed dry fruits (almonds, cashews, pistachios, raisins)"},
+            {"qty": "1/2 tsp", "item": "cardamom powder"},
+            {"qty": "2 tbsp", "item": "powdered sugar"},
+            {"qty": "1.5 cups", "item": "sugar (for syrup)"},
+            {"qty": "1 cup", "item": "water"},
+            {"qty": "as needed", "item": "ghee for deep frying"}
+          ],
+          "instructions": [
+            "Mix khoya, milk powder, flour and ghee until a soft dough forms. Do not add water.",
+            "For filling: mix dry fruits, cardamom and powdered sugar.",
+            "Divide dough into 12 balls; press each flat, fill and seal into a smooth ball.",
+            "Deep fry on very low heat until uniformly golden, turning gently — about 12 minutes. Do not rush.",
+            "Drain; dip warm balls in one-string sugar syrup for 30 seconds. Remove.",
+            "Serve warm with cold rabri or on their own."
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 30,
+          "servings": 12,
+          "source_url": "https://www.incredibleindia.gov.in/en/madhya-pradesh/indore/must-try-street-food-in-indore-by",
+          "author_credit": "Incredible India"
+        },
+        {
+          "name": "Malpua",
+          "slug": "malpua",
+          "category": "dessert",
+          "description": "Thin, crispy-edged Indian pancakes made from flour, milk and fennel, deep-fried in ghee until lacey at the edges, then soaked in cardamom sugar syrup. Indore's malpuas are renowned — served with thick cold rabri, they are the city's most indulgent street dessert.",
+          "ingredients": [
+            {"qty": "1 cup", "item": "refined flour (maida)"},
+            {"qty": "2 tbsp", "item": "semolina"},
+            {"qty": "1/2 cup", "item": "milk"},
+            {"qty": "1/4 cup", "item": "water"},
+            {"qty": "1/2 tsp", "item": "fennel seeds (saunf)"},
+            {"qty": "1 pinch", "item": "baking soda"},
+            {"qty": "1.5 cups", "item": "sugar (for syrup)"},
+            {"qty": "1 cup", "item": "water (for syrup)"},
+            {"qty": "1/4 tsp", "item": "cardamom powder"},
+            {"qty": "as needed", "item": "ghee for frying"},
+            {"qty": "to serve", "item": "thick rabri, pistachios"}
+          ],
+          "instructions": [
+            "Mix flour, semolina, milk, water, fennel and baking soda into a smooth, pourable batter. Rest 30 minutes.",
+            "Make sugar syrup with cardamom; keep warm.",
+            "Heat ghee in a shallow pan; pour a small ladle of batter into hot ghee — it spreads naturally into a thin round.",
+            "Fry on medium heat until edges are golden and lacy, about 2 minutes per side.",
+            "Drain briefly; soak in warm sugar syrup for 1 minute. Remove.",
+            "Serve immediately topped with a generous spoon of cold rabri and pistachios."
+          ],
+          "prep_time_mins": 35,
+          "cook_time_mins": 20,
+          "servings": 8,
+          "source_url": "https://www.holidify.com/pages/indore-famous-food-1500.html",
+          "author_credit": "Holidify"
+        },
+        {
+          "name": "Jal Jeera",
+          "slug": "jal-jeera",
+          "category": "drink",
+          "description": "A tangy, cooling cumin and mint water that is the classic summer street drink of Indore and central India. Black salt and tamarind give it its characteristic sharp zing while roasted cumin provides earthy warmth — a single glass instantly refreshes on a hot afternoon.",
+          "ingredients": [
+            {"qty": "1 tsp", "item": "cumin seeds, roasted and ground"},
+            {"qty": "1/4 cup", "item": "fresh mint leaves"},
+            {"qty": "1 tbsp", "item": "tamarind pulp"},
+            {"qty": "1 tsp", "item": "black salt (kala namak)"},
+            {"qty": "1 tsp", "item": "chaat masala"},
+            {"qty": "1 tsp", "item": "lemon juice"},
+            {"qty": "1 tbsp", "item": "jaggery or sugar"},
+            {"qty": "3 cups", "item": "cold water"},
+            {"qty": "ice cubes", "item": "to serve"}
+          ],
+          "instructions": [
+            "Blend mint leaves with 1/2 cup water until smooth. Strain.",
+            "Mix mint water with tamarind, black salt, chaat masala, cumin, lemon juice and jaggery.",
+            "Add remaining cold water; stir until jaggery dissolves. Taste — it should be very tangy and spicy.",
+            "Pour over ice and serve chilled with a sprig of mint."
+          ],
+          "prep_time_mins": 10,
+          "cook_time_mins": 0,
+          "servings": 4,
+          "source_url": "https://thestoriedrecipe.com/indian-drinks-for-summer/",
+          "author_credit": "The Storied Recipe"
+        }
+      ]
+    },
+    {
+      "slug": "delhi",
+      "name": "Delhi",
+      "description": "The capital of India and its culinary crossroads — where Mughal grandeur meets Punjabi heartiness, street-food ingenuity and timeless vegetarian classics have created a food scene unlike any other.",
+      "image_file": "delhi.jpg",
+      "recipes": [
+        {
+          "name": "Golgappa",
+          "slug": "golgappa",
+          "category": "appetizer",
+          "description": "Delhi's definitive street snack — small crispy hollow puris filled with spiced potatoes and white peas, then filled tableside with ice-cold spiced water and eaten in one explosive bite. The sharp tamarind and cumin water makes this simultaneously the most popular and most debated food in the city.",
+          "ingredients": [
+            {"qty": "20", "item": "golgappa shells (semolina puris)"},
+            {"qty": "3 medium", "item": "potatoes, boiled and mashed"},
+            {"qty": "1/2 cup", "item": "white peas (matar), boiled"},
+            {"qty": "1 tsp", "item": "chaat masala"},
+            {"qty": "3 cups", "item": "cold water"},
+            {"qty": "3 tbsp", "item": "tamarind pulp"},
+            {"qty": "1 tsp", "item": "roasted cumin powder"},
+            {"qty": "1 tsp", "item": "black salt"},
+            {"qty": "1/2 tsp", "item": "red chili powder"},
+            {"qty": "2 tbsp", "item": "mint leaves, blended"}
+          ],
+          "instructions": [
+            "Blend tamarind, mint, black salt, cumin and chili with cold water. Strain into a serving bowl. Chill.",
+            "Mix mashed potato and peas with chaat masala, salt and a squeeze of lemon.",
+            "Poke a small hole in each golgappa shell from the top.",
+            "Fill with a teaspoon of potato mixture.",
+            "Dip immediately into spiced water so the shell is half-filled. Eat in one bite."
+          ],
+          "prep_time_mins": 15,
+          "cook_time_mins": 0,
+          "servings": 4,
+          "source_url": "https://www.vegrecipesofindia.com/golgappa-recipe/",
+          "author_credit": "Dassana Amit — Veg Recipes of India"
+        },
+        {
+          "name": "Veg Momos",
+          "slug": "veg-momos-delhi",
+          "category": "appetizer",
+          "description": "Tibetan-origin steamed dumplings that Delhi adopted so thoroughly they are now an inseparable part of the city's street food landscape. Pleated and steamed, filled with finely spiced cabbage, carrot, and onion — and served with a fiery red garlic chutney that is Delhi's unique contribution.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "refined flour (maida)"},
+            {"qty": "1/2 tsp", "item": "salt"},
+            {"qty": "water", "item": "as needed"},
+            {"qty": "1 cup", "item": "cabbage, finely shredded"},
+            {"qty": "1/2 cup", "item": "carrot, grated"},
+            {"qty": "1 medium", "item": "onion, finely chopped"},
+            {"qty": "1 tsp", "item": "ginger-garlic paste"},
+            {"qty": "1 tbsp", "item": "soy sauce"},
+            {"qty": "1 tsp", "item": "sesame oil"},
+            {"qty": "salt and pepper", "item": "to taste"},
+            {"qty": "to serve", "item": "spicy red chutney (tomato and chili based)"}
+          ],
+          "instructions": [
+            "Make a smooth, somewhat stiff dough with flour, salt and water. Cover and rest 30 minutes.",
+            "Mix cabbage, carrot, onion, ginger-garlic, soy sauce, sesame oil, salt and pepper for filling.",
+            "Roll dough very thin; cut into 3-inch circles.",
+            "Place a teaspoon of filling in centre; pleat and seal the edges into a crescent or round shape.",
+            "Steam in a greased steamer for 12-14 minutes.",
+            "Serve hot with spicy red chutney."
+          ],
+          "prep_time_mins": 45,
+          "cook_time_mins": 15,
+          "servings": 4,
+          "source_url": "https://www.tataneu.com/pages/travel/flights/10-must-try-foods-in-delhi-a-complete-checklist",
+          "author_credit": "TATA Neu Travel"
+        },
+        {
+          "name": "Paneer Tikka",
+          "slug": "paneer-tikka",
+          "category": "appetizer",
+          "description": "Chunks of paneer marinated in spiced yogurt with ginger, garlic, and warming aromatics, then skewered with onions and bell peppers and charred on a hot grill or tandoor. Delhi's most popular vegetarian starter — smoky, tangy, and perfect with green chutney and onion rings.",
+          "ingredients": [
+            {"qty": "400g", "item": "paneer, cubed"},
+            {"qty": "1 cup", "item": "thick yogurt (hung curd)"},
+            {"qty": "2 tbsp", "item": "ginger-garlic paste"},
+            {"qty": "2 tbsp", "item": "gram flour (besan), roasted"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1 tsp", "item": "cumin powder"},
+            {"qty": "1 tsp", "item": "garam masala"},
+            {"qty": "1 tsp", "item": "chaat masala"},
+            {"qty": "1 tbsp", "item": "kasuri methi (dried fenugreek)"},
+            {"qty": "1", "item": "onion, cut in chunks"},
+            {"qty": "1", "item": "bell pepper, cut in chunks"},
+            {"qty": "2 tbsp", "item": "oil"},
+            {"qty": "1", "item": "lemon, juiced"}
+          ],
+          "instructions": [
+            "Whisk yogurt with ginger-garlic paste, all spices, kasuri methi, besan, oil, lemon juice and salt.",
+            "Add paneer cubes, onions and peppers; coat well. Marinate at least 1 hour (ideally 3).",
+            "Thread alternating paneer, onion and pepper onto skewers.",
+            "Grill on a hot tawa or charcoal grill, turning every 2 minutes, for 8-10 minutes until lightly charred.",
+            "Brush with oil once during cooking.",
+            "Sprinkle with chaat masala; serve with green chutney and onion rings."
+          ],
+          "prep_time_mins": 70,
+          "cook_time_mins": 15,
+          "servings": 4,
+          "source_url": "https://www.makemytrip.com/tripideas/blog/famous-dishes-of-delhi",
+          "author_credit": "MakeMyTrip Blog"
+        },
+        {
+          "name": "Aloo Chaat",
+          "slug": "aloo-chaat",
+          "category": "appetizer",
+          "description": "Crispy fried potato cubes tossed with yogurt, tamarind chutney, green chutney and an avalanche of chaat masala — Delhi's most democratic snack, eaten at upscale restaurants and roadside stalls with equal enthusiasm. The sour-sweet-spicy combination is the hallmark of Delhi's chaat culture.",
+          "ingredients": [
+            {"qty": "4 medium", "item": "potatoes, boiled, peeled and cubed"},
+            {"qty": "2 tbsp", "item": "oil for frying"},
+            {"qty": "2 tsp", "item": "chaat masala"},
+            {"qty": "1 tsp", "item": "cumin powder"},
+            {"qty": "1/2 tsp", "item": "red chili powder"},
+            {"qty": "3 tbsp", "item": "tamarind chutney"},
+            {"qty": "2 tbsp", "item": "green coriander chutney"},
+            {"qty": "4 tbsp", "item": "yogurt, whisked"},
+            {"qty": "2 tbsp", "item": "pomegranate seeds"},
+            {"qty": "2 tbsp", "item": "fine sev"},
+            {"qty": "1", "item": "lemon, juiced"}
+          ],
+          "instructions": [
+            "Shallow fry potato cubes in oil until golden and crispy all over. Drain.",
+            "While hot, toss with chaat masala, cumin, chili powder, salt and lemon juice.",
+            "Arrange on a plate; drizzle with yogurt, tamarind chutney and green chutney.",
+            "Top with pomegranate seeds and sev.",
+            "Serve immediately before the chutneys make the potatoes soggy."
+          ],
+          "prep_time_mins": 15,
+          "cook_time_mins": 15,
+          "servings": 4,
+          "source_url": "https://www.makemytrip.com/tripideas/blog/famous-dishes-of-delhi",
+          "author_credit": "MakeMyTrip Blog"
+        },
+        {
+          "name": "Chole Bhature",
+          "slug": "chole-bhature",
+          "category": "entree",
+          "description": "Delhi's most beloved breakfast and brunch dish — spicy, tangy chickpea curry cooked with a complex array of whole and ground spices, served alongside golden, billowy deep-fried bread (bhature) that puffs like a pillow. A complete meal that the city runs on.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "dried chickpeas, soaked overnight"},
+            {"qty": "2", "item": "tea bags (for dark colour)"},
+            {"qty": "3 medium", "item": "onions, finely chopped"},
+            {"qty": "3 medium", "item": "tomatoes, pureed"},
+            {"qty": "2 tsp", "item": "ginger-garlic paste"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "2 tsp", "item": "chole masala"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1 tbsp", "item": "anardana (pomegranate seed powder)"},
+            {"qty": "2 cups", "item": "refined flour (maida) for bhature"},
+            {"qty": "2 tbsp", "item": "yogurt (for bhature)"},
+            {"qty": "1/4 tsp", "item": "baking soda (for bhature)"},
+            {"qty": "oil", "item": "for frying bhature"}
+          ],
+          "instructions": [
+            "Pressure cook chickpeas with tea bags for 20 minutes until soft. Discard tea bags.",
+            "Fry onions until deep golden; add ginger-garlic paste, tomato puree and all spices. Cook 15 minutes.",
+            "Add chickpeas with their water; simmer 20 minutes until thick. Add anardana, adjust salt.",
+            "For bhature: mix maida, yogurt, baking soda, salt and water into a soft dough. Rest 2 hours.",
+            "Roll into thick ovals; deep fry in hot oil until puffed and golden, about 2 minutes each.",
+            "Serve chole alongside hot bhature with pickled onion and green chili."
+          ],
+          "prep_time_mins": 600,
+          "cook_time_mins": 60,
+          "servings": 5,
+          "source_url": "https://www.spiceupthecurry.com/chole-bhature-recipe/",
+          "author_credit": "Spice Up The Curry — Kanan Patel"
+        },
+        {
+          "name": "Paneer Butter Masala",
+          "slug": "paneer-butter-masala",
+          "category": "entree",
+          "description": "The vegetarian cousin of Delhi's famous Butter Chicken — silky paneer cubes simmered in a lush tomato, butter and cream gravy finished with kasuri methi. Invented in the same Moti Mahal tradition, this dish has become the most ordered vegetarian main in Indian restaurants worldwide.",
+          "ingredients": [
+            {"qty": "400g", "item": "paneer, cubed"},
+            {"qty": "5 medium", "item": "tomatoes, pureed"},
+            {"qty": "2 tsp", "item": "ginger-garlic paste"},
+            {"qty": "12", "item": "cashews, soaked and ground to paste"},
+            {"qty": "4 tbsp", "item": "butter"},
+            {"qty": "1/2 cup", "item": "fresh cream"},
+            {"qty": "1 tsp", "item": "kasuri methi (dried fenugreek)"},
+            {"qty": "1 tsp", "item": "garam masala"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1 tbsp", "item": "honey or sugar"},
+            {"qty": "4", "item": "green cardamom pods"},
+            {"qty": "salt", "item": "to taste"}
+          ],
+          "instructions": [
+            "Lightly pan-sear paneer cubes in 1 tsp butter until edges are golden. Remove.",
+            "In same pan, melt 2 tbsp butter; add cardamom and ginger-garlic paste; cook 1 minute.",
+            "Add tomato puree, chili powder, garam masala and salt. Simmer 15 minutes until thick.",
+            "Blend sauce smooth; strain through sieve for silky texture.",
+            "Return to pan; add remaining butter, cashew paste, cream, kasuri methi and honey. Simmer 5 minutes.",
+            "Add paneer; simmer 5 minutes gently. Serve with naan or jeera rice."
+          ],
+          "prep_time_mins": 15,
+          "cook_time_mins": 30,
+          "servings": 5,
+          "source_url": "https://www.makemytrip.com/tripideas/blog/famous-dishes-of-delhi",
+          "author_credit": "MakeMyTrip Blog"
+        },
+        {
+          "name": "Dal Makhani",
+          "slug": "dal-makhani",
+          "category": "entree",
+          "description": "A slow-cooked Delhi Punjabi classic of whole urad dal and kidney beans simmered for hours with butter, cream and warming whole spices until the lentils break down into a glossy, velvet-smooth richness. Traditionally cooked overnight over dying embers — every restaurant in Delhi has its own variation.",
+          "ingredients": [
+            {"qty": "1 cup", "item": "whole urad dal (black gram), soaked overnight"},
+            {"qty": "1/4 cup", "item": "rajma (kidney beans), soaked overnight"},
+            {"qty": "4 tbsp", "item": "butter"},
+            {"qty": "1/2 cup", "item": "fresh cream"},
+            {"qty": "3 large", "item": "tomatoes, pureed"},
+            {"qty": "2 tbsp", "item": "ginger-garlic paste"},
+            {"qty": "2", "item": "bay leaves"},
+            {"qty": "2", "item": "black cardamom pods"},
+            {"qty": "4", "item": "cloves"},
+            {"qty": "1 stick", "item": "cinnamon"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1 tsp", "item": "garam masala"},
+            {"qty": "1 tsp", "item": "kasuri methi"},
+            {"qty": "salt", "item": "to taste"}
+          ],
+          "instructions": [
+            "Pressure cook soaked dal and rajma with 4 cups water and salt for 8 whistles until very soft.",
+            "Heat 2 tbsp butter; add whole spices and bay leaves; fry 30 seconds.",
+            "Add ginger-garlic paste, tomato puree, chili powder and salt. Cook 15 minutes until oil separates.",
+            "Add cooked dal with its water; simmer on very low heat for 1 hour, stirring occasionally, adding water as needed.",
+            "Finish with remaining butter, cream, kasuri methi and garam masala. Simmer 10 minutes more.",
+            "Serve with naan, roti or basmati rice."
+          ],
+          "prep_time_mins": 600,
+          "cook_time_mins": 90,
+          "servings": 5,
+          "source_url": "https://www.makemytrip.com/tripideas/blog/famous-dishes-of-delhi",
+          "author_credit": "MakeMyTrip Blog"
+        },
+        {
+          "name": "Stuffed Paranthas",
+          "slug": "stuffed-paranthas",
+          "category": "entree",
+          "description": "From the legendary Paranthe Wali Gali in Chandni Chowk — whole wheat flatbreads stuffed with richly spiced potatoes or cauliflower, then roasted in ghee until shatteringly crispy. Served with pickles and yogurt, these paranthas have fuelled Delhi since the 19th century.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "whole wheat flour (atta)"},
+            {"qty": "1 tbsp", "item": "ghee (for dough)"},
+            {"qty": "4 medium", "item": "potatoes, boiled and mashed (for aloo parantha)"},
+            {"qty": "2", "item": "green chilis, finely chopped"},
+            {"qty": "1 tsp", "item": "ginger, grated"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "1 tsp", "item": "dry mango powder (amchur)"},
+            {"qty": "2 tbsp", "item": "fresh coriander, chopped"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "generous", "item": "ghee for cooking"},
+            {"qty": "to serve", "item": "yogurt, mixed pickles, makhan (white butter)"}
+          ],
+          "instructions": [
+            "Knead flour, ghee and salt with water into a soft, pliable dough. Rest 20 minutes.",
+            "Mix mashed potato with all spices, chili, ginger, coriander and salt.",
+            "Divide dough into 8 balls. Roll each into a small circle; place filling in centre. Seal and flatten gently.",
+            "Roll out to 7-inch rounds, being careful not to tear.",
+            "Cook on a medium-hot tawa with generous ghee, pressing gently, until golden and crispy on both sides.",
+            "Serve immediately with cold yogurt, pickle and a knob of white butter."
+          ],
+          "prep_time_mins": 30,
+          "cook_time_mins": 25,
+          "servings": 4,
+          "source_url": "https://www.makemytrip.com/tripideas/blog/famous-dishes-of-delhi",
+          "author_credit": "MakeMyTrip Blog"
+        },
+        {
+          "name": "Jalebi with Rabri",
+          "slug": "jalebi-with-rabri",
+          "category": "dessert",
+          "description": "Crispy, deep-fried spirals of fermented batter soaked in saffron sugar syrup, served alongside thick, sweet rabri (reduced milk with cardamom and nuts). Delhi's Old City jalebi-walas pour batter in tight concentric circles directly into hot ghee — the result is simultaneously crispy, sticky and intensely sweet.",
+          "ingredients": [
+            {"qty": "1 cup", "item": "refined flour (maida)"},
+            {"qty": "2 tbsp", "item": "gram flour (besan)"},
+            {"qty": "1/4 tsp", "item": "baking soda"},
+            {"qty": "3/4 cup", "item": "warm water"},
+            {"qty": "1 tsp", "item": "lemon juice"},
+            {"qty": "2 cups", "item": "sugar"},
+            {"qty": "1 cup", "item": "water"},
+            {"qty": "1 pinch", "item": "saffron"},
+            {"qty": "1/4 tsp", "item": "cardamom powder"},
+            {"qty": "1 litre", "item": "full-fat milk (for rabri)"},
+            {"qty": "3 tbsp", "item": "sugar (for rabri)"},
+            {"qty": "as needed", "item": "ghee or oil for frying"}
+          ],
+          "instructions": [
+            "Mix flour, besan and baking soda; add water and lemon juice to make smooth batter. Ferment 30 minutes.",
+            "For rabri: simmer milk in a wide pan, stirring and scraping sides, until reduced to 1/3. Add sugar and cardamom.",
+            "Make one-string sugar syrup with saffron; keep warm.",
+            "Fill batter into a squeeze bottle; pipe spirals directly into hot ghee. Fry until golden and crispy.",
+            "Transfer immediately into warm syrup; soak 1 minute. Remove.",
+            "Serve hot jalebis alongside chilled rabri."
+          ],
+          "prep_time_mins": 40,
+          "cook_time_mins": 60,
+          "servings": 6,
+          "source_url": "https://www.makemytrip.com/tripideas/blog/famous-dishes-of-delhi",
+          "author_credit": "MakeMyTrip Blog"
+        },
+        {
+          "name": "Falooda",
+          "slug": "falooda",
+          "category": "drink",
+          "description": "A spectacular layered dessert drink originating from Mughal royal kitchens — vermicelli noodles, basil seeds (sabja), rose syrup and cold sweetened milk topped with a scoop of vanilla ice cream and jelly cubes. Delhi's Karims, Roshan Di Kulfi and countless Old City shops serve this magnificent pink concoction all summer.",
+          "ingredients": [
+            {"qty": "3 tbsp", "item": "rose syrup (Roohafza)"},
+            {"qty": "1 tbsp", "item": "basil seeds (sabja), soaked 20 min"},
+            {"qty": "1/4 cup", "item": "thin vermicelli (cooked until soft)"},
+            {"qty": "1 cup", "item": "cold full-fat milk"},
+            {"qty": "2 tsp", "item": "sugar (optional)"},
+            {"qty": "2 scoops", "item": "vanilla ice cream"},
+            {"qty": "2 tbsp", "item": "jelly cubes (rose or strawberry flavour)"},
+            {"qty": "to garnish", "item": "pistachios, rose petals"}
+          ],
+          "instructions": [
+            "In a tall glass, pour 2 tbsp rose syrup.",
+            "Add soaked basil seeds; then layer cooked vermicelli.",
+            "Mix remaining rose syrup into cold milk; pour gently over vermicelli.",
+            "Add jelly cubes.",
+            "Place ice cream scoops on top.",
+            "Garnish with pistachios and rose petals. Serve immediately with a long spoon and straw."
+          ],
+          "prep_time_mins": 25,
+          "cook_time_mins": 10,
+          "servings": 2,
+          "source_url": "https://www.neehees.com/flavor-talks/cool-sips-battle-are-you-team-falooda-or-team-lassi/",
+          "author_credit": "Neehee's"
+        }
+      ]
+    }
+  ]
+}

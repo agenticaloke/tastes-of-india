@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}Tastes of India — Vegetarian Recipes from 5 Indian Cities{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<div class="text-center mb-12">
+  <h1 class="text-4xl sm:text-5xl font-semibold text-rose-500 mb-4">A Journey Through Indian Flavours</h1>
+  <p class="text-lg text-stone-500 max-w-2xl mx-auto">
+    Explore authentic vegetarian recipes from five iconic Indian cities — from Jaipur's royal kitchens to Kolkata's street-side phuchka stalls, Hyderabad's Nizami feasts, Indore's legendary bazaars, and Delhi's timeless Old City lanes.
+  </p>
+  <div class="mt-6 flex flex-wrap justify-center gap-3">
+    <a href="{{ url_for('web.search') }}" class="bg-rose-300 text-white px-6 py-2.5 rounded-full hover:bg-rose-400 transition font-medium">Browse All Recipes</a>
+    <a href="{{ url_for('web.menu_builder') }}" class="border border-rose-300 text-rose-500 px-6 py-2.5 rounded-full hover:bg-rose-50 transition font-medium">Build a Menu</a>
+  </div>
+</div>
+
+<!-- City Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {% for city in cities %}
+  <a href="{{ url_for('web.city', slug=city['slug']) }}"
+     class="group bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
+
+    <!-- City image placeholder with gradient -->
+    <div class="h-48 relative overflow-hidden"
+         style="background: linear-gradient(135deg, #fce7f3 0%, #fef3c7 50%, #e0f2fe 100%);">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <span class="text-stone-400 text-6xl opacity-50 select-none">
+          {% if city['slug'] == 'jaipur' %}🏰
+          {% elif city['slug'] == 'kolkata' %}🪷
+          {% elif city['slug'] == 'hyderabad' %}🍚
+          {% elif city['slug'] == 'indore' %}🥘
+          {% else %}🫓{% endif %}
+        </span>
+      </div>
+      <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-white/80 to-transparent p-4">
+        <h2 class="text-stone-700 text-2xl font-semibold">{{ city['name'] }}</h2>
+        <p class="text-stone-500 text-sm">{{ city['recipe_count'] }} recipes</p>
+      </div>
+    </div>
+
+    <div class="p-5">
+      <p class="text-stone-500 text-sm leading-relaxed line-clamp-3">{{ city['description'] }}</p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {% for label, cat in [('Appetizers','appetizer'),('Entree','entree'),('Desserts','dessert'),('Drinks','drink')] %}
+        <span class="text-xs px-2 py-1 rounded-full
+          {% if cat == 'appetizer' %}bg-emerald-50 text-emerald-600
+          {% elif cat == 'entree' %}bg-amber-50 text-amber-700
+          {% elif cat == 'dessert' %}bg-pink-50 text-pink-600
+          {% else %}bg-sky-50 text-sky-600{% endif %}">
+          {{ label }}
+        </span>
+        {% endfor %}
+      </div>
+      <div class="mt-4 text-rose-500 text-sm font-medium group-hover:text-rose-400 transition">
+        Explore recipes →
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<!-- About section -->
+<div class="mt-16 bg-white rounded-2xl shadow-sm border border-stone-100 p-8 text-center">
+  <h2 class="text-2xl font-semibold text-rose-500 mb-3">About Tastes of India</h2>
+  <p class="text-stone-500 max-w-2xl mx-auto text-sm leading-relaxed">
+    Each recipe is vegetarian and sourced with full attribution to its original author or publisher.
+    Our <strong class="text-stone-700">Recipe Agent</strong> continuously scours trusted food websites to discover new authentic vegetarian dishes
+    from these cities — keeping our collection fresh and growing.
+    Use the <a href="{{ url_for('web.menu_builder') }}" class="text-rose-500 hover:underline">Menu Builder</a> to
+    plan a complete Lunch or Dinner for your next event.
+  </p>
+</div>
+{% endblock %}
