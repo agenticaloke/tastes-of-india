@@ -7,6 +7,7 @@ Usage:
   source venv/bin/activate
   python agent/recipe_agent.py
 """
+from __future__ import annotations
 
 import os
 import sys
@@ -16,6 +17,7 @@ import hashlib
 import sqlite3
 import logging
 import re
+import random
 import unicodedata
 
 import requests
@@ -28,6 +30,7 @@ from agent.agent_config import (
     CITIES, CATEGORIES, TARGET_SITES, DDG_URL,
     REQUEST_DELAY, MAX_NEW_PER_RUN, RUN_INTERVAL_HOURS,
     NON_VEG_TOKENS, VEG_QUERY_MODIFIER,
+    MIN_SITES_PER_RUN, CATEGORIES_PER_SITE,
 )
 from agent.parsers.generic_parser import GenericParser
 from agent.parsers.archana_kitchen import ArchanaKitchenParser
@@ -57,8 +60,19 @@ HEADERS = {
 
 CATEGORY_MAP = {
     'appetizer': 'appetizer',
+    'appetizers': 'appetizer',
     'starter': 'appetizer',
+    'starters': 'appetizer',
+    'indian starter': 'appetizer',
+    'indian starters': 'appetizer',
     'snack': 'appetizer',
+    'snacks': 'appetizer',
+    'indian snack': 'appetizer',
+    'indian snacks': 'appetizer',
+    'pakora': 'appetizer',
+    'chaat': 'appetizer',
+    'tikki': 'appetizer',
+    'samosa': 'appetizer',
     'street food': 'appetizer',
     'entree': 'entree',
     'main course': 'entree',
@@ -195,11 +209,15 @@ def fetch_page(url: str) -> str | None:
     return None
 
 
-def get_parser(url: str):
+def get_parsers_for(url: str):
+    """Return an ordered list of parsers to try for this URL — site-specific
+    parsers first, GenericParser always last as a fallback."""
+    chain = []
     for parser in PARSERS:
         if parser.can_parse(url) and type(parser).__name__ != 'GenericParser':
-            return parser
-    return PARSERS[-1]  # fallback to generic
+            chain.append(parser)
+    chain.append(PARSERS[-1])  # generic JSON-LD fallback
+    return chain
 
 
 def run_agent():
@@ -214,92 +232,107 @@ def run_agent():
 
     city_rows = {row['slug']: row['id'] for row in db.execute('SELECT id, slug FROM cities').fetchall()}
 
+    # Pick at least MIN_SITES_PER_RUN distinct sites to consult this run.
+    sites_for_run = random.sample(
+        TARGET_SITES, min(MIN_SITES_PER_RUN, len(TARGET_SITES))
+    )
+    log.info(f'This run will consult {len(sites_for_run)} sites: {", ".join(sites_for_run)}')
+
+    # Build (city, site, category) work list, randomised so different runs
+    # explore different combinations rather than always hitting the same first.
+    work = []
     for city in CITIES:
+        for site in sites_for_run:
+            for category in random.sample(CATEGORIES, min(CATEGORIES_PER_SITE, len(CATEGORIES))):
+                work.append((city, site, category))
+    random.shuffle(work)
+
+    for city, site, category in work:
+        if added_count >= MAX_NEW_PER_RUN:
+            break
         city_id = city_rows.get(city['slug'])
         if not city_id:
             continue
 
-        for category in CATEGORIES:
-            for keyword in city['keywords'][:1]:  # use first keyword per city to stay polite
-                for site in TARGET_SITES[:2]:  # limit to 2 sites per query
-                    if added_count >= MAX_NEW_PER_RUN:
-                        break
+        keyword = city['keywords'][0]
+        query = f'site:{site} {keyword} {category} {VEG_QUERY_MODIFIER} recipe'
+        log.info(f'Searching: {query}')
+        urls = search_ddg(query)
+        time.sleep(REQUEST_DELAY)
 
-                    query = f'site:{site} {keyword} {category} {VEG_QUERY_MODIFIER} recipe'
-                    log.info(f'Searching: {query}')
-                    urls = search_ddg(query)
-                    time.sleep(REQUEST_DELAY)
+        for url in urls:
+            if added_count >= MAX_NEW_PER_RUN:
+                break
+            if url_already_seen(db, url):
+                log.debug(f'Already seen: {url}')
+                continue
 
-                    for url in urls:
-                        if added_count >= MAX_NEW_PER_RUN:
-                            break
-                        if url_already_seen(db, url):
-                            log.debug(f'Already seen: {url}')
-                            continue
+            html = fetch_page(url)
+            time.sleep(REQUEST_DELAY)
+            if not html:
+                log_run(db, url, 'error', 'fetch failed')
+                continue
 
-                        html = fetch_page(url)
-                        time.sleep(REQUEST_DELAY)
-                        if not html:
-                            log_run(db, url, 'error', 'fetch failed')
-                            continue
+            recipe = None
+            for parser in get_parsers_for(url):
+                recipe = parser.parse(url, html)
+                if recipe and recipe.get('name'):
+                    break
 
-                        parser = get_parser(url)
-                        recipe = parser.parse(url, html)
+            if not recipe or not recipe.get('name'):
+                log_run(db, url, 'rejected', 'parse returned nothing')
+                continue
 
-                        if not recipe or not recipe.get('name'):
-                            log_run(db, url, 'rejected', 'parse returned nothing')
-                            continue
+            veg_ok, veg_reason = is_vegetarian(recipe)
+            if not veg_ok:
+                log_run(db, url, 'rejected', f'non-veg: {veg_reason}')
+                log.info(f'Rejected non-veg [{recipe.get("name","?")}]: {veg_reason}')
+                continue
 
-                        veg_ok, veg_reason = is_vegetarian(recipe)
-                        if not veg_ok:
-                            log_run(db, url, 'rejected', f'non-veg: {veg_reason}')
-                            log.info(f'Rejected non-veg [{recipe.get("name","?")}]: {veg_reason}')
-                            continue
+            if is_duplicate(db, city_id, recipe):
+                log_run(db, url, 'duplicate', normalise_name(recipe['name']))
+                log.info(f'Duplicate: {recipe["name"]}')
+                continue
 
-                        if is_duplicate(db, city_id, recipe):
-                            log_run(db, url, 'duplicate', normalise_name(recipe['name']))
-                            log.info(f'Duplicate: {recipe["name"]}')
-                            continue
+            # Ensure unique slug
+            base_slug = recipe['slug'] or parser.slugify(recipe['name'])
+            slug = base_slug
+            suffix = 1
+            while db.execute('SELECT id FROM recipes WHERE slug = ?', (slug,)).fetchone():
+                slug = f'{base_slug}-{suffix}'
+                suffix += 1
 
-                        # Ensure unique slug
-                        base_slug = recipe['slug'] or parser.slugify(recipe['name'])
-                        slug = base_slug
-                        suffix = 1
-                        while db.execute('SELECT id FROM recipes WHERE slug = ?', (slug,)).fetchone():
-                            slug = f'{base_slug}-{suffix}'
-                            suffix += 1
+            cat = guess_category(recipe, query)
+            chash = content_hash(recipe)
 
-                        cat = guess_category(recipe, query)
-                        chash = content_hash(recipe)
-
-                        try:
-                            db.execute('''
-                                INSERT INTO recipes
-                                (city_id, name, slug, category, description, ingredients,
-                                 instructions, prep_time_mins, cook_time_mins, servings,
-                                 source_url, author_credit, is_verified)
-                                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)
-                            ''', (
-                                city_id,
-                                recipe['name'],
-                                slug,
-                                cat,
-                                recipe.get('description', ''),
-                                json.dumps(recipe.get('ingredients', [])),
-                                json.dumps(recipe.get('instructions', [])),
-                                recipe.get('prep_time_mins'),
-                                recipe.get('cook_time_mins'),
-                                recipe.get('servings'),
-                                recipe['source_url'],
-                                recipe.get('author_credit', 'Unknown'),
-                            ))
-                            db.commit()
-                            log_run(db, url, 'added', chash)
-                            added_count += 1
-                            log.info(f'Added [{city["name"]}] {recipe["name"]}')
-                        except Exception as e:
-                            log_run(db, url, 'error', str(e))
-                            log.warning(f'DB insert failed for {recipe["name"]}: {e}')
+            try:
+                db.execute('''
+                    INSERT INTO recipes
+                    (city_id, name, slug, category, description, ingredients,
+                     instructions, prep_time_mins, cook_time_mins, servings,
+                     source_url, author_credit, is_verified)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)
+                ''', (
+                    city_id,
+                    recipe['name'],
+                    slug,
+                    cat,
+                    recipe.get('description', ''),
+                    json.dumps(recipe.get('ingredients', [])),
+                    json.dumps(recipe.get('instructions', [])),
+                    recipe.get('prep_time_mins'),
+                    recipe.get('cook_time_mins'),
+                    recipe.get('servings'),
+                    recipe['source_url'],
+                    recipe.get('author_credit', 'Unknown'),
+                ))
+                db.commit()
+                log_run(db, url, 'added', chash)
+                added_count += 1
+                log.info(f'Added [{city["name"]}] {recipe["name"]}')
+            except Exception as e:
+                log_run(db, url, 'error', str(e))
+                log.warning(f'DB insert failed for {recipe["name"]}: {e}')
 
     db.close()
     log.info(f'=== Agent run complete. Added {added_count} recipes. ===')

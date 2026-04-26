@@ -1,3 +1,4 @@
+from __future__ import annotations
 from bs4 import BeautifulSoup
 from .base_parser import BaseParser
 

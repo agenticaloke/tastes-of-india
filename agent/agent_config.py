@@ -9,19 +9,36 @@ CITIES = [
     {"slug": "delhi",      "name": "Delhi",       "keywords": ["Delhi", "Old Delhi", "New Delhi"]},
 ]
 
-CATEGORIES = ["appetizer", "entree", "dessert", "drink"]
+CATEGORIES = ["appetizer", "snack", "starter", "entree", "dessert", "drink"]
 
 # Every search query will include this modifier so we only pick up veg recipes.
 VEG_QUERY_MODIFIER = "vegetarian"
 
-# Trusted vegetarian-friendly recipe sites to search
+# Trusted vegetarian-friendly Indian recipe sites to search.
+# Each agent run consults at least MIN_SITES_PER_RUN of these.
 TARGET_SITES = [
     "vegrecipesofindia.com",
     "archanaskitchen.com",
     "indianhealthyrecipes.com",
     "cookwithmanali.com",
     "whiskaffair.com",
+    "hebbarskitchen.com",
+    "spiceupthecurry.com",
+    "myfoodstory.com",
+    "tarladalal.com",
+    "sailusfood.com",
+    "cookingandme.com",
+    "rakskitchen.net",
+    "sharmispassions.com",
+    "manjulaskitchen.com",
+    "vegetarianindiancooking.com",
 ]
+
+# How many distinct sites to query in a single run (random sample).
+MIN_SITES_PER_RUN = 10
+
+# How many categories to search per (city, site) pair (random sample).
+CATEGORIES_PER_SITE = 2
 
 # DuckDuckGo HTML search endpoint (scraper-friendly, no API key needed)
 DDG_URL = "https://html.duckduckgo.com/html/"
