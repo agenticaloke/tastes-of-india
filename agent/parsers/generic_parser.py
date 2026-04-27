@@ -2,6 +2,7 @@
 Generic fallback parser using schema.org/Recipe JSON-LD,
 which most modern recipe sites embed for SEO.
 """
+from __future__ import annotations
 import json
 import re
 from bs4 import BeautifulSoup

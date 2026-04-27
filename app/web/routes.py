@@ -26,7 +26,7 @@ def index():
     cities = db.execute('''
         SELECT c.*, COUNT(r.id) AS recipe_count
         FROM cities c
-        LEFT JOIN recipes r ON r.city_id = c.id AND r.is_verified = 1
+        LEFT JOIN recipes r ON r.city_id = c.id
         GROUP BY c.id
         ORDER BY c.name
     ''').fetchall()
@@ -44,8 +44,8 @@ def city(slug):
         SELECT r.*, c.name AS city_name, c.slug AS city_slug
         FROM recipes r
         JOIN cities c ON c.id = r.city_id
-        WHERE c.slug = ? AND r.is_verified = 1
-        ORDER BY r.name
+        WHERE c.slug = ?
+        ORDER BY r.is_verified DESC, r.name
     ''', (slug,)).fetchall()
 
     by_category = {cat: [] for cat in CATEGORY_ORDER}
@@ -87,7 +87,7 @@ def search():
 
     results = []
     if q or city_filter or cat_filter:
-        where_clauses = ['r.is_verified = 1']
+        where_clauses = []
         params = []
 
         if q:
@@ -112,13 +112,13 @@ def search():
             where_clauses.append('r.category = ?')
             params.append(cat_filter)
 
-        where_sql = ' AND '.join(where_clauses)
+        where_sql = ' AND '.join(where_clauses) if where_clauses else '1=1'
         rows = db.execute(f'''
             SELECT r.*, c.name AS city_name, c.slug AS city_slug
             FROM recipes r
             JOIN cities c ON c.id = r.city_id
             WHERE {where_sql}
-            ORDER BY r.name
+            ORDER BY r.is_verified DESC, r.name
             LIMIT 60
         ''', params).fetchall()
 
@@ -147,8 +147,7 @@ def menu_builder():
                c.name AS city_name, c.slug AS city_slug
         FROM recipes r
         JOIN cities c ON c.id = r.city_id
-        WHERE r.is_verified = 1
-        ORDER BY r.category, r.name
+        ORDER BY r.category, r.is_verified DESC, r.name
     ''').fetchall()
 
     recipes_by_category = {cat: [] for cat in CATEGORY_ORDER}
