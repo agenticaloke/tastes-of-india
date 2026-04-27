@@ -34,6 +34,7 @@ from agent.agent_config import (
 )
 from agent.parsers.generic_parser import GenericParser
 from agent.parsers.archana_kitchen import ArchanaKitchenParser
+from agent.discover import discover_site_urls
 
 logging.basicConfig(
     level=logging.INFO,
@@ -238,101 +239,124 @@ def run_agent():
     )
     log.info(f'This run will consult {len(sites_for_run)} sites: {", ".join(sites_for_run)}')
 
-    # Build (city, site, category) work list, randomised so different runs
-    # explore different combinations rather than always hitting the same first.
-    work = []
-    for city in CITIES:
-        for site in sites_for_run:
-            for category in random.sample(CATEGORIES, min(CATEGORIES_PER_SITE, len(CATEGORIES))):
-                work.append((city, site, category))
-    random.shuffle(work)
+    # Discover candidate URLs by reading each site's sitemap.xml. This is
+    # far more reliable than scraping search engines, which rate-limit hard.
+    candidates: list[tuple[str, str]] = []  # (site, url)
+    for site in sites_for_run:
+        try:
+            urls = discover_site_urls(site, max_urls=80)
+        except Exception as e:
+            log.warning(f'Discovery failed for {site}: {e}')
+            urls = []
+        for u in urls:
+            candidates.append((site, u))
+        time.sleep(REQUEST_DELAY)
 
-    for city, site, category in work:
+    if not candidates:
+        log.warning('No candidate URLs discovered. Aborting run.')
+        db.close()
+        return
+
+    def pick_city_for_text(*texts: str):
+        hay = ' '.join(t.lower() for t in texts if t)
+        for city in CITIES:
+            for kw in city['keywords']:
+                if kw.lower() in hay:
+                    return city
+        return None
+
+    random.shuffle(candidates)
+    log.info(f'Discovered {len(candidates)} candidate URLs across {len(sites_for_run)} sites')
+
+    for site, url in candidates:
         if added_count >= MAX_NEW_PER_RUN:
             break
+
+        if url_already_seen(db, url):
+            log.debug(f'Already seen: {url}')
+            continue
+
+        # Quick URL-slug city check; if no hint we still fetch + check content
+        url_city = pick_city_for_text(url)
+
+        html = fetch_page(url)
+        time.sleep(REQUEST_DELAY)
+        if not html:
+            log_run(db, url, 'error', 'fetch failed')
+            continue
+
+        recipe = None
+        for parser in get_parsers_for(url):
+            recipe = parser.parse(url, html)
+            if recipe and recipe.get('name'):
+                break
+
+        if not recipe or not recipe.get('name'):
+            log_run(db, url, 'rejected', 'parse returned nothing')
+            continue
+
+        # Decide which city this recipe belongs to. URL hint wins; otherwise
+        # check the parsed name/description for a cuisine keyword.
+        city = url_city or pick_city_for_text(recipe.get('name', ''), recipe.get('description', ''))
+        if not city:
+            log_run(db, url, 'rejected', 'no city match')
+            continue
         city_id = city_rows.get(city['slug'])
         if not city_id:
             continue
 
-        keyword = city['keywords'][0]
-        query = f'site:{site} {keyword} {category} {VEG_QUERY_MODIFIER} recipe'
-        log.info(f'Searching: {query}')
-        urls = search_ddg(query)
-        time.sleep(REQUEST_DELAY)
+        query = f'{site} {url} {recipe.get("name","")}'
 
-        for url in urls:
-            if added_count >= MAX_NEW_PER_RUN:
-                break
-            if url_already_seen(db, url):
-                log.debug(f'Already seen: {url}')
-                continue
+        veg_ok, veg_reason = is_vegetarian(recipe)
+        if not veg_ok:
+            log_run(db, url, 'rejected', f'non-veg: {veg_reason}')
+            log.info(f'Rejected non-veg [{recipe.get("name","?")}]: {veg_reason}')
+            continue
 
-            html = fetch_page(url)
-            time.sleep(REQUEST_DELAY)
-            if not html:
-                log_run(db, url, 'error', 'fetch failed')
-                continue
+        if is_duplicate(db, city_id, recipe):
+            log_run(db, url, 'duplicate', normalise_name(recipe['name']))
+            log.info(f'Duplicate: {recipe["name"]}')
+            continue
 
-            recipe = None
-            for parser in get_parsers_for(url):
-                recipe = parser.parse(url, html)
-                if recipe and recipe.get('name'):
-                    break
+        # Ensure unique slug
+        base_slug = recipe['slug'] or parser.slugify(recipe['name'])
+        slug = base_slug
+        suffix = 1
+        while db.execute('SELECT id FROM recipes WHERE slug = ?', (slug,)).fetchone():
+            slug = f'{base_slug}-{suffix}'
+            suffix += 1
 
-            if not recipe or not recipe.get('name'):
-                log_run(db, url, 'rejected', 'parse returned nothing')
-                continue
+        cat = guess_category(recipe, query)
+        chash = content_hash(recipe)
 
-            veg_ok, veg_reason = is_vegetarian(recipe)
-            if not veg_ok:
-                log_run(db, url, 'rejected', f'non-veg: {veg_reason}')
-                log.info(f'Rejected non-veg [{recipe.get("name","?")}]: {veg_reason}')
-                continue
-
-            if is_duplicate(db, city_id, recipe):
-                log_run(db, url, 'duplicate', normalise_name(recipe['name']))
-                log.info(f'Duplicate: {recipe["name"]}')
-                continue
-
-            # Ensure unique slug
-            base_slug = recipe['slug'] or parser.slugify(recipe['name'])
-            slug = base_slug
-            suffix = 1
-            while db.execute('SELECT id FROM recipes WHERE slug = ?', (slug,)).fetchone():
-                slug = f'{base_slug}-{suffix}'
-                suffix += 1
-
-            cat = guess_category(recipe, query)
-            chash = content_hash(recipe)
-
-            try:
-                db.execute('''
-                    INSERT INTO recipes
-                    (city_id, name, slug, category, description, ingredients,
-                     instructions, prep_time_mins, cook_time_mins, servings,
-                     source_url, author_credit, is_verified)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)
-                ''', (
-                    city_id,
-                    recipe['name'],
-                    slug,
-                    cat,
-                    recipe.get('description', ''),
-                    json.dumps(recipe.get('ingredients', [])),
-                    json.dumps(recipe.get('instructions', [])),
-                    recipe.get('prep_time_mins'),
-                    recipe.get('cook_time_mins'),
-                    recipe.get('servings'),
-                    recipe['source_url'],
-                    recipe.get('author_credit', 'Unknown'),
-                ))
-                db.commit()
-                log_run(db, url, 'added', chash)
-                added_count += 1
-                log.info(f'Added [{city["name"]}] {recipe["name"]}')
-            except Exception as e:
-                log_run(db, url, 'error', str(e))
-                log.warning(f'DB insert failed for {recipe["name"]}: {e}')
+        try:
+            db.execute('''
+                INSERT INTO recipes
+                (city_id, name, slug, category, description, ingredients,
+                 instructions, prep_time_mins, cook_time_mins, servings,
+                 source_url, author_credit, is_verified)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)
+            ''', (
+                city_id,
+                recipe['name'],
+                slug,
+                cat,
+                recipe.get('description', ''),
+                json.dumps(recipe.get('ingredients', [])),
+                json.dumps(recipe.get('instructions', [])),
+                recipe.get('prep_time_mins'),
+                recipe.get('cook_time_mins'),
+                recipe.get('servings'),
+                recipe['source_url'],
+                recipe.get('author_credit', 'Unknown'),
+            ))
+            db.commit()
+            log_run(db, url, 'added', chash)
+            added_count += 1
+            log.info(f'Added [{city["name"]}] {recipe["name"]}')
+        except Exception as e:
+            log_run(db, url, 'error', str(e))
+            log.warning(f'DB insert failed for {recipe["name"]}: {e}')
 
     db.close()
     log.info(f'=== Agent run complete. Added {added_count} recipes. ===')
