@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Admin — Tastes of India{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-800">
+
+  <header class="bg-slate-900 text-white shadow">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="{{ url_for('admin.index') }}" class="text-lg font-semibold tracking-wide">
+        Tastes of India — Admin
+      </a>
+      <nav class="flex items-center gap-4 text-sm">
+        <a href="{{ url_for('admin.index') }}" class="hover:text-amber-300">Recipes</a>
+        <a href="{{ url_for('web.index') }}" class="hover:text-amber-300" target="_blank">Public site ↗</a>
+        <form method="post" action="{{ url_for('admin.sync') }}" class="inline"
+              onsubmit="return confirm('Export agent finds and push to GitHub (triggers Render redeploy)?');">
+          <button class="bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold px-3 py-1 rounded text-xs">
+            Sync to Render
+          </button>
+        </form>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-6">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, msg in messages %}
+        <div class="mb-4 px-4 py-2 rounded text-sm
+          {% if category == 'error' %}bg-red-100 text-red-800 border border-red-200
+          {% else %}bg-emerald-100 text-emerald-800 border border-emerald-200{% endif %}">
+          {{ msg }}
+        </div>
+      {% endfor %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+</body>
+</html>

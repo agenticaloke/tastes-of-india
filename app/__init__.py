@@ -20,8 +20,10 @@ def create_app():
 
     from .web import routes as web_routes
     from .api import routes as api_routes
+    from .admin import routes as admin_routes
 
     app.register_blueprint(web_routes.bp)
     app.register_blueprint(api_routes.bp)
+    app.register_blueprint(admin_routes.bp)
 
     return app

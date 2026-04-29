@@ -1,0 +1,92 @@
+{% extends 'admin/base.html' %}
+{% block title %}Recipes — Admin{% endblock %}
+{% block content %}
+
+<div class="flex flex-wrap items-end justify-between gap-4 mb-4">
+  <div>
+    <h1 class="text-2xl font-semibold">Recipes</h1>
+    <p class="text-sm text-slate-500">
+      {{ counts['total'] or 0 }} total —
+      <span class="text-emerald-600">{{ counts['verified'] or 0 }} verified</span>,
+      <span class="text-amber-600">{{ counts['unverified'] or 0 }} unverified</span>
+    </p>
+  </div>
+</div>
+
+<form method="get" class="flex flex-wrap gap-2 mb-4 bg-white p-3 rounded border border-slate-200">
+  <input type="text" name="q" value="{{ q }}" placeholder="Search name or description"
+         class="flex-1 min-w-[200px] px-3 py-1.5 border border-slate-300 rounded text-sm" />
+  <select name="city" class="px-3 py-1.5 border border-slate-300 rounded text-sm">
+    <option value="">All cities</option>
+    {% for c in cities %}
+      <option value="{{ c['slug'] }}" {% if c['slug'] == city_filter %}selected{% endif %}>{{ c['name'] }}</option>
+    {% endfor %}
+  </select>
+  <select name="verified" class="px-3 py-1.5 border border-slate-300 rounded text-sm">
+    <option value="">Any status</option>
+    <option value="1" {% if verified_filter == '1' %}selected{% endif %}>Verified only</option>
+    <option value="0" {% if verified_filter == '0' %}selected{% endif %}>Unverified only</option>
+  </select>
+  <button class="bg-slate-800 text-white px-4 py-1.5 rounded text-sm hover:bg-slate-700">Filter</button>
+  <a href="{{ url_for('admin.index') }}" class="px-4 py-1.5 rounded text-sm border border-slate-300 hover:bg-slate-100">Clear</a>
+</form>
+
+<div class="bg-white rounded border border-slate-200 overflow-hidden">
+  <table class="w-full text-sm">
+    <thead class="bg-slate-100 text-slate-600 text-left">
+      <tr>
+        <th class="px-3 py-2">Name</th>
+        <th class="px-3 py-2">City</th>
+        <th class="px-3 py-2">Category</th>
+        <th class="px-3 py-2">Source</th>
+        <th class="px-3 py-2">Status</th>
+        <th class="px-3 py-2 text-right">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for r in recipes %}
+      <tr class="border-t border-slate-100 hover:bg-slate-50">
+        <td class="px-3 py-2">
+          <a href="{{ url_for('admin.edit', recipe_id=r['id']) }}" class="text-sky-700 hover:underline font-medium">
+            {{ r['name'] }}
+          </a>
+          <div class="text-xs text-slate-400">{{ r['slug'] }}</div>
+        </td>
+        <td class="px-3 py-2">{{ r['city_name'] }}</td>
+        <td class="px-3 py-2 capitalize">{{ r['category'] }}</td>
+        <td class="px-3 py-2 text-xs text-slate-500 max-w-[220px] truncate">
+          {% if r['source_url'] %}<a href="{{ r['source_url'] }}" target="_blank" class="hover:underline">{{ r['author_credit'] or 'source' }}</a>{% else %}—{% endif %}
+        </td>
+        <td class="px-3 py-2">
+          {% if r['is_verified'] %}
+            <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded">Verified</span>
+          {% else %}
+            <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded">Agent find</span>
+          {% endif %}
+        </td>
+        <td class="px-3 py-2 text-right whitespace-nowrap">
+          <a href="{{ url_for('web.recipe', slug=r['slug']) }}" target="_blank"
+             class="text-xs text-slate-500 hover:text-slate-800">View</a>
+          <a href="{{ url_for('admin.edit', recipe_id=r['id']) }}"
+             class="text-xs text-sky-700 hover:underline ml-2">Edit</a>
+          <form method="post" action="{{ url_for('admin.toggle_verify', recipe_id=r['id']) }}" class="inline">
+            <button class="text-xs text-emerald-700 hover:underline ml-2">
+              {{ 'Unverify' if r['is_verified'] else 'Verify' }}
+            </button>
+          </form>
+          <form method="post" action="{{ url_for('admin.delete', recipe_id=r['id']) }}" class="inline"
+                onsubmit="return confirm('Delete &quot;{{ r['name']|e }}&quot;? This cannot be undone.');">
+            <button class="text-xs text-red-600 hover:underline ml-2">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {% else %}
+      <tr><td colspan="6" class="px-3 py-6 text-center text-slate-400">No recipes match.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<p class="text-xs text-slate-400 mt-4">Showing up to 500 results. After editing, click <em>Sync to Render</em> in the header to push changes to the live site.</p>
+
+{% endblock %}
