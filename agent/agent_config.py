@@ -7,6 +7,8 @@ CITIES = [
     {"slug": "hyderabad",  "name": "Hyderabad",   "keywords": ["Hyderabad", "Hyderabadi", "Telangana"]},
     {"slug": "indore",     "name": "Indore",      "keywords": ["Indore", "Indori", "Madhya Pradesh"]},
     {"slug": "delhi",      "name": "Delhi",       "keywords": ["Delhi", "Old Delhi", "New Delhi"]},
+    {"slug": "bikaner",    "name": "Bikaner",     "keywords": ["Bikaner", "Bikaneri", "Marwari", "Marwar"]},
+    {"slug": "bangalore",  "name": "Bangalore",   "keywords": ["Bangalore", "Bengaluru", "Karnataka", "Udupi", "Mangalorean"]},
 ]
 
 CATEGORIES = ["appetizer", "snack", "starter", "entree", "dessert", "drink"]

@@ -358,6 +358,19 @@ def run_agent():
             log_run(db, url, 'error', str(e))
             log.warning(f'DB insert failed for {recipe["name"]}: {e}')
 
+    if added_count > 0:
+        try:
+            from agent.exporter import export_finds, git_push_finds
+            total = export_finds(db)
+            log.info(f'Exported {total} agent-discovered recipes to agent_finds.json')
+            ok = git_push_finds(f'agent: add {added_count} new recipe(s) (total {total})')
+            if ok:
+                log.info('Pushed agent_finds.json to GitHub — Render will redeploy.')
+            else:
+                log.warning('git push failed — check logs above.')
+        except Exception as e:
+            log.warning(f'Auto-push failed: {e}')
+
     db.close()
     log.info(f'=== Agent run complete. Added {added_count} recipes. ===')
 

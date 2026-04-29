@@ -1572,6 +1572,313 @@
           "author_credit": "Neehee's"
         }
       ]
+    },
+    {
+      "slug": "bikaner",
+      "name": "Bikaner",
+      "description": "A desert city in northern Rajasthan famed for its bhujia, kachoris, and rich Marwari sweets — a cuisine shaped by arid lands and centuries of trade.",
+      "image_file": "bikaner.jpg",
+      "recipes": [
+        {
+          "name": "Bikaneri Bhujia",
+          "slug": "bikaneri-bhujia",
+          "category": "appetizer",
+          "description": "The iconic crisp, spicy moth-bean and gram-flour noodle snack from Bikaner, prized for its distinctive aroma of cloves, cardamom and ajwain.",
+          "ingredients": [
+            {"qty": "1 cup", "item": "gram flour (besan)"},
+            {"qty": "1/2 cup", "item": "moth bean flour"},
+            {"qty": "1/2 tsp", "item": "ajwain (carom seeds)"},
+            {"qty": "1/4 tsp", "item": "clove powder"},
+            {"qty": "1/4 tsp", "item": "cardamom powder"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1/2 tsp", "item": "black pepper powder"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "2 tbsp", "item": "hot oil (for dough)"},
+            {"qty": "as needed", "item": "oil for deep frying"}
+          ],
+          "instructions": [
+            "Sift both flours together with salt and all spices.",
+            "Drizzle in hot oil and rub through the flour until crumbly.",
+            "Add water a little at a time to make a smooth, stiff dough.",
+            "Press through a sev press (fine plate) directly into hot oil.",
+            "Fry on medium heat until crisp and pale golden, about 1-2 minutes.",
+            "Drain, cool completely, and store in an airtight jar."
+          ],
+          "prep_time_mins": 15,
+          "cook_time_mins": 20,
+          "servings": 6,
+          "source_url": "https://www.vegrecipesofindia.com/bikaneri-bhujia-recipe/",
+          "author_credit": "Veg Recipes of India"
+        },
+        {
+          "name": "Bikaneri Khasta Kachori",
+          "slug": "bikaneri-khasta-kachori",
+          "category": "appetizer",
+          "description": "Flaky, layered kachoris stuffed with a fragrant moong dal and spice filling — a Bikaner breakfast classic.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "refined flour (maida)"},
+            {"qty": "1/4 cup", "item": "ghee (for dough)"},
+            {"qty": "1/2 cup", "item": "yellow moong dal, soaked 2 hours"},
+            {"qty": "1 tsp", "item": "fennel seeds (saunf)"},
+            {"qty": "1 tsp", "item": "coriander seeds, crushed"},
+            {"qty": "1/2 tsp", "item": "red chili powder"},
+            {"qty": "1/2 tsp", "item": "garam masala"},
+            {"qty": "1 tsp", "item": "amchur (dry mango powder)"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "as needed", "item": "oil for deep frying"}
+          ],
+          "instructions": [
+            "Knead flour, ghee, salt and water into a firm dough; rest 30 minutes.",
+            "Coarsely grind drained moong dal. Saute with all spices in 2 tbsp oil for 4-5 minutes.",
+            "Cool the filling completely.",
+            "Roll dough into small discs, place a spoon of filling, seal and flatten gently.",
+            "Deep fry on low heat 8-10 minutes until puffed, crisp and pale golden.",
+            "Serve with tamarind and green chutneys."
+          ],
+          "prep_time_mins": 45,
+          "cook_time_mins": 30,
+          "servings": 8,
+          "source_url": "https://www.archanaskitchen.com/bikaneri-khasta-kachori-recipe",
+          "author_credit": "Archana's Kitchen"
+        },
+        {
+          "name": "Ker Sangri Ki Sabzi",
+          "slug": "ker-sangri-bikaner",
+          "category": "entree",
+          "description": "A signature Marwari dry curry of desert berries (ker) and beans (sangri), tempered with ghee, red chili and amchur — a true taste of the Thar.",
+          "ingredients": [
+            {"qty": "1/2 cup", "item": "dried ker"},
+            {"qty": "1 cup", "item": "dried sangri beans"},
+            {"qty": "3 tbsp", "item": "ghee or mustard oil"},
+            {"qty": "1 tsp", "item": "cumin seeds"},
+            {"qty": "1/2 tsp", "item": "asafoetida (hing)"},
+            {"qty": "2", "item": "dried red chilis"},
+            {"qty": "1 tsp", "item": "red chili powder"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "1 tsp", "item": "coriander powder"},
+            {"qty": "1 tsp", "item": "amchur"},
+            {"qty": "salt", "item": "to taste"}
+          ],
+          "instructions": [
+            "Soak ker and sangri overnight in salted water; drain and rinse well.",
+            "Pressure cook with fresh water and a pinch of salt for 4-5 whistles. Drain.",
+            "Heat ghee, crackle cumin, add hing and dried red chilis.",
+            "Add ker-sangri with all dry spices and saute for 6-8 minutes on medium heat.",
+            "Sprinkle amchur, toss, and serve hot with bajra roti."
+          ],
+          "prep_time_mins": 480,
+          "cook_time_mins": 25,
+          "servings": 4,
+          "source_url": "https://www.tarladalal.com/ker-sangri-rajasthani-ker-sangri-sabzi-41611r",
+          "author_credit": "Tarla Dalal"
+        },
+        {
+          "name": "Rasgulla (Bikaneri Style)",
+          "slug": "rasgulla-bikaneri",
+          "category": "dessert",
+          "description": "Spongy chenna dumplings simmered in cardamom-scented sugar syrup — Bikaner's beloved sweet-shop classic.",
+          "ingredients": [
+            {"qty": "1 litre", "item": "full-fat milk"},
+            {"qty": "2 tbsp", "item": "lemon juice"},
+            {"qty": "1.5 cups", "item": "sugar"},
+            {"qty": "4 cups", "item": "water"},
+            {"qty": "1/4 tsp", "item": "cardamom powder"},
+            {"qty": "few strands", "item": "saffron (optional)"}
+          ],
+          "instructions": [
+            "Bring milk to a boil; add lemon juice gradually until it curdles.",
+            "Strain through muslin, rinse with cold water, and hang for 30 minutes to drain.",
+            "Knead the chenna for 8-10 minutes until smooth; shape into 12 small balls.",
+            "Bring sugar and water to a rolling boil. Drop balls in, cover, and cook 15 minutes.",
+            "Add cardamom and saffron; cool and chill before serving."
+          ],
+          "prep_time_mins": 45,
+          "cook_time_mins": 25,
+          "servings": 6,
+          "source_url": "https://www.indianhealthyrecipes.com/rasgulla-recipe-how-to-make-rasgulla/",
+          "author_credit": "Indian Healthy Recipes"
+        },
+        {
+          "name": "Thandai",
+          "slug": "thandai-bikaner",
+          "category": "drink",
+          "description": "A cooling Marwari milk drink blended with almonds, fennel, peppercorns, rose petals and saffron — a desert-summer staple.",
+          "ingredients": [
+            {"qty": "1 litre", "item": "full-fat milk, chilled"},
+            {"qty": "1/2 cup", "item": "sugar"},
+            {"qty": "20", "item": "almonds, soaked and peeled"},
+            {"qty": "2 tbsp", "item": "fennel seeds, soaked"},
+            {"qty": "1 tbsp", "item": "poppy seeds, soaked"},
+            {"qty": "1 tsp", "item": "black peppercorns"},
+            {"qty": "1 tbsp", "item": "dried rose petals"},
+            {"qty": "1/2 tsp", "item": "cardamom powder"},
+            {"qty": "few strands", "item": "saffron"}
+          ],
+          "instructions": [
+            "Grind almonds, fennel, poppy, peppercorns and rose petals with a little milk into a fine paste.",
+            "Whisk paste into the chilled milk along with sugar, cardamom and saffron.",
+            "Strain through a fine sieve.",
+            "Chill for at least 1 hour and serve over ice, garnished with rose petals."
+          ],
+          "prep_time_mins": 240,
+          "cook_time_mins": 0,
+          "servings": 4,
+          "source_url": "https://www.cookwithmanali.com/thandai-recipe/",
+          "author_credit": "Cook With Manali"
+        }
+      ]
+    },
+    {
+      "slug": "bangalore",
+      "name": "Bangalore",
+      "description": "Karnataka's garden city — home to crisp dosas, fragrant filter coffee, and the unmistakable buttery indulgence of the Bangalore-style masala dosa.",
+      "image_file": "bangalore.jpg",
+      "recipes": [
+        {
+          "name": "Bangalore Masala Dosa",
+          "slug": "bangalore-masala-dosa",
+          "category": "entree",
+          "description": "The legendary Bangalore-style masala dosa: a thin, crisp, ghee-laced rice-and-lentil crepe folded over a buttery, turmeric-yellow potato filling.",
+          "ingredients": [
+            {"qty": "2 cups", "item": "dosa rice"},
+            {"qty": "1/2 cup", "item": "urad dal"},
+            {"qty": "1/4 cup", "item": "poha (flattened rice)"},
+            {"qty": "1/2 tsp", "item": "fenugreek seeds"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "4 medium", "item": "potatoes, boiled and crumbled"},
+            {"qty": "1", "item": "onion, sliced"},
+            {"qty": "1 tsp", "item": "mustard seeds"},
+            {"qty": "1 tsp", "item": "chana dal"},
+            {"qty": "10", "item": "curry leaves"},
+            {"qty": "2", "item": "green chilis, slit"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "as needed", "item": "ghee and oil"}
+          ],
+          "instructions": [
+            "Soak rice, urad dal, poha and fenugreek for 5 hours; grind into a smooth batter and ferment overnight.",
+            "For filling: heat oil, splutter mustard, chana dal, curry leaves and green chili.",
+            "Add onion, saute until soft. Add turmeric and crumbled potato; cook 3-4 minutes.",
+            "Heat a tawa, pour a ladle of batter and spread thin. Drizzle ghee around edges.",
+            "When golden, place a spoon of filling at centre and fold over.",
+            "Serve hot with coconut chutney and sambar."
+          ],
+          "prep_time_mins": 360,
+          "cook_time_mins": 25,
+          "servings": 4,
+          "source_url": "https://www.vegrecipesofindia.com/masala-dosa-recipe/",
+          "author_credit": "Veg Recipes of India"
+        },
+        {
+          "name": "Bisi Bele Bath",
+          "slug": "bisi-bele-bath",
+          "category": "entree",
+          "description": "A one-pot Karnataka comfort dish of rice, lentils and vegetables in a tamarind-and-spice broth, finished with ghee and cashews.",
+          "ingredients": [
+            {"qty": "1 cup", "item": "rice"},
+            {"qty": "1/2 cup", "item": "toor dal"},
+            {"qty": "2 cups", "item": "mixed vegetables (carrot, beans, peas)"},
+            {"qty": "1 tbsp", "item": "tamarind paste"},
+            {"qty": "2 tbsp", "item": "bisi bele bath masala"},
+            {"qty": "1/2 tsp", "item": "turmeric"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "3 tbsp", "item": "ghee"},
+            {"qty": "1 tsp", "item": "mustard seeds"},
+            {"qty": "10", "item": "curry leaves"},
+            {"qty": "2 tbsp", "item": "cashews"}
+          ],
+          "instructions": [
+            "Pressure cook rice and dal together with turmeric until soft.",
+            "Cook vegetables separately until tender.",
+            "Combine rice-dal, vegetables, tamarind paste, masala, salt and 2 cups water.",
+            "Simmer 8-10 minutes until thick and well blended.",
+            "Heat ghee, fry cashews, splutter mustard and curry leaves; pour over the dish.",
+            "Serve hot with raita and boondi."
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 35,
+          "servings": 4,
+          "source_url": "https://www.indianhealthyrecipes.com/bisi-bele-bath-recipe/",
+          "author_credit": "Indian Healthy Recipes"
+        },
+        {
+          "name": "Mangalore Bonda",
+          "slug": "mangalore-bonda",
+          "category": "appetizer",
+          "description": "Soft, fluffy yogurt-batter fritters from coastal Karnataka — a beloved Bangalore tea-time snack with coconut chutney.",
+          "ingredients": [
+            {"qty": "1 cup", "item": "all-purpose flour (maida)"},
+            {"qty": "1/2 cup", "item": "yogurt"},
+            {"qty": "1/4 tsp", "item": "baking soda"},
+            {"qty": "1 tsp", "item": "sugar"},
+            {"qty": "1", "item": "green chili, finely chopped"},
+            {"qty": "1 tsp", "item": "ginger, grated"},
+            {"qty": "10", "item": "curry leaves, chopped"},
+            {"qty": "2 tbsp", "item": "fresh coriander, chopped"},
+            {"qty": "salt", "item": "to taste"},
+            {"qty": "as needed", "item": "oil for deep frying"}
+          ],
+          "instructions": [
+            "Whisk flour, yogurt, baking soda, sugar and salt with a little water into a thick batter.",
+            "Stir in green chili, ginger, curry leaves and coriander.",
+            "Rest the batter 30 minutes.",
+            "Heat oil. Drop spoonfuls of batter and fry on medium heat until golden and puffed, 4-5 minutes.",
+            "Drain and serve hot with coconut chutney."
+          ],
+          "prep_time_mins": 35,
+          "cook_time_mins": 15,
+          "servings": 4,
+          "source_url": "https://www.hebbarskitchen.com/mangalore-buns-banana-buns-recipe/",
+          "author_credit": "Hebbar's Kitchen"
+        },
+        {
+          "name": "Mysore Pak",
+          "slug": "mysore-pak-bangalore",
+          "category": "dessert",
+          "description": "A rich, ghee-drenched gram-flour fudge from neighbouring Mysore that has become an inseparable part of Bangalore's sweet-shop tradition.",
+          "ingredients": [
+            {"qty": "1 cup", "item": "gram flour (besan), sifted"},
+            {"qty": "1.5 cups", "item": "ghee"},
+            {"qty": "1.5 cups", "item": "sugar"},
+            {"qty": "1/2 cup", "item": "water"}
+          ],
+          "instructions": [
+            "Grease a tray and keep ghee warm in a separate pan.",
+            "Boil sugar with water until single-string consistency.",
+            "Lower heat; add besan slowly, stirring constantly to avoid lumps.",
+            "Add hot ghee a ladle at a time, stirring until the mixture turns frothy and porous.",
+            "Pour into the greased tray immediately. Cool 10 minutes, then cut into squares."
+          ],
+          "prep_time_mins": 5,
+          "cook_time_mins": 25,
+          "servings": 12,
+          "source_url": "https://www.indianhealthyrecipes.com/mysore-pak-recipe/",
+          "author_credit": "Indian Healthy Recipes"
+        },
+        {
+          "name": "Filter Coffee",
+          "slug": "bangalore-filter-coffee",
+          "category": "drink",
+          "description": "Bangalore's morning ritual — strong, dark decoction brewed in a traditional steel filter, frothed with hot milk and sugar in a tumbler-davara.",
+          "ingredients": [
+            {"qty": "3 tbsp", "item": "South Indian filter coffee powder (with chicory)"},
+            {"qty": "1 cup", "item": "boiling water"},
+            {"qty": "1 cup", "item": "full-fat milk"},
+            {"qty": "2 tsp", "item": "sugar (or to taste)"}
+          ],
+          "instructions": [
+            "Place coffee powder in the upper chamber of a South Indian filter and pack lightly with the press.",
+            "Pour boiling water over it, cover, and let the decoction drip slowly for 15-20 minutes.",
+            "Heat milk to a near-boil.",
+            "In a tumbler, add 2-3 tbsp decoction, sugar, then the hot milk.",
+            "Pour back and forth between tumbler and davara to froth, and serve immediately."
+          ],
+          "prep_time_mins": 5,
+          "cook_time_mins": 20,
+          "servings": 2,
+          "source_url": "https://www.vegrecipesofindia.com/filter-coffee-recipe-south-indian-filter-coffee/",
+          "author_credit": "Veg Recipes of India"
+        }
+      ]
     }
   ]
 }

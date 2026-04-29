@@ -79,6 +79,45 @@ def seed_recipes():
 
     db.commit()
 
+    # Also load agent-discovered recipes if the file exists. These are stored
+    # separately from the curated seed file and replenished by the recipe agent.
+    finds_path = os.path.join(os.path.dirname(__file__), 'agent_finds.json')
+    if os.path.exists(finds_path):
+        with open(finds_path) as f:
+            finds = json.load(f)
+        for city_data in finds.get('cities', []):
+            city_row = db.execute('SELECT id FROM cities WHERE slug = ?', (city_data['slug'],)).fetchone()
+            if not city_row:
+                continue
+            city_id = city_row['id']
+            for recipe in city_data.get('recipes', []):
+                existing = db.execute('SELECT id FROM recipes WHERE slug = ?', (recipe['slug'],)).fetchone()
+                if existing:
+                    continue
+                ings = recipe['ingredients']
+                steps = recipe['instructions']
+                db.execute(
+                    '''INSERT INTO recipes
+                       (city_id, name, slug, category, description, ingredients, instructions,
+                        prep_time_mins, cook_time_mins, servings, source_url, author_credit, is_verified)
+                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)''',
+                    (
+                        city_id,
+                        recipe['name'],
+                        recipe['slug'],
+                        recipe['category'],
+                        recipe.get('description', ''),
+                        ings if isinstance(ings, str) else json.dumps(ings),
+                        steps if isinstance(steps, str) else json.dumps(steps),
+                        recipe.get('prep_time_mins'),
+                        recipe.get('cook_time_mins'),
+                        recipe.get('servings'),
+                        recipe.get('source_url'),
+                        recipe.get('author_credit'),
+                    )
+                )
+        db.commit()
+
 
 @click.command('seed-recipes')
 def seed_recipes_command():
