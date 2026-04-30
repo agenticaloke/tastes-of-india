@@ -1212,6 +1212,61 @@
           "author_credit": "Unknown"
         },
         {
+          "name": "Ugadi Pachadi Recipe",
+          "slug": "ugadi-pachadi-recipe",
+          "category": "entree",
+          "description": "Ugadi Pachadi is one of the most important dishes prepared during the Ugadi festival in the states of Andhra Pradesh and Telangana. It is a festive drink made with six ingredients that create six tastes – tamarind (sour), jaggery (sweet), raw mango (astringent), neem flowers (bitter), black pepper (spicy) and salt (salty). These six tastes symbolize the different emotions and experiences of life.",
+          "ingredients": [
+            {
+              "qty": "",
+              "item": "1 teaspoon tamarind"
+            },
+            {
+              "qty": "",
+              "item": "¼ cup water (- for soaking tamarind)"
+            },
+            {
+              "qty": "",
+              "item": "⅓ cup water (- to be added later)"
+            },
+            {
+              "qty": "",
+              "item": "¼ cup jaggery (- chopped)"
+            },
+            {
+              "qty": "",
+              "item": "⅓ cup mangoes (finely chopped, unripe)"
+            },
+            {
+              "qty": "",
+              "item": "2 tablespoons neem flowers"
+            },
+            {
+              "qty": "",
+              "item": "¼ teaspoon black pepper powder ((ground black pepper))"
+            },
+            {
+              "qty": "",
+              "item": "¼ teaspoon salt (or add as required)"
+            }
+          ],
+          "instructions": [
+            "Soak tamarind in water for about 40 minutes to 1 hour. Then squeeze the tamarind pulp and set it aside.",
+            "In a small mixing bowl, add this tamarind pulp.",
+            "Next add ⅓ cup water to this bowl containing the tamarind extract or pulp.",
+            "Add the chopped jaggery.",
+            "Mix very well with a spoon so that all of the jaggery dissolves.",
+            "Add the finely chopped raw mangoes and neem flowers.",
+            "Season with salt and black pepper powder. Mix very well.",
+            "Offer Ugadi Pachadi as naivedyam to your deities. Later serve it to your family as prasad."
+          ],
+          "prep_time_mins": 10,
+          "cook_time_mins": null,
+          "servings": 3,
+          "source_url": "https://www.vegrecipesofindia.com/ugadi-pachadi-recipe/",
+          "author_credit": "Dassana Amit"
+        },
+        {
           "name": "Veg Kurma Recipe | Vegetable Korma Recipe",
           "slug": "veg-kurma-recipe-vegetable-korma-recipe",
           "category": "appetizer",
