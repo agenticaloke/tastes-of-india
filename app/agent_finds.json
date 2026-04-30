@@ -1,6 +1,106 @@
 {
   "cities": [
     {
+      "slug": "bangalore",
+      "recipes": [
+        {
+          "name": "girmit recipe | masala puffed rice | north karnataka mandakki upkari",
+          "slug": "girmit-recipe-masala-puffed-rice-north-karnataka-mandakki-upkari",
+          "category": "entree",
+          "description": "easy girmit recipe | masala puffed rice | north karnataka mandakki upkari",
+          "ingredients": [
+            {
+              "qty": "",
+              "item": "4 tsp oil"
+            },
+            {
+              "qty": "",
+              "item": "1 tsp mustard / rai / sasuve"
+            },
+            {
+              "qty": "",
+              "item": "½ tsp jeera / cumin / jeerige"
+            },
+            {
+              "qty": "",
+              "item": "few curry leaves"
+            },
+            {
+              "qty": "",
+              "item": "1 onion (finely chopped)"
+            },
+            {
+              "qty": "",
+              "item": "2 green chilli (finely chopped)"
+            },
+            {
+              "qty": "",
+              "item": "½ tsp turmeric / haldi / asrshina"
+            },
+            {
+              "qty": "",
+              "item": "½ tsp salt"
+            },
+            {
+              "qty": "",
+              "item": "1 tsp putani powder / roasted gram powder"
+            },
+            {
+              "qty": "",
+              "item": "½ cup tamarind extract"
+            },
+            {
+              "qty": "",
+              "item": "½ tsp jaggery / gud / bella"
+            },
+            {
+              "qty": "",
+              "item": "2 cups churumuri / mandakki / puffed rice"
+            },
+            {
+              "qty": "",
+              "item": "2 tbsp onions (finely chopped)"
+            },
+            {
+              "qty": "",
+              "item": "3 tsp putani powder / roasted gram powder"
+            },
+            {
+              "qty": "",
+              "item": "2 tbsp tomato (finely chopped)"
+            },
+            {
+              "qty": "",
+              "item": "2 tsp coriander leaves (finely chopped)"
+            },
+            {
+              "qty": "",
+              "item": "handful of sev / mixture"
+            }
+          ],
+          "instructions": [
+            "firstly, in a large kadai heat 4 tsp oil and add 1 tsp mustard, ½ tsp jeera and few curry leaves. allow to splutter.",
+            "further add 1 finely chopped onion and 2 green chilli. saute well.",
+            "also add ½ tsp turmeric and ½ tsp salt. saute for a minute.",
+            "additioanlly, add ½ cup tamarind extract and ½ tsp jaggery.",
+            "boil for 3 minutes.",
+            "now add 1 tsp putani powder and mix well.",
+            "girmit masala / curry is ready.",
+            "further, in a large mixing bowl take 2 cups churumuri.",
+            "add in ¼ cup of prepared girmit masala / curry.",
+            "also add 2 tbsp onions, 2 tbsp tomato and 3 tsp putani powder.",
+            "give a rough mix.",
+            "finally, serve north karnataka style girmit recipe garnished with few coriander leaves and handful of sev / mixture."
+          ],
+          "prep_time_mins": 5,
+          "cook_time_mins": 15,
+          "servings": 2,
+          "source_url": "https://hebbarskitchen.com/girmit-masala-puffed-rice-mandakki/",
+          "author_credit": "Unknown"
+        }
+      ]
+    },
+    {
       "slug": "delhi",
       "recipes": [
         {
