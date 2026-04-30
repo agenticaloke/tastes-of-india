@@ -4,228 +4,6 @@
       "slug": "delhi",
       "recipes": [
         {
-          "name": "Aloo Gobi Matar Recipe",
-          "slug": "aloo-gobi-matar-recipe",
-          "category": "appetizer",
-          "description": "Aloo Gobi Matar is an all-time favorite vegetarian side dish made with three pantry staples: potatoes (aloo), cauliflower (Gobi), and green peas (matar). These veggies are slowly cooked until tender along with spices. This dry sabzi shows up very often in Indian households, holding a special place. This sabzi is perfect for outdoor picnics, lunch boxes, and a lazy dinner.",
-          "ingredients": [
-            {
-              "qty": "",
-              "item": "1 potato (medium sized )"
-            },
-            {
-              "qty": "",
-              "item": "1/2 cup cauliflower (small florets)"
-            },
-            {
-              "qty": "",
-              "item": "1/2 cup green peas"
-            },
-            {
-              "qty": "",
-              "item": "1 teaspoon garlic ( finely chopped)"
-            },
-            {
-              "qty": "",
-              "item": "1 big onion (small sized finely chopped)"
-            },
-            {
-              "qty": "",
-              "item": "1/2 teaspoon red chilli powder"
-            },
-            {
-              "qty": "",
-              "item": "1 teaspoon coriander powder"
-            },
-            {
-              "qty": "",
-              "item": "1 pinch turmeric powder"
-            },
-            {
-              "qty": "",
-              "item": "1/2 teaspoon garam masala powder"
-            },
-            {
-              "qty": "",
-              "item": "2 teaspoon coriander leaves (finely chopped)"
-            },
-            {
-              "qty": "",
-              "item": "1/4 teaspoon kasoori methi (crushed)"
-            },
-            {
-              "qty": "",
-              "item": "salt (to taste)"
-            },
-            {
-              "qty": "",
-              "item": "2 teaspoon oil"
-            },
-            {
-              "qty": "",
-              "item": "3/4 teaspoon cumin seeds"
-            }
-          ],
-          "instructions": [
-            "Wash potatoes, peel off the skin of potatoes, chop them into bite sized cubes and set aside.",
-            "Clean cauliflower, cut them into small florets and set aside. Peel the skin and collect the peas in bowl and set aside.",
-            "Heat oil in a pan – add jeera and let it splutter.",
-            "Then add garlic saute till slightly browned, then add onion and saute for a minute.",
-            "Then add potato along with turmeric powder and required salt.",
-            "Sprinkle little water and cook covered with a lid containing water.",
-            "When the water reduces, add more water and stir the veggie occasionally to avoid burning at the bottom.",
-            "When potato is half cooked add cauliflower and peas.",
-            "Then again cook covered as mentioned in step 6 & 7.",
-            "Then add red chilli powder,coriander powder and garam masala powder, give a quick toss.",
-            "Sprinkle little water and cook covered for 2 minutes.",
-            "Mix well till the masala coats well with the veggies.",
-            "Saute for 2-3 minutes. Adjust salt and spice level at this stage.",
-            "Finally garnish with chopped coriander leaves and kasoori methi.",
-            "Serve hot with roti / rice or any pulao of your choice."
-          ],
-          "prep_time_mins": 15,
-          "cook_time_mins": 20,
-          "servings": 2,
-          "source_url": "https://www.sharmispassions.com/aloo-gobi-matar-recipe-easy-potato/",
-          "author_credit": "Sharmilee J"
-        },
-        {
-          "name": "Bottle Gourd Soup Recipe",
-          "slug": "bottle-gourd-soup-recipe",
-          "category": "drink",
-          "description": "Bottle gourd soup or lauki soup is an easy soup recipe with a bottle gourd and moong dal base and very simply spiced with cumin and pepper.",
-          "ingredients": [
-            {
-              "qty": "",
-              "item": "4 cups peeled and cubed bottle gourd"
-            },
-            {
-              "qty": "",
-              "item": "3/4 cup moong dal"
-            },
-            {
-              "qty": "",
-              "item": "1/2 cup cubed onions"
-            },
-            {
-              "qty": "",
-              "item": "1 tsp minced garlic (or 3-4 flakes of garlic)"
-            },
-            {
-              "qty": "",
-              "item": "1 tsp roasted cumin seeds"
-            },
-            {
-              "qty": "",
-              "item": "1 tsp black pepper"
-            },
-            {
-              "qty": "",
-              "item": "1-2 tsp lemon juice"
-            },
-            {
-              "qty": "",
-              "item": "Salt to taste"
-            }
-          ],
-          "instructions": [
-            "Wash, peel, and cube the bottle gourd. I used a pressure cooker to make the soup so didn't make the pieces or even or very small. If you plan to use a covered pan on the stovetop, then cut the bottle gourd into smaller pieces for quicker cooking",
-            "Wash the moong dal and place in the pressure pan with about 1.5 cups water",
-            "Add the cubed bottle gourd and onions along with the garlic to the pressure pan",
-            "Pressure cook for 4-5 whistles. If you are cooking in a regular pot, simmer covered on low heat until the bottle gourd and moong dal are cooked soft",
-            "Using an immersion blender, blend the ingredients until smooth. Add more water if the soup is too thick",
-            "Add salt and lemon juice, mix well",
-            "The seasoning I used is roasted and powdered cumin seeds with some freshly cracked black pepper. You can add as much as or as little as you'd like. Keep some to add just before serving",
-            "Serve soup hot with some crusty bread or a side salad"
-          ],
-          "prep_time_mins": 10,
-          "cook_time_mins": 20,
-          "servings": 6,
-          "source_url": "https://www.cookingandme.com/bottle-gourd-soup-how-to-make-lauki-soup/",
-          "author_credit": "nags"
-        },
-        {
-          "name": "Dal Vegetable Soup Recipe",
-          "slug": "dal-vegetable-soup-recipe",
-          "category": "drink",
-          "description": "A dal vegetable soup with a moong dal and lots of added vegetable to make an Indian-style dal soup recipe, perfectly easy and healthy.",
-          "ingredients": [
-            {
-              "qty": "",
-              "item": "1/4 cup moong dal (yellow split lentils)"
-            },
-            {
-              "qty": "",
-              "item": "1 cup tomatoes (cubed)"
-            },
-            {
-              "qty": "",
-              "item": "1 cup carrots (cubed)"
-            },
-            {
-              "qty": "",
-              "item": "1/2 cup onions (cubed)"
-            },
-            {
-              "qty": "",
-              "item": "2 flakes of garlic"
-            },
-            {
-              "qty": "",
-              "item": "1 tbsp butter or olive oil"
-            },
-            {
-              "qty": "",
-              "item": "1/2 cup button mushrooms (chopped fine)"
-            },
-            {
-              "qty": "",
-              "item": "1/2 cup carrots (chopped fine)"
-            },
-            {
-              "qty": "",
-              "item": "1/2 cup celery (chopped fine)"
-            },
-            {
-              "qty": "",
-              "item": "2 cups spinach leaves (packed)"
-            },
-            {
-              "qty": "",
-              "item": "1 tbsp lemon juice"
-            },
-            {
-              "qty": "",
-              "item": "1 tsp black pepper powder (freshly cracked (or to taste))"
-            },
-            {
-              "qty": "",
-              "item": "1/2 tsp sugar"
-            },
-            {
-              "qty": "",
-              "item": "Salt to taste"
-            }
-          ],
-          "instructions": [
-            "Add the soup base ingredients - moong dal, carrots, tomatoes, onion, garlic - to a pressure cooker with enough water to submerge the ingredients",
-            "Pressure cook for 3-4 whistles or 15 minutes (Alternatively, cook them in a covered pot until the dal is soft and the vegetables turn mushy)",
-            "Open and let this mixture cool while you chop up the vegetables needed to add on to the soup",
-            "Once cool, blend the moong dal mixture to an almost smooth paste",
-            "Heat butter in a pan and add the chopped vegetables except spinach - mushroom, carrot, celery - and saute until they turn soft",
-            "Add the pureed moong dal mixture",
-            "Top up with 3-4 cups water or as much as you'd like to bring to to the right consistency",
-            "Bring to the boil and add salt and sugar",
-            "Finally add the spinach leaves and boil again for a minute or two",
-            "Add cracked pepper and lemon juice, mix well, and serve hot"
-          ],
-          "prep_time_mins": 15,
-          "cook_time_mins": 15,
-          "servings": 4,
-          "source_url": "https://www.cookingandme.com/dal-vegetable-soup-recipe/",
-          "author_credit": "nags"
-        },
-        {
           "name": "Matar Kachori",
           "slug": "matar-kachori",
           "category": "appetizer",
@@ -314,106 +92,6 @@
           "servings": 20,
           "source_url": "https://www.sailusfood.com/matar-kachori-recipe-indian-veg-snack",
           "author_credit": "Sailu's Kitchen"
-        },
-        {
-          "name": "Mushroom Fry Recipe",
-          "slug": "mushroom-fry-recipe",
-          "category": "appetizer",
-          "description": "Mushroom Fry is a popular dry South Indian style curry made in under 30 minutes. Mushroom Fry is a vegetarian side dish that can be served with Rice, Roti etc. Learn to make Mushroom Fry Recipe with step by step pictures and video for easy understanding and reference.",
-          "ingredients": [
-            {
-              "qty": "",
-              "item": "400 gms mushroom (cleaned)"
-            },
-            {
-              "qty": "",
-              "item": "3/4 cup thick curd"
-            },
-            {
-              "qty": "",
-              "item": "1 teaspoon ginger garlic paste"
-            },
-            {
-              "qty": "",
-              "item": "1 teaspoon red chilli powder"
-            },
-            {
-              "qty": "",
-              "item": "1/4 teaspoon turmeric powder"
-            },
-            {
-              "qty": "",
-              "item": "1 teaspoon coriander powder"
-            },
-            {
-              "qty": "",
-              "item": "1 teaspoon garam masala powder"
-            },
-            {
-              "qty": "",
-              "item": "1 tablespoon garlic (chopped finely)"
-            },
-            {
-              "qty": "",
-              "item": "1 medium sized big onion (chopped finely)"
-            },
-            {
-              "qty": "",
-              "item": "1 teaspoon fennel seeds"
-            },
-            {
-              "qty": "",
-              "item": "1 tablespoon grated coconut"
-            },
-            {
-              "qty": "",
-              "item": "1 tablespoon coriander leaves (chopped finely)"
-            },
-            {
-              "qty": "",
-              "item": "salt (to taste)"
-            },
-            {
-              "qty": "",
-              "item": "2 tablespoon oil"
-            },
-            {
-              "qty": "",
-              "item": "1/2 teaspoon cumin seeds"
-            },
-            {
-              "qty": "",
-              "item": "a small sprig curry leaves"
-            },
-            {
-              "qty": "",
-              "item": "4 red chillies"
-            }
-          ],
-          "instructions": [
-            "Clean mushroom and slice each mushroom into 3-4 slices depending on how big it is. To a mixing bowl add 400 gms mushrooms along with 3/4 cup thick curd, 1 teaspoon ginger garlic paste, salt to taste, 1/4 teaspoon turmeric powder, 1 teaspoon red chilli powder, 1 teaspoon coriander powder, 1 teaspoon garam masala powder.",
-            "Mix it well so that the masalas are evenly coated. Do not add water. Set aside.",
-            "To a pan add 1 teaspoon fennel seeds. Dry roast until crisp.",
-            "Crush it coarsely using a mortar and pestle and set it aside.",
-            "Now to the same pan add 2 tablespoon - add 1/2 teaspoon cumin seeds let it splutter, add few curry leaves 4 red chillies, fennel seeds powder, 1 tablespoon garlic.",
-            "Saute for a minute until garlic turns golden.",
-            "Add 1 medium sized onion finely chopped along with required salt.",
-            "Saute until golden.",
-            "Add the mushroom marinade.",
-            "In medium high heat give a quick saute.",
-            "It will start letting out water.",
-            "Cook covered in medium high heat for 3 mins.",
-            "Open give a quick stir then cook in medium heat until it becomes dry.",
-            "Keep stirring in between and cook until almost dry and roasted well.",
-            "Add 1 tablespoon coriander leaves and 1 tablespoon grated coconut. Though coconut is optional it gives a nice texture to the fry.",
-            "Give a quick mix and switch off.",
-            "Mushroom Fry is ready!"
-          ],
-          "prep_time_mins": 10,
-          "cook_time_mins": 15,
-          "servings": 2,
-          "source_url": "https://www.sharmispassions.com/mushroom-fry-recipe/",
-          "author_credit": "Sharmilee J"
         },
         {
           "name": "Nombu Kanji Recipe | Ramzan Nombu Kanji",
@@ -526,94 +204,53 @@
           "author_credit": "Sharmilee J"
         },
         {
-          "name": "Paneer 65 Recipe",
-          "slug": "paneer-65-recipe",
+          "name": "Paneer Satay Recipe",
+          "slug": "paneer-satay-recipe",
           "category": "appetizer",
-          "description": "Paneer 65 is a popular restaurant style appetizer or starter perfect for parties and get together. Paneer 65 is made by marinating paneer, dipping them in flour batter and then deep frying it.",
+          "description": "Paneer Satay Recipe is made with marinated paneer cooked on a stove top grill or in an oven. This protein rich Paneer Recipe is delicious and can be served with a Peanut Dipping Sauce.",
           "ingredients": [
             {
               "qty": "",
-              "item": "200 gms paneer"
+              "item": "500 grams Paneer (Homemade Cottage Cheese) cut lengthwise of 1 inch thickness"
             },
             {
               "qty": "",
-              "item": "1 teaspoon ginger garlic paste"
+              "item": "1 inch Ginger grated"
             },
             {
               "qty": "",
-              "item": "1/2 teaspoon red chilli powder"
+              "item": "3 cloves Garlic grated"
             },
             {
               "qty": "",
-              "item": "1/2 teaspoon garam masala powder"
+              "item": "1/2 teaspoon Turmeric powder (Haldi)"
             },
             {
               "qty": "",
-              "item": "1/4 teaspoon pepper powder"
+              "item": "2 tablespoons Dark soy sauce"
             },
             {
               "qty": "",
-              "item": "1 teaspoon lemon juice"
+              "item": "1 tablespoon Sesame (Gingelly) Oil"
             },
             {
               "qty": "",
-              "item": "1 tablespoon curd"
-            },
-            {
-              "qty": "",
-              "item": "salt ( to taste)"
-            },
-            {
-              "qty": "",
-              "item": "3 tablespoon maida"
-            },
-            {
-              "qty": "",
-              "item": "2 tablespoon cornflour"
-            },
-            {
-              "qty": "",
-              "item": "1 teaspoon kashmiri red chilli powder"
-            },
-            {
-              "qty": "",
-              "item": "a tiny pinch cooking soda"
-            },
-            {
-              "qty": "",
-              "item": "salt ( to taste)"
-            },
-            {
-              "qty": "",
-              "item": "water (as needed)"
-            },
-            {
-              "qty": "",
-              "item": "curry leaves"
-            },
-            {
-              "qty": "",
-              "item": "green chillies"
+              "item": "Salt to taste"
             }
           ],
           "instructions": [
-            "To begin with first to a mixing bowl add paneer along with ingredients listed under &#39;For marinade&#39;.",
-            "Mix until the spices are coated well.",
-            "To another mixing bowl. add the ingredients listed under &#39;for the batter&#39;. Mix this well first.",
-            "Add water little by little to form a slightly thickish batter. Not too thick or not too thin. It should be thinner than idli batter consistency.",
-            "Add few paneer pieces into the batter, few at a time.",
-            "Coat it well using a fork. Remove excess batter. Add it to preheated oil.",
-            "Do not turn over at once. Leave it for few seconds then turn over. If it sticks break it.",
-            "Turn over and fry well. Fry until golden brown.",
-            "Remove and add next batch. Repeat to finish.",
-            "Finally add curry leaves and green chillies and fry until crisp.",
-            "Crispy restaurant style Paneer 65 ready! Enjoy!"
+            "To begin making the Paneer Satay Recipe, combine the marinade ingredients including ginger, garlic, turmeric powder, dark soy sauce, sesame oil and salt in a large bowl.",
+            "Add the paneer and toss gently to coat the paneer well with the marinade. Let the paneer marinate for about 30 minutes or you can refrigerate overnight if you plan to make it the next day.",
+            "I like to roast the paneer on a stove top grill, you can also do it in the oven that is preheated at 200 C.",
+            "Place the paneer on the preheated skillet and roast it until it is evenly browned on all sides. Keep drizzling some of the marinade as the paneer is roasting, so it absorbs additional flavors.",
+            "The paneer satay is done when it is has a golden brown color. Transfer the paneer satay onto a serving plate and serve hot.",
+            "Serve this delicious Paneer Satay Recipe along with Peanut Dipping Sauce as a party appetisers."
           ],
           "prep_time_mins": 15,
-          "cook_time_mins": 15,
-          "servings": 3,
-          "source_url": "https://www.sharmispassions.com/paneer-65-recipe/",
-          "author_credit": "Sharmilee J"
+          "cook_time_mins": 30,
+          "servings": 4,
+          "source_url": "https://www.archanaskitchen.com/recipe/paneer-satay-recipe-healthy-vegetarian-appetizer",
+          "author_credit": "Archana Doshi"
         },
         {
           "name": "Samosa – Indian Snack",
@@ -773,6 +410,106 @@
           "servings": 2,
           "source_url": "https://www.sharmispassions.com/turmeric-milk-recipe/",
           "author_credit": "Sharmilee J"
+        },
+        {
+          "name": "Veg Puff Recipe (Bakery Style Vegetable Puff)",
+          "slug": "veg-puff-recipe-bakery-style-vegetable-puff",
+          "category": "appetizer",
+          "description": "Read the notes to get the best, perfect, flaky layered texture. This is an Indian bakery style vegetable puff recipe. These are SO EASY to make, plus taste and texture are PERFECT. A must try and a keeper recipe!",
+          "ingredients": [
+            {
+              "qty": "",
+              "item": "2 Puff pastry sheets ((store bought 1 packet))"
+            },
+            {
+              "qty": "",
+              "item": "4 slices Cheese (optional)"
+            },
+            {
+              "qty": "",
+              "item": "2 tablespoons Oil"
+            },
+            {
+              "qty": "",
+              "item": "½ teaspoon Cumin seeds"
+            },
+            {
+              "qty": "",
+              "item": "½ cup Red onion (chopped)"
+            },
+            {
+              "qty": "",
+              "item": "1 Green chili (finely chopped)"
+            },
+            {
+              "qty": "",
+              "item": "½ teaspoon Ginger paste or freshly grated or crushed"
+            },
+            {
+              "qty": "",
+              "item": "1 ½ cups or or 2 medium Potatoes (Boiled, peeled and chopped)"
+            },
+            {
+              "qty": "",
+              "item": "⅓ cup Green peas (boiled or steamed)"
+            },
+            {
+              "qty": "",
+              "item": "¼ cup Carrots (chopped and boiled or steamed)"
+            },
+            {
+              "qty": "",
+              "item": "Salt (to taste)"
+            },
+            {
+              "qty": "",
+              "item": "¼ teaspoon Turmeric powder"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon Red chili powder"
+            },
+            {
+              "qty": "",
+              "item": "½ teaspoon Coriander powder"
+            },
+            {
+              "qty": "",
+              "item": "½ teaspoon Cumin powder"
+            },
+            {
+              "qty": "",
+              "item": "½ teaspoon Garam masala"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon Lemon juice or Lime juice"
+            }
+          ],
+          "instructions": [
+            "Preparation: Boil the potato, peel and chop into small pieces. Also, boil the peas and carrot. I have cooked them together in the microwave for 5 minutes.",
+            "Make the stuffing: Heat the oil in a pan on medium heat. Once hot add onion, ginger and green chili. Sprinkle little salt and mix. Cook till onions become soft and light pink in color.",
+            "Then add carrot, peas, potatoes, all the spice powders (turmeric, red chili powder, coriander powder, cumin powder, garam masala) and salt.",
+            "Mix well and mash few potatoes while mixing. It should be the semi-chunky mixture. Cook for 1-2 minutes.",
+            "Then add cilantro and lemon/lime juice. Mix well.",
+            "Let the stuffing cool down completely. You can pop it in the refrigerator for quicker cooling.",
+            "Shaping and baking: Remove the puff pastry sheets from the freezer and thaw as mentioned in the packet. Here I am using Pepperidge farm brand sheets and it took me around 30 minutes to get thawed at room temperature.",
+            "Also, preheat the oven to 400 degrees F or 200 degrees C for 10-15 minutes.",
+            "Now unfold the sheet carefully, if it is still frozen or hard then it will get break. So make sure that it is thawed properly. Cut into 4 pieces using a knife.",
+            "Now cut a square cheese slice into a triangle and put on each piece. If you like more cheesy then you can use the whole slice. Or you can skip the cheese entirely.",
+            "Now put around 2-3 tablespoons of stuffing mixture on top of the cheese.",
+            "Now apply the water or milk on all four edges using a brush or fingers. This will help to seal the sides.",
+            "Now fold and make a triangle. Using fingers press the sides to seal it.",
+            "Now using a fork make design and also it helps to seal it again. Otherwise, it may open up while baking.",
+            "Arrange them on the baking sheet (lined with parchment paper.) NOTE: if you eat eggs, then beat one egg. Brush the mixture on top of veg puff before baking. This gives a very deep golden brown color.",
+            "Bake into the preheated oven for 20-25 minutes or till it puffs up and becomes golden brown.",
+            "Remove from the oven, cool for 5 minutes and then serve."
+          ],
+          "prep_time_mins": 15,
+          "cook_time_mins": 40,
+          "servings": 8,
+          "source_url": "https://www.spiceupthecurry.com/veg-puff-recipe/",
+          "author_credit": "Unknown"
         }
       ]
     },
@@ -869,6 +606,214 @@
           "servings": 4,
           "source_url": "https://www.cookingandme.com/hyderabad-style-bagara-baingan-recipe/",
           "author_credit": "nags"
+        },
+        {
+          "name": "Dry Aloo Gobi Matar Sabzi Recipe",
+          "slug": "dry-aloo-gobi-matar-sabzi-recipe",
+          "category": "appetizer",
+          "description": "Make delicious North Indian-style Dry Aloo Gobi Matar Sabzi using my easy recipe. Serve it with dal rice or phulka for a hearty meal.",
+          "ingredients": [
+            {
+              "qty": "",
+              "item": "5 tablespoons Mustard Oil"
+            },
+            {
+              "qty": "",
+              "item": "2 medium potatoes (aloo) (peeled and cubed (½-inch cubes))"
+            },
+            {
+              "qty": "",
+              "item": "1 medium cauliflower (phool gobi) (cut into small florets)"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon cumin seeds"
+            },
+            {
+              "qty": "",
+              "item": "½ teaspoon asafetida (hing)"
+            },
+            {
+              "qty": "",
+              "item": "2 teaspoons finely chopped ginger"
+            },
+            {
+              "qty": "",
+              "item": "2 teaspoons finely chopped garlic"
+            },
+            {
+              "qty": "",
+              "item": "2 teaspoons finely chopped green chilli"
+            },
+            {
+              "qty": "",
+              "item": "1 cup finely chopped onions"
+            },
+            {
+              "qty": "",
+              "item": "½ cup pureed fresh tomatoes"
+            },
+            {
+              "qty": "",
+              "item": "½ cup green peas (matar)"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon coriander powder"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon turmeric powder"
+            },
+            {
+              "qty": "",
+              "item": "2 teaspoons Kashmiri red chili powder"
+            },
+            {
+              "qty": "",
+              "item": "½ teaspoon garam masala powder"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon salt (or to taste)"
+            },
+            {
+              "qty": "",
+              "item": "1 tablespoon Kasur methi"
+            },
+            {
+              "qty": "",
+              "item": "2 teaspoons dry mango powder (amchoor)"
+            },
+            {
+              "qty": "",
+              "item": "2 tablespoons chopped cilantro (fresh coriander leaves)"
+            }
+          ],
+          "instructions": [
+            "Heat oil in a pan over medium-high heat.",
+            "Once the oil is hot, add gobhi florets and fry them until lightly browned, stirring frequently.",
+            "Remove on a plate and keep aside.",
+            "Add the potatoes to the same oil and fry until they are lightly browned and cooked through, stirring frequently.",
+            "Remove on the plate and keep aside.",
+            "To the same oil, add cumin seeds and asafetida and let them crackle for 4-5 seconds.",
+            "Add ginger, garlic, and green chilies and saute for 3-4 seconds.",
+            "Add onions and cook until they turn golden brown, stirring frequently.",
+            "Now add pureed tomatoes and cook for 2 minutes.",
+            "Add peas, coriander powder, turmeric powder, Kashmiri red chili powder, garam masala, and salt and mix well.",
+            "Add 2 tbsp of water and mix well.",
+            "Reduce the heat to low.",
+            "Cover the pan and cook for 5-6 minutes until the peas are tender and the oil starts to separate from the sides Stir a few times while cooking.",
+            "Splash more water while cooking if needed.",
+            "Add the fried cauliflower and potatoes, Kasuri methi, dry mango powder, and chopped cilantro, and mix well.",
+            "Check for salt and add more if needed. Serve hot."
+          ],
+          "prep_time_mins": 10,
+          "cook_time_mins": 20,
+          "servings": 4,
+          "source_url": "https://www.whiskaffair.com/aloo-matar-gobi/",
+          "author_credit": "Unknown"
+        },
+        {
+          "name": "Kuska Rice Recipe (Plain Biryani)",
+          "slug": "kuska-rice-recipe-plain-biryani",
+          "category": "entree",
+          "description": "A perfect Tamil hotel style Kuska Rice recipe! This Hyderabadi style kuska biryani is the plain biryani made without vegetables/meat. Serve with salan, shorba, raita or yogurt.",
+          "ingredients": [
+            {
+              "qty": "",
+              "item": "1 cup Basmati rice (Note 1)"
+            },
+            {
+              "qty": "",
+              "item": "2 tablespoons Ghee (clarified butter) (Note 2)"
+            },
+            {
+              "qty": "",
+              "item": "½ teaspoon Shahi jeera (kala jeera or black cumin seeds) (Note 3)"
+            },
+            {
+              "qty": "",
+              "item": "5 Cloves"
+            },
+            {
+              "qty": "",
+              "item": "2 Green cardamoms"
+            },
+            {
+              "qty": "",
+              "item": "1 Star anise"
+            },
+            {
+              "qty": "",
+              "item": "1 Bay leaf"
+            },
+            {
+              "qty": "",
+              "item": "1 inch Cinnamon stick"
+            },
+            {
+              "qty": "",
+              "item": "½ cup Red onion (sliced)"
+            },
+            {
+              "qty": "",
+              "item": "2 teaspoon Ginger garlic paste"
+            },
+            {
+              "qty": "",
+              "item": "½ cup Tomato (chopped)"
+            },
+            {
+              "qty": "",
+              "item": "4 tablespoons Plain yogurt ((dahi or curd))"
+            },
+            {
+              "qty": "",
+              "item": "½ teaspoon Turmeric powder"
+            },
+            {
+              "qty": "",
+              "item": "Salt (to taste)"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon Biryani masala (Note 4)"
+            },
+            {
+              "qty": "",
+              "item": "3 tablespoons Mint leaves (chopped)"
+            },
+            {
+              "qty": "",
+              "item": "3 tablespoons Cilantro or coriander leaves (chopped)"
+            },
+            {
+              "qty": "",
+              "item": "1 ¾ cups Water"
+            }
+          ],
+          "instructions": [
+            "First, wash the rice under running cold water until water runs clear. Washing/rinsing the rice step is very important. This way it removes the starch and helps to make separated rice grains. Then soak them in enough water for about 15-20 minutes.",
+            "Then discard the soaking water and drain it completely in the colander.",
+            "Heat the ghee in a pan on medium heat. Once hot add shahi jeera and let them sizzle a bit. Then add whole spices (cloves, cardamom, star anise, bay leaf, cinnamon stick), saute for 30-40 seconds.",
+            "Then add sliced onions and cook till they become soft and light pink or translucent in color.",
+            "Then add ginger garlic paste, mix and saute for a minute or till the raw smell of ginger garlic goes away.",
+            "Now add chopped tomatoes, mix and cook for 2 minutes or till the tomatoes become soft.",
+            "Now lower the heat and add yogurt and mix immediately to avoid curdling.",
+            "Add turmeric powder, biryani masala and salt.",
+            "Mix well and cook for a minute.",
+            "Then mix in chopped mint and cilantro leaves.",
+            "Add soaked, drained rice, mix and cook for a minute.",
+            "Then add water, crank the heat to high and bring it to a rolling boil.",
+            "Then cover with a lid, lower the heat to lowest possible. Cook for 17-18 minutes. Then turn off the stove and let it stand for 10 minutes without opening the lid.",
+            "Then uncover and fluff up the rice."
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 25,
+          "servings": 3,
+          "source_url": "https://www.spiceupthecurry.com/kuska-rice-recipe/",
+          "author_credit": "Unknown"
         },
         {
           "name": "Mirchi Ka Salan Recipe",
@@ -1165,6 +1110,224 @@
           "servings": 4,
           "source_url": "https://www.whiskaffair.com/saffron-milk-with-dry-fruits/",
           "author_credit": "Unknown"
+        },
+        {
+          "name": "Veg Kurma Recipe | Vegetable Korma Recipe",
+          "slug": "veg-kurma-recipe-vegetable-korma-recipe",
+          "category": "appetizer",
+          "description": "Vegetable Kurma is a flavorful gravy made by cooking vegetables with whole spices, onion, tomato, coconut paste, tempered spices and herbs. Veg Kurma is one of the best accompaniment for rotis, pooris and can be extended for pulao, jeera rice, plain rice as well. Learn to make Veg Kurma or Vegetable Korma with step by step pictures and video.",
+          "ingredients": [
+            {
+              "qty": "",
+              "item": "2 tablespoon oil"
+            },
+            {
+              "qty": "",
+              "item": "1 cinnamon"
+            },
+            {
+              "qty": "",
+              "item": "2 cloves"
+            },
+            {
+              "qty": "",
+              "item": "1 small piece stone flower"
+            },
+            {
+              "qty": "",
+              "item": "2 small cardamom"
+            },
+            {
+              "qty": "",
+              "item": "1 small bay leaf"
+            },
+            {
+              "qty": "",
+              "item": "1 big onion ((finely chopped))"
+            },
+            {
+              "qty": "",
+              "item": "1 big tomato ((roughly chopped))"
+            },
+            {
+              "qty": "",
+              "item": "1 green chili"
+            },
+            {
+              "qty": "",
+              "item": "1 tablespoon ginger garlic paste"
+            },
+            {
+              "qty": "",
+              "item": "1/4 teaspoon turmeric powder"
+            },
+            {
+              "qty": "",
+              "item": "2 teaspoon red chili powder"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon coriander powder"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon garam masala powder"
+            },
+            {
+              "qty": "",
+              "item": "2 tablespoon curd"
+            },
+            {
+              "qty": "",
+              "item": "1 tablespoon coriander leaves"
+            },
+            {
+              "qty": "",
+              "item": "salt to taste"
+            },
+            {
+              "qty": "",
+              "item": "1 medium sized carrot ((roughly chopped))"
+            },
+            {
+              "qty": "",
+              "item": "5 beans ((cut into 1 inch long))"
+            },
+            {
+              "qty": "",
+              "item": "1/2 cup green peas"
+            },
+            {
+              "qty": "",
+              "item": "1 medium sized potato"
+            },
+            {
+              "qty": "",
+              "item": "15 small cauliflower florets"
+            },
+            {
+              "qty": "",
+              "item": "1/2 cup coconut ((tightly packed))"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon fennel seeds"
+            },
+            {
+              "qty": "",
+              "item": "10 cashews"
+            }
+          ],
+          "instructions": [
+            "Add 1/2 cup coconut(tightly packed), 1 teaspoon fennel seeds and 10 cashews.",
+            "Add little water and grind it to a fine paste. Set aside.",
+            "To a pressure cooker heat 2 tablespoon oil add one 1 inch cinnamon, 2 cloves, 2 cardamom, 1 star anise, 1 small piece stone flower and 1 bay leaf. Let it splutter, give a quick sauté.",
+            "Add 1 big onion finely chopped along with 1 teaspoon ginger garlic paste and salt to taste.",
+            "Saute until onions turn transparent.",
+            "Add 1 big tomato roughly chopped along with 1 green chili.",
+            "Saute until tomatoes turn mushy and raw smell leaves.",
+            "Add 1 carrot chopped roughly, 1/2 cup green peas, 6 beans cut into 1 inch long, 10 to 12 cauliflower florets along with 1/4 teaspoon turmeric powder, 1 heaped teaspoon red chili powder, 1/2 teaspoon garam masala powder and 1/2 teaspoon coriander powder.",
+            "Saute well for a minute then add 2 tablespoon curd and mix it well.",
+            "Add water till immersing level around 2 cups. Check salt and add if needed.",
+            "Pressure cook for 1 whistle low medium flame and switch off. Let pressure release by itself.",
+            "Open switch on and give a quick mix. Now add coconut paste.",
+            "Mix it well.",
+            "Simmer in low flame and cook covered for 10 minutes or until oil separates.",
+            "Once oil separates finally add 1 tablespoon coriander leaves.",
+            "Give a quick mix and switch off.",
+            "Veg kurma is ready!"
+          ],
+          "prep_time_mins": 20,
+          "cook_time_mins": 25,
+          "servings": 4,
+          "source_url": "https://www.sharmispassions.com/hotel-style-veg-kurma-vegetable-korma-recipe/",
+          "author_credit": "Sharmilee J"
+        },
+        {
+          "name": "Vegetable Jalfrezi Recipe | Veg Jalfrezi Recipe",
+          "slug": "vegetable-jalfrezi-recipe-veg-jalfrezi-recipe",
+          "category": "appetizer",
+          "description": "Veg Jalfrezi is a colorful stir fry made with mixed vegetables cooked in a tomato base. It is little spicy, tangy and goes well with rice as well as roti. The dish comes together very quick, and it is also a nice way to add more veggies into the meal without making it boring.",
+          "ingredients": [
+            {
+              "qty": "",
+              "item": "1/3 cup baby corn"
+            },
+            {
+              "qty": "",
+              "item": "1/2 cup mushroom"
+            },
+            {
+              "qty": "",
+              "item": "1 medium sized onion (cut lengthwise)"
+            },
+            {
+              "qty": "",
+              "item": "1/2 medium sized capsicum (cut lengthwise)"
+            },
+            {
+              "qty": "",
+              "item": "1 tablespoon tomato sauce"
+            },
+            {
+              "qty": "",
+              "item": "2 medium sized tomatoes (pureed)"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon ginger garlic paste"
+            },
+            {
+              "qty": "",
+              "item": "1 teaspoon red chilli powder"
+            },
+            {
+              "qty": "",
+              "item": "1/4 teaspoon garam masala powder"
+            },
+            {
+              "qty": "",
+              "item": "1/2 cup water"
+            },
+            {
+              "qty": "",
+              "item": "1/2 teaspoon kasoori methi"
+            },
+            {
+              "qty": "",
+              "item": "1 tablespoon coriander leaves (finely chopped)"
+            },
+            {
+              "qty": "",
+              "item": "salt (to taste)"
+            },
+            {
+              "qty": "",
+              "item": "2 teaspoon oil"
+            },
+            {
+              "qty": "",
+              "item": "1/4 teaspoon cumin seeds"
+            }
+          ],
+          "instructions": [
+            "Chop tomatoes roughly and puree it, set aside.",
+            "Chop all the veggies lengthwise and keep it ready.",
+            "In a pan add onions fry till transparent, then add mushrooms saute for a minute then add carrot and baby corn.",
+            "Add capsicum, sauté for a minute.",
+            "Cook for few mins until the veggies are sautéed but still crisp, Remove from pan and Set aside.",
+            "In a pan heat oil - add jeera let it crackle then add tomato puree.",
+            "Add red chilli powder and garam masala powders mix well. Let it cook in low flame till raw smell of tomatoes leave. It will start to thicken.",
+            "At this stage add the vegetables, add little water and cook covered for few minutes.",
+            "Finally add paneer, give a mix and let it cook for 2 minutes for the masalas to blend well. Add tomato sauce.",
+            "Garnish with coriander leaves, kasoori methi, stir once and switch off.",
+            "Serve Veg Jalfrezi hot / warm with roti or pulao or rice."
+          ],
+          "prep_time_mins": 15,
+          "cook_time_mins": 25,
+          "servings": 2,
+          "source_url": "https://www.sharmispassions.com/vegetable-jalfrezi-recipe/",
+          "author_credit": "Sharmilee J"
         },
         {
           "name": "veg cutlet recipe | vegetable cutlet recipe | easy veg cutlet recipe",
