@@ -68,3 +68,11 @@ CREATE TABLE IF NOT EXISTS agent_runs (
     reason      TEXT,
     run_at      TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+CREATE TABLE IF NOT EXISTS target_sites (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    domain      TEXT NOT NULL UNIQUE,
+    enabled     INTEGER NOT NULL DEFAULT 1,
+    notes       TEXT,
+    created_at  TEXT NOT NULL DEFAULT (datetime('now'))
+);

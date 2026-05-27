@@ -34,6 +34,8 @@ TARGET_SITES = [
     "sharmispassions.com",
     "manjulaskitchen.com",
     "vegetarianindiancooking.com",
+    "ranveerbrar.com",
+    "nishamadhulika.com",
 ]
 
 # How many distinct sites to query in a single run (random sample).

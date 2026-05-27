@@ -100,6 +100,20 @@ def get_db() -> sqlite3.Connection:
     return conn
 
 
+def load_target_sites(db: sqlite3.Connection) -> list[str]:
+    """Read enabled domains from the DB. Falls back to the hardcoded
+    TARGET_SITES list if the table is missing or empty."""
+    try:
+        rows = db.execute(
+            'SELECT domain FROM target_sites WHERE enabled = 1 ORDER BY domain'
+        ).fetchall()
+        if rows:
+            return [r['domain'] for r in rows]
+    except sqlite3.Error:
+        pass
+    return list(TARGET_SITES)
+
+
 def normalise_name(name: str) -> str:
     name = unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').decode()
     name = re.sub(r'[^a-z0-9\s]', '', name.lower())
@@ -233,9 +247,11 @@ def run_agent():
 
     city_rows = {row['slug']: row['id'] for row in db.execute('SELECT id, slug FROM cities').fetchall()}
 
-    # Pick at least MIN_SITES_PER_RUN distinct sites to consult this run.
+    # Read the live list of target sites from the DB (admins manage this via
+    # /admin/sites). Falls back to TARGET_SITES if the table is empty.
+    available_sites = load_target_sites(db)
     sites_for_run = random.sample(
-        TARGET_SITES, min(MIN_SITES_PER_RUN, len(TARGET_SITES))
+        available_sites, min(MIN_SITES_PER_RUN, len(available_sites))
     )
     log.info(f'This run will consult {len(sites_for_run)} sites: {", ".join(sites_for_run)}')
 

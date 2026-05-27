@@ -1,0 +1,88 @@
+{% extends 'admin/base.html' %}
+{% block title %}Target Sites — Admin{% endblock %}
+{% block content %}
+
+<div class="flex items-end justify-between mb-4">
+  <div>
+    <h1 class="text-2xl font-semibold">Target Sites</h1>
+    <p class="text-sm text-slate-500">Domains the recipe agent scrapes each run. Disable to skip without deleting.</p>
+  </div>
+  <a href="{{ url_for('admin.index') }}" class="text-sm text-sky-700 hover:underline">← Recipes</a>
+</div>
+
+<form method="post" action="{{ url_for('admin.sites_add') }}"
+      class="bg-white p-4 rounded border border-slate-200 mb-4 flex flex-wrap gap-2 items-end">
+  <div class="flex-1 min-w-[220px]">
+    <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Domain</label>
+    <input type="text" name="domain" placeholder="example.com" required
+           class="w-full px-3 py-2 border border-slate-300 rounded text-sm" />
+  </div>
+  <div class="flex-1 min-w-[220px]">
+    <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">Notes (optional)</label>
+    <input type="text" name="notes" placeholder="e.g. Hindi recipes, JSON-LD"
+           class="w-full px-3 py-2 border border-slate-300 rounded text-sm" />
+  </div>
+  <button class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-5 py-2 rounded text-sm">
+    Add site
+  </button>
+</form>
+
+<div class="bg-white rounded border border-slate-200 overflow-hidden">
+  <table class="w-full text-sm">
+    <thead class="bg-slate-100 text-slate-600 text-left">
+      <tr>
+        <th class="px-3 py-2">Domain</th>
+        <th class="px-3 py-2">Status</th>
+        <th class="px-3 py-2">Notes</th>
+        <th class="px-3 py-2">Added</th>
+        <th class="px-3 py-2 text-right">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for s in sites %}
+      <tr class="border-t border-slate-100 hover:bg-slate-50">
+        <td class="px-3 py-2 font-mono">
+          <a href="https://{{ s['domain'] }}" target="_blank" class="hover:underline">{{ s['domain'] }}</a>
+        </td>
+        <td class="px-3 py-2">
+          {% if s['enabled'] %}
+            <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded">Enabled</span>
+          {% else %}
+            <span class="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded">Disabled</span>
+          {% endif %}
+        </td>
+        <td class="px-3 py-2 text-slate-600">
+          <form method="post" action="{{ url_for('admin.sites_notes', site_id=s['id']) }}" class="flex gap-1">
+            <input type="text" name="notes" value="{{ s['notes'] or '' }}"
+                   class="flex-1 px-2 py-1 border border-slate-200 rounded text-xs" />
+            <button class="text-xs text-sky-700 hover:underline">Save</button>
+          </form>
+        </td>
+        <td class="px-3 py-2 text-xs text-slate-400">{{ s['created_at'][:10] if s['created_at'] else '' }}</td>
+        <td class="px-3 py-2 text-right whitespace-nowrap">
+          <form method="post" action="{{ url_for('admin.sites_toggle', site_id=s['id']) }}" class="inline">
+            <button class="text-xs text-emerald-700 hover:underline">
+              {{ 'Disable' if s['enabled'] else 'Enable' }}
+            </button>
+          </form>
+          <form method="post" action="{{ url_for('admin.sites_delete', site_id=s['id']) }}" class="inline"
+                onsubmit="return confirm('Remove {{ s['domain'] }} permanently?');">
+            <button class="text-xs text-red-600 hover:underline ml-2">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {% else %}
+      <tr><td colspan="5" class="px-3 py-6 text-center text-slate-400">
+        No sites configured. Run <code>flask --app run.py seed-sites</code> to backfill from agent_config.
+      </td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<p class="text-xs text-slate-400 mt-4">
+  Total: {{ sites|length }} · Enabled: {{ sites|selectattr('enabled')|list|length }}.
+  The agent reads this list at the start of every run.
+</p>
+
+{% endblock %}

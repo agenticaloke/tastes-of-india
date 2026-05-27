@@ -15,6 +15,7 @@
       </a>
       <nav class="flex items-center gap-4 text-sm">
         <a href="{{ url_for('admin.index') }}" class="hover:text-amber-300">Recipes</a>
+        <a href="{{ url_for('admin.sites') }}" class="hover:text-amber-300">Sites</a>
         <a href="{{ url_for('web.index') }}" class="hover:text-amber-300" target="_blank">Public site ↗</a>
         <form method="post" action="{{ url_for('admin.sync') }}" class="inline"
               onsubmit="return confirm('Export agent finds and push to GitHub (triggers Render redeploy)?');">

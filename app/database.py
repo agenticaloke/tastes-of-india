@@ -125,7 +125,32 @@ def seed_recipes_command():
     click.echo('Recipes seeded.')
 
 
+def seed_target_sites():
+    """Backfill target_sites from agent_config.TARGET_SITES.
+    Idempotent — uses INSERT OR IGNORE so existing rows are preserved."""
+    import sys, os
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    try:
+        from agent.agent_config import TARGET_SITES
+    except Exception:
+        TARGET_SITES = []
+    db = get_db()
+    for domain in TARGET_SITES:
+        db.execute(
+            'INSERT OR IGNORE INTO target_sites (domain, enabled) VALUES (?, 1)',
+            (domain,)
+        )
+    db.commit()
+
+
+@click.command('seed-sites')
+def seed_sites_command():
+    seed_target_sites()
+    click.echo('Target sites seeded.')
+
+
 def init_app(app):
     app.teardown_appcontext(close_db)
     app.cli.add_command(init_db_command)
     app.cli.add_command(seed_recipes_command)
+    app.cli.add_command(seed_sites_command)

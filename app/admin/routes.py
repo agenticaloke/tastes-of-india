@@ -228,6 +228,86 @@ def delete(recipe_id):
     return redirect(url_for('admin.index'))
 
 
+@bp.route('/sites')
+@requires_admin
+def sites():
+    db = get_db()
+    rows = db.execute(
+        'SELECT id, domain, enabled, notes, created_at FROM target_sites ORDER BY enabled DESC, domain'
+    ).fetchall()
+    return render_template('admin/sites.html', sites=rows)
+
+
+@bp.route('/sites/add', methods=['POST'])
+@requires_admin
+def sites_add():
+    domain = (request.form.get('domain') or '').strip().lower()
+    notes = (request.form.get('notes') or '').strip()
+    # strip protocol, trailing slash, www.
+    for prefix in ('https://', 'http://'):
+        if domain.startswith(prefix):
+            domain = domain[len(prefix):]
+    if domain.startswith('www.'):
+        domain = domain[4:]
+    domain = domain.rstrip('/').split('/')[0]
+
+    if not domain or '.' not in domain:
+        flash('Enter a valid domain like "example.com".', 'error')
+        return redirect(url_for('admin.sites'))
+
+    db = get_db()
+    try:
+        db.execute(
+            'INSERT INTO target_sites (domain, enabled, notes) VALUES (?, 1, ?)',
+            (domain, notes or None)
+        )
+        db.commit()
+        flash(f'Added {domain}.', 'success')
+    except Exception as e:
+        flash(f'Could not add: {e}', 'error')
+    return redirect(url_for('admin.sites'))
+
+
+@bp.route('/sites/<int:site_id>/toggle', methods=['POST'])
+@requires_admin
+def sites_toggle(site_id):
+    db = get_db()
+    row = db.execute('SELECT enabled, domain FROM target_sites WHERE id=?', (site_id,)).fetchone()
+    if not row:
+        abort(404)
+    new_val = 0 if row['enabled'] else 1
+    db.execute('UPDATE target_sites SET enabled=? WHERE id=?', (new_val, site_id))
+    db.commit()
+    flash(f'{row["domain"]} {"enabled" if new_val else "disabled"}.', 'success')
+    return redirect(url_for('admin.sites'))
+
+
+@bp.route('/sites/<int:site_id>/delete', methods=['POST'])
+@requires_admin
+def sites_delete(site_id):
+    db = get_db()
+    row = db.execute('SELECT domain FROM target_sites WHERE id=?', (site_id,)).fetchone()
+    if not row:
+        abort(404)
+    db.execute('DELETE FROM target_sites WHERE id=?', (site_id,))
+    db.commit()
+    flash(f'Removed {row["domain"]}.', 'success')
+    return redirect(url_for('admin.sites'))
+
+
+@bp.route('/sites/<int:site_id>/notes', methods=['POST'])
+@requires_admin
+def sites_notes(site_id):
+    db = get_db()
+    if not db.execute('SELECT 1 FROM target_sites WHERE id=?', (site_id,)).fetchone():
+        abort(404)
+    db.execute('UPDATE target_sites SET notes=? WHERE id=?',
+               ((request.form.get('notes') or '').strip() or None, site_id))
+    db.commit()
+    flash('Notes updated.', 'success')
+    return redirect(url_for('admin.sites'))
+
+
 @bp.route('/sync', methods=['POST'])
 @requires_admin
 def sync():
