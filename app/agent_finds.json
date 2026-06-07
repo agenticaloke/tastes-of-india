@@ -1982,6 +1982,52 @@
           "author_credit": "Unknown"
         },
         {
+          "name": "Dal Bati",
+          "slug": "dal-bati",
+          "category": "entree",
+          "description": "Dal Bati Recipe - This is the traditional and popular Rajasthani recipe. Here bati or baati is made from whole wheat flour and cooked over coal. But at home we will be baking into the oven.",
+          "ingredients": [
+            {
+              "qty": "",
+              "item": "1 ½ cups Coarse whole wheat flour ((or use regular chapati atta))"
+            },
+            {
+              "qty": "",
+              "item": "Salt (to taste)"
+            },
+            {
+              "qty": "",
+              "item": "¼ teaspoon Baking soda"
+            },
+            {
+              "qty": "",
+              "item": "6 tablespoons Ghee Clarified butter (+ more needed while serving)"
+            },
+            {
+              "qty": "",
+              "item": "7-8 tablespoons Water"
+            }
+          ],
+          "instructions": [
+            "Take whole wheat flour, salt and baking soda in a bowl and mix.",
+            "Drizzle ghee and using your fingertips mix till everything is incorporated well. It should be crumbly texture and if you press together, you should be able to form a ball.",
+            "Now add little water at a time and knead into stiff dough.",
+            "Cover it with damp towel and let it rest for 20 minutes.",
+            "Preheat the oven to 350 degrees F or 180 degrees C for at least 10 minutes.",
+            "Line a baking sheet or cookie sheet with parchment paper and keep it ready.",
+            "After the resting time, knead the dough once again and divide into 12-13 equal portions.",
+            "Make balls with the indentation similar to ‘+’ sign on top. Arrange them on prepared tray.",
+            "Bake into preheated oven for 20 minutes, then flip the batis and bake again for 20-25 minutes or till they are slightly light brown in color.",
+            "Dip them into ghee and then break or Break few baati and put them in a plate, drizzle little ghee over it.",
+            "On top add dal and serve."
+          ],
+          "prep_time_mins": 25,
+          "cook_time_mins": 45,
+          "servings": 12,
+          "source_url": "https://www.spiceupthecurry.com/dal-bati-recipe/",
+          "author_credit": "Unknown"
+        },
+        {
           "name": "Gobi 65 Recipe | Cauliflower 65 Recipe",
           "slug": "gobi-65-recipe-cauliflower-65-recipe",
           "category": "appetizer",
