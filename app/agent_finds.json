@@ -2535,6 +2535,61 @@
       "slug": "kolkata",
       "recipes": [
         {
+          "name": "Chena Murki Recipe",
+          "slug": "chena-murki-recipe",
+          "category": "entree",
+          "description": "Chena Murki is a traditional Bengali sweet made with cubes of fresh chena or paneer coated in a delicate layer of crystallized sugar. It is prepared by cooking the paneer in one-string sugar syrup and then stirring continuously until the sugar dries and coats each cube. Enjoy this easy homemade mithai for festivals, celebrations or as a simple after-meal sweet.",
+          "ingredients": [
+            {
+              "qty": "",
+              "item": "200 grams chhena (or fresh paneer, cut into 2.5 to 3 cm cubes)"
+            },
+            {
+              "qty": "",
+              "item": "¾ cup/150 grams sugar"
+            },
+            {
+              "qty": "",
+              "item": "5 tablespoons/75 ml water"
+            },
+            {
+              "qty": "",
+              "item": "¼ teaspoon green cardamom powder"
+            },
+            {
+              "qty": "",
+              "item": "½ teaspoon rose water ( – optional)"
+            },
+            {
+              "qty": "",
+              "item": "2 to 3 teaspoon almonds (– sliced, optional)"
+            },
+            {
+              "qty": "",
+              "item": "1 sheet edible silver leaf ((vark), optional)"
+            }
+          ],
+          "instructions": [
+            "Cut the paneer into small, even-sized cubes. If needed, rinse and pat dry thoroughly. Let the cubes air-dry briefly before using.",
+            "In a thick-bottomed wide pan or kadai, combine the sugar and water.",
+            "Heat gently until the sugar dissolves completely, then cook the syrup until it reaches one-string consistency.",
+            "Add the paneer cubes and gently mix so they are evenly coated with the syrup.",
+            "Cook on low to medium-low heat for about 5 to 6 minutes or until the syrup bubbles actively and a light whitish foam appears on the surface.",
+            "Turn off the heat and transfer the pan to the kitchen counter. Add the cardamom powder and rose water, if using.",
+            "Using a flat wooden spatula, stir continuously until the sugar crystallizes and evenly coats the paneer cubes. Gently separate any cubes that stick together.",
+            "Depending on the sugar and humidity, the final stirring stage can take 10 to 20 minutes. Stir continuously until the sugar crystallizes.",
+            "Spread the Chena Murki on a plate or tray and let it cool completely.",
+            "Remove any excess sugar from the cooled paneer cubes and store it separately to use in tea, coffee or milk.",
+            "Serve Chena Murki immediately or store in an airtight container in the refrigerator.",
+            "While serving, garnish with dried rose petals, edible silver leaf (vark), or sliced nuts like almonds or pistachios, if you like."
+          ],
+          "prep_time_mins": 5,
+          "cook_time_mins": 15,
+          "servings": 24,
+          "source_url": "https://www.vegrecipesofindia.com/chena-murki/",
+          "author_credit": "Dassana Amit"
+        },
+        {
           "name": "Kolkata Style Vegetable Chop Recipe",
           "slug": "kolkata-style-vegetable-chop-recipe",
           "category": "appetizer",
