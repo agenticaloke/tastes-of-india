@@ -104,6 +104,40 @@ def api_search():
     return jsonify([dict(r) for r in rows])
 
 
+@bp.route('/ingredients', methods=['POST'])
+def api_ingredients():
+    """Given {ids: [1,2,3]}, return aggregated ingredient groups."""
+    payload = request.get_json(silent=True) or {}
+    ids = payload.get('ids') or []
+    ids = [int(i) for i in ids if str(i).isdigit()]
+    if not ids:
+        return jsonify(groups=[])
+
+    db = get_db()
+    placeholders = ','.join('?' * len(ids))
+    rows = db.execute(
+        f'SELECT id, name, ingredients FROM recipes WHERE id IN ({placeholders})',
+        ids
+    ).fetchall()
+
+    groups = {}
+    for row in rows:
+        for ing in json.loads(row['ingredients']):
+            if isinstance(ing, dict):
+                item = (ing.get('item') or '').strip()
+                qty = (ing.get('qty') or '').strip()
+            else:
+                item, qty = str(ing).strip(), ''
+            if not item:
+                continue
+            key = item.lower()
+            if key not in groups:
+                groups[key] = {'item': item, 'entries': []}
+            groups[key]['entries'].append({'qty': qty, 'recipe': row['name']})
+
+    return jsonify(groups=sorted(groups.values(), key=lambda g: g['item'].lower()))
+
+
 @bp.route('/menu', methods=['POST'])
 def api_create_menu():
     db = get_db()

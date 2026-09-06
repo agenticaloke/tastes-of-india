@@ -190,6 +190,46 @@ def view_menu(menu_id):
                            category_labels=CATEGORY_LABELS)
 
 
+@bp.route('/menu/<int:menu_id>/ingredients')
+def menu_ingredients(menu_id):
+    db = get_db()
+    menu_row = db.execute('SELECT * FROM saved_menus WHERE id = ?', (menu_id,)).fetchone()
+    if not menu_row:
+        abort(404)
+    menu = dict(menu_row)
+    lunch_ids = json.loads(menu['lunch_ids'])
+    dinner_ids = json.loads(menu['dinner_ids'])
+    all_ids = lunch_ids + dinner_ids
+    if not all_ids:
+        return render_template('menu_ingredients.html', menu=menu, groups=[])
+
+    placeholders = ','.join('?' * len(all_ids))
+    rows = db.execute(f'''
+        SELECT r.id, r.name, r.slug, r.ingredients
+        FROM recipes r WHERE r.id IN ({placeholders})
+    ''', all_ids).fetchall()
+
+    # Aggregate: normalise ingredient name → list of (qty, recipe_name)
+    groups = {}  # key = lowercased item, val = {'item': display, 'entries': [(qty, recipe_name), ...]}
+    for row in rows:
+        ings = json.loads(row['ingredients'])
+        for ing in ings:
+            if isinstance(ing, dict):
+                item = (ing.get('item') or '').strip()
+                qty = (ing.get('qty') or '').strip()
+            else:
+                item, qty = str(ing).strip(), ''
+            if not item:
+                continue
+            key = item.lower()
+            if key not in groups:
+                groups[key] = {'item': item, 'entries': []}
+            groups[key]['entries'].append({'qty': qty, 'recipe': row['name']})
+
+    sorted_groups = sorted(groups.values(), key=lambda g: g['item'].lower())
+    return render_template('menu_ingredients.html', menu=menu, groups=sorted_groups)
+
+
 @bp.route('/menu/<int:menu_id>/print')
 def print_menu(menu_id):
     db = get_db()

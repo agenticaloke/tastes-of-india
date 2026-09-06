@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}{{ menu.title }} — Combined Ingredients{% endblock %}
+
+{% block content %}
+<div class="flex items-center justify-between mb-6 flex-wrap gap-4">
+  <div>
+    <div class="text-sm text-stone-400 mb-1">
+      <a href="{{ url_for('web.view_menu', menu_id=menu.id) }}" class="hover:text-rose-500">← Back to menu</a>
+    </div>
+    <h1 class="text-3xl font-semibold text-rose-500">{{ menu.title }}</h1>
+    <p class="text-stone-500 mt-1 text-sm">Combined shopping list · {{ groups|length }} unique ingredient{{ '' if groups|length == 1 else 's' }}</p>
+  </div>
+  <div class="flex gap-2">
+    <button onclick="window.print()"
+            class="border border-rose-300 text-rose-500 px-4 py-2 rounded-xl text-sm font-medium hover:bg-rose-50 transition">
+      🖨 Print
+    </button>
+    <button onclick="copyList()"
+            class="bg-rose-300 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-rose-400 transition">
+      📋 Copy
+    </button>
+  </div>
+</div>
+
+{% if groups %}
+<div class="bg-white rounded-xl shadow-sm border border-stone-100 p-6">
+  <ul class="divide-y divide-stone-100" id="ingredient-list">
+    {% for g in groups %}
+    <li class="py-3 flex items-start gap-3">
+      <input type="checkbox" class="mt-1 w-4 h-4 text-rose-500 rounded"
+             onchange="this.nextElementSibling.classList.toggle('line-through', this.checked); this.nextElementSibling.classList.toggle('text-stone-400', this.checked);" />
+      <div class="flex-1">
+        <div class="font-medium text-stone-800 capitalize">{{ g.item }}</div>
+        <div class="text-sm text-stone-500 mt-0.5">
+          {% for e in g.entries %}
+            <span class="inline-block mr-3">
+              {% if e.qty %}<span class="font-mono text-stone-700">{{ e.qty }}</span>{% endif %}
+              <span class="text-stone-400">— {{ e.recipe }}</span>
+            </span>
+          {% endfor %}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<p class="text-xs text-stone-400 mt-4">
+  Quantities are shown per recipe rather than summed, because units vary (2 cups, 1 tsp, a pinch). Tally them as you shop.
+</p>
+
+<script>
+function copyList() {
+  const lines = [];
+  document.querySelectorAll('#ingredient-list > li').forEach(li => {
+    const name = li.querySelector('.font-medium').innerText.trim();
+    const qtys = Array.from(li.querySelectorAll('.font-mono')).map(s => s.innerText.trim()).filter(Boolean).join(' + ');
+    lines.push(qtys ? `${name} (${qtys})` : name);
+  });
+  navigator.clipboard.writeText(lines.join('\n')).then(() => {
+    alert('Copied ' + lines.length + ' ingredients to clipboard.');
+  });
+}
+</script>
+{% else %}
+<p class="text-stone-500">This menu has no recipes yet.</p>
+{% endif %}
+{% endblock %}

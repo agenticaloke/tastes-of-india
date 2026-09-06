@@ -12,10 +12,16 @@
     <p class="text-stone-500 mt-1 text-sm">{{ menu.notes }}</p>
     {% endif %}
   </div>
-  <a href="{{ url_for('web.print_menu', menu_id=menu.id) }}" target="_blank"
-     class="bg-rose-300 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-rose-400 transition">
-    🖨 Print Menu
-  </a>
+  <div class="flex gap-2 flex-wrap">
+    <a href="{{ url_for('web.menu_ingredients', menu_id=menu.id) }}"
+       class="border border-rose-300 text-rose-500 px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-rose-50 transition">
+      🛒 Combined Ingredients
+    </a>
+    <a href="{{ url_for('web.print_menu', menu_id=menu.id) }}" target="_blank"
+       class="bg-rose-300 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-rose-400 transition">
+      🖨 Print Menu
+    </a>
+  </div>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
