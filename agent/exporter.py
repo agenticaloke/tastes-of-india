@@ -62,7 +62,9 @@ def _run(cmd: list[str], cwd: str) -> tuple[int, str]:
 
 
 def git_push_finds(commit_message: str) -> bool:
-    """Stage agent_finds.json, commit, pull --rebase, push. Returns True on success."""
+    """Stage agent_finds.json, commit, pull --rebase, push. Other local
+    edits are stashed around the pull so a dirty tree does not block the
+    push, then restored afterwards. Returns True on success."""
     rc, out = _run(['git', 'status', '--porcelain', 'app/agent_finds.json'], PROJECT_ROOT)
     if rc != 0:
         log.warning(f'git status failed: {out}')
@@ -71,16 +73,51 @@ def git_push_finds(commit_message: str) -> bool:
         log.info('No changes in agent_finds.json — nothing to push.')
         return True
 
-    steps = [
+    # Commit the finds first.
+    for cmd in [
         ['git', 'add', 'app/agent_finds.json'],
         ['git', 'commit', '-m', commit_message],
-        ['git', 'pull', '--rebase', 'origin', 'main'],
-        ['git', 'push', 'origin', 'HEAD:main'],
-    ]
-    for cmd in steps:
+    ]:
         rc, out = _run(cmd, PROJECT_ROOT)
         if rc != 0:
             log.warning(f'git step failed ({" ".join(cmd)}): {out}')
             return False
         log.info(f'git: {" ".join(cmd)} -> ok')
-    return True
+
+    # Stash any unrelated local edits (so pull --rebase can proceed).
+    rc, dirty_out = _run(['git', 'status', '--porcelain'], PROJECT_ROOT)
+    stashed = False
+    if rc == 0 and dirty_out.strip():
+        rc, out = _run(
+            ['git', 'stash', 'push', '-u', '-m', 'auto-export-stash'],
+            PROJECT_ROOT,
+        )
+        if rc == 0 and 'No local changes' not in out:
+            stashed = True
+            log.info('git: stashed unrelated local changes')
+        else:
+            log.warning(f'git stash failed: {out}')
+
+    # Pull + push.
+    ok = True
+    for cmd in [
+        ['git', 'pull', '--rebase', 'origin', 'main'],
+        ['git', 'push', 'origin', 'HEAD:main'],
+    ]:
+        rc, out = _run(cmd, PROJECT_ROOT)
+        if rc != 0:
+            log.warning(f'git step failed ({" ".join(cmd)}): {out}')
+            ok = False
+            break
+        log.info(f'git: {" ".join(cmd)} -> ok')
+
+    # Restore any stashed edits.
+    if stashed:
+        rc, out = _run(['git', 'stash', 'pop'], PROJECT_ROOT)
+        if rc != 0:
+            log.warning(f'git stash pop failed: {out}')
+            ok = False
+        else:
+            log.info('git: restored stashed local changes')
+
+    return ok

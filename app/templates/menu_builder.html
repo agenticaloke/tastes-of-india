@@ -7,6 +7,27 @@
   <p class="text-stone-500">Mix and match vegetarian dishes from any city to create the perfect Lunch or Dinner menu for your event.</p>
 </div>
 
+<!-- AI prompt -->
+<div class="mb-6 bg-gradient-to-br from-rose-50 to-amber-50 border border-rose-100 rounded-2xl p-5">
+  <div class="flex items-start gap-3">
+    <div class="text-2xl leading-none pt-1">✨</div>
+    <div class="flex-1">
+      <h2 class="font-semibold text-stone-700 mb-1">Build with AI</h2>
+      <p class="text-sm text-stone-500 mb-3">Describe your event and let AI pick dishes from the catalog. e.g. <em>"Diwali dinner for 8, mostly North Indian, include dessert"</em>.</p>
+      <div class="flex gap-2 flex-wrap">
+        <input id="ai-prompt" type="text" placeholder="What kind of menu do you want?"
+               class="flex-1 min-w-[240px] border border-stone-200 rounded-lg px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-rose-200"
+               onkeydown="if(event.key==='Enter') aiSuggest()" />
+        <button id="ai-btn" onclick="aiSuggest()"
+                class="bg-rose-500 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-rose-400 transition disabled:opacity-60">
+          Suggest Menu
+        </button>
+      </div>
+      <div id="ai-msg" class="text-sm mt-3 hidden"></div>
+    </div>
+  </div>
+</div>
+
 <div class="lg:grid lg:grid-cols-5 lg:gap-8">
 
   <!-- Left: recipe picker -->
@@ -136,6 +157,55 @@
 
 <script>
 const menuState = { lunch: [], dinner: [] };
+
+async function aiSuggest() {
+  const promptEl = document.getElementById('ai-prompt');
+  const btn = document.getElementById('ai-btn');
+  const msg = document.getElementById('ai-msg');
+  const prompt = promptEl.value.trim();
+  if (!prompt) { promptEl.focus(); return; }
+
+  btn.disabled = true;
+  const oldLabel = btn.textContent;
+  btn.textContent = 'Thinking…';
+  msg.className = 'text-sm mt-3 text-stone-500';
+  msg.textContent = 'Consulting the AI chef…';
+  msg.classList.remove('hidden');
+
+  try {
+    const res = await fetch('/api/menu/ai-suggest', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({prompt}),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      msg.className = 'text-sm mt-3 text-red-600';
+      msg.textContent = data.error || 'AI request failed.';
+      return;
+    }
+    menuState.lunch = (data.lunch || []).map(r => ({
+      id: r.id, name: r.name, city: r.city_name,
+      cat: {appetizer:'Appetizers',entree:'Entree',dessert:'Desserts',drink:'Drinks'}[r.category] || r.category,
+    }));
+    menuState.dinner = (data.dinner || []).map(r => ({
+      id: r.id, name: r.name, city: r.city_name,
+      cat: {appetizer:'Appetizers',entree:'Entree',dessert:'Desserts',drink:'Drinks'}[r.category] || r.category,
+    }));
+    renderPanel('lunch');
+    renderPanel('dinner');
+    msg.className = 'text-sm mt-3 text-emerald-700';
+    msg.textContent = data.explanation
+      ? `✨ ${data.explanation}`
+      : `Added ${menuState.lunch.length} lunch and ${menuState.dinner.length} dinner dishes.`;
+  } catch (e) {
+    msg.className = 'text-sm mt-3 text-red-600';
+    msg.textContent = 'Network error talking to the AI.';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = oldLabel;
+  }
+}
 
 async function previewIngredients() {
   const ids = [...menuState.lunch, ...menuState.dinner].map(r => r.id);

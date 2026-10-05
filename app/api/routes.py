@@ -1,8 +1,25 @@
 import json
+import os
 from flask import Blueprint, jsonify, request, abort
 from ..database import get_db
 
 bp = Blueprint('api', __name__, url_prefix='/api')
+
+AI_MODEL = 'claude-haiku-4-5-20251001'
+AI_SYSTEM = (
+    "You are a chef helping build vegetarian Indian menus from a fixed catalog "
+    "of recipes. The user provides a natural-language request; you pick dishes "
+    "from the catalog that best fit. Respond ONLY with valid JSON in this exact "
+    "shape:\n"
+    '{"lunch": [<recipe ids>], "dinner": [<recipe ids>], "explanation": "<one to two sentences>"}\n'
+    "Rules:\n"
+    "- Use only ids that appear in the provided catalog.\n"
+    "- If the user asks only for a lunch or only for a dinner, leave the other array empty.\n"
+    "- Prefer a balanced mix of appetizer, entree, dessert, and drink unless the user says otherwise.\n"
+    "- 3-6 dishes per meal by default.\n"
+    "- The explanation should call out the theme, city origin, or dietary notes.\n"
+    "- Return NOTHING except the JSON object."
+)
 
 
 def _parse_recipe(row):
@@ -102,6 +119,87 @@ def api_search():
         ORDER BY r.name LIMIT 40
     ''', params).fetchall()
     return jsonify([dict(r) for r in rows])
+
+
+@bp.route('/menu/ai-suggest', methods=['POST'])
+def api_ai_suggest():
+    """AI-powered menu builder. Accepts {prompt: str}, returns a suggested
+    lunch/dinner selection using the current recipe catalog."""
+    api_key = os.environ.get('ANTHROPIC_API_KEY')
+    if not api_key:
+        return jsonify(error='ANTHROPIC_API_KEY not set on the server.'), 503
+
+    payload = request.get_json(silent=True) or {}
+    user_prompt = (payload.get('prompt') or '').strip()
+    if not user_prompt:
+        return jsonify(error='Prompt is required.'), 400
+    if len(user_prompt) > 1000:
+        return jsonify(error='Prompt is too long (max 1000 chars).'), 400
+
+    db = get_db()
+    rows = db.execute('''
+        SELECT r.id, r.name, r.category, c.name AS city
+        FROM recipes r JOIN cities c ON c.id = r.city_id
+        ORDER BY r.name
+    ''').fetchall()
+    catalog = [
+        {'id': r['id'], 'name': r['name'], 'city': r['city'], 'category': r['category']}
+        for r in rows
+    ]
+    valid_ids = {r['id'] for r in catalog}
+
+    try:
+        from anthropic import Anthropic
+        client = Anthropic(api_key=api_key)
+        message = client.messages.create(
+            model=AI_MODEL,
+            max_tokens=1024,
+            system=AI_SYSTEM,
+            messages=[{
+                'role': 'user',
+                'content': (
+                    f"User request: {user_prompt}\n\n"
+                    f"Recipe catalog (JSON):\n{json.dumps(catalog)}"
+                )
+            }],
+        )
+        raw = message.content[0].text.strip()
+    except Exception as e:
+        return jsonify(error=f'AI call failed: {e}'), 502
+
+    # Strip markdown fences if the model included them
+    if raw.startswith('```'):
+        raw = raw.strip('`')
+        if raw.lower().startswith('json'):
+            raw = raw[4:].strip()
+
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError:
+        return jsonify(error='AI returned malformed JSON.', raw=raw), 502
+
+    lunch = [int(i) for i in data.get('lunch') or [] if int(i) in valid_ids]
+    dinner = [int(i) for i in data.get('dinner') or [] if int(i) in valid_ids]
+    explanation = str(data.get('explanation') or '').strip()[:600]
+
+    # Hydrate ids into recipe cards the frontend can render directly.
+    def hydrate(ids):
+        if not ids:
+            return []
+        placeholders = ','.join('?' * len(ids))
+        recipe_rows = db.execute(f'''
+            SELECT r.id, r.name, r.category, c.name AS city_name, c.slug AS city_slug
+            FROM recipes r JOIN cities c ON c.id = r.city_id
+            WHERE r.id IN ({placeholders})
+        ''', ids).fetchall()
+        by_id = {r['id']: dict(r) for r in recipe_rows}
+        return [by_id[i] for i in ids if i in by_id]
+
+    return jsonify(
+        lunch=hydrate(lunch),
+        dinner=hydrate(dinner),
+        explanation=explanation,
+    )
 
 
 @bp.route('/ingredients', methods=['POST'])
